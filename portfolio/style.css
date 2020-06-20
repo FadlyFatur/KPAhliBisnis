@@ -1,0 +1,185 @@
+
+
+    .logo{
+        color: #ffffff;
+        position:absolute;
+        left: 75px;
+        top: 25px;
+
+    }
+    #menu-area{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex
+        display: flex;
+        justify-content: space-betweenp: 0 60px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: background 0.5s;
+    }
+    #menu-area ul{
+        width: 500px;
+        justify-content: space-around;
+        list-style: none;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+    }
+    #menu-area ul li a{
+        text-decoration: none;
+        color: #262626;
+    }
+    .banner-area{
+        background: url(bg2.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+    }
+    .banner-text{
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .banner-text h2{
+        font-family: big john;
+        font-size: 60px;
+    }
+    .banner-text a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .gambariklan{
+        background-color: black;
+        color: #ffffff;
+        padding: 15px 30px;
+        display: inline-block;
+        margin-top: 20px;
+        border-radius: 50px;
+        position: absolute;
+        right: 20%;
+        top: 20%;
+    }
+    .wrapping{
+        padding: 70px;
+    }
+    #menu-area.cus-nav{
+        background:#262626;
+        z-index: 999;
+    }
+    #menu-area.cus-nav a{
+        color: #fff;
+    }
+    #menu-area.cus-nav .logo img{
+        height: 65px;
+    }
+    .Cart{
+        color: #ffffff;
+        position:absolute;
+        right: 280px;
+    }
+    .login{
+        color:#ffffff;
+        position:absolute;
+        right: 180px;
+        font-size: 20px;
+    }
+    .register{
+        color: #ffffff;
+        position:absolute;
+        right: 50px;
+        font-size: 20px;
+    }
+    #iklan{
+        background-image: url('bgiklan2.jpg');
+        height: 250px;
+        width: 1366px;
+        padding: 16px;
+        font-size: 25px;
+        position: absolute;
+        top: 90px;
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+    
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #4588B5;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #4588B5;
+
+    }
+    
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #96D5E4;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+
+    }
+    .container{
+        position: absolute;
+        top: 350px;
+    }
+    
+    .openbtn:hover {
+        background-color: #444;
+    }
+    
+    #menu-area {
+        transition: margin-left .5s;
+        padding: 16px;
+        font-size: 25px;
+
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 300px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+        #main{
+            width: 100%;
+        }
+        #iklan{
+            width: 100%;
+        }
+        .closebtn{
+            width: 100%;
+        }
+    }
