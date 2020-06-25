@@ -44,7 +44,6 @@ section{
 }
 
 section .gMapSection{
-    border: 1px solid #494949;
     height: 30vh;
 }
 #map {
