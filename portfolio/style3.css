@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+footer{
+    text-align: center;
+}
+#menu-area .banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(235deg,#E14455, #172232 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#menu-area .banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+#menu-area .banner .content{
+    position: absolute;
+    left: 7%;
+    max-width: 500px;
+    text-align: left;
+}
+#menu-area .banner .content h2{
+    color: #fff;
+    font-size: 60px;
+
+}
+#menu-area .banner .content p{
+    color: #fff;
+    font-size: 18px;
+    
+}
+
+
+.button {
+    position: absolute;
+    border-radius: 20px;
+    padding: 7px 16px;
+    top: 98%;
+    border: 2px solid #F99A00;
+    background-color: #F99A00;
+    color: #fff;
+}
+.button3{
+    left: 5%;
+}
+.button4{
+    left: 50%;
+}
+
+  
+.more{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 
+}
+.about{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.about .contentBx{
+    background: #172232;
+    padding: 100px;
+    width: 100%;
+}
+.heading{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.text{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.services
+{
+    background: #C92C3D;
+    padding: 100px;
+    text-align: center;
+}
+.services .container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.services .container .serviceBx
+{
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services .container .serviceBx img{
+    max-width: 100px;
+
+}
+.jasaproduk{
+    background-color: #E14455;
+    padding: 40px;
+    text-align: center;
+}
+.jasaproduk .container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.jasaproduk .produk .container .jasaPusat{
+    position: relative;
+    background: #fff;
+    width: 450px;
+    height: 515px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasaproduk .produk .container .jasaview1{
+    position: absolute;
+    right: 33%;
+    top: 1617px;
+    background: #fff;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasaproduk .produk .container .jasaview2{
+    position: absolute;
+    right: 9%;
+    top: 1617px;
+    background: #fff;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasaproduk .produk .container .jasaview3{
+    position: absolute;
+    right: 33%;
+    top: 1880px;    
+    background: #fff;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasaproduk .produk .container .jasaview4{
+    position: absolute;
+    right: 9%;
+    top: 1880px;  
+    background: #fff;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasaproduk .produk .container img{
+    max-width: 100px;
+}
+.jasaproduk .produk .container .more{
+    position: absolute;
+    top: 2130px;
+    right: 9%;
+}
+
+@media screen and (max-width: 576px)
+{
+    #menu-area{
+        width: 100%;
+    }
+    #menu-area .banner img{
+        width: 100%;
+    }
+    #menu-area .banner .content h2{
+        font-size: 18px;
+    }
+    #menu-area .banner .content p{
+        font-size: 14px;
+    }
+    #menu-area .banner .content .button3{
+        position: absolute;
+        left: 0px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .imgBx{
+        width: 100%;
+        padding: 50px;
+        text-align: center;
+    }
+    .services{
+        padding: 50px;
+    }
+    .services .container{
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .services .container .serviceBx{
+        margin: 10px;
+    }
+    .services .container a{
+        position: relative;
+    }
+    .jasaproduk{
+        width: 100%;
+        height: 400px;
+        padding: 50px;
+    }
+    .jasaproduk .produk .container{
+        width: 100%;
+    }
+    .jasaproduk .produk .container img{
+        width: 50px;
+        
+    }
+    .jasaproduk .produk .container .jasaPusat h2{
+        font-size: 12px;
+    }
+    .jasaproduk .produk .container .jasaPusat{
+        width: 120px;
+        height: 225px;
+        position: absolute;
+        top: 2300px;
+        left: 20px;
+    }
+    .jasaproduk .produk .container .jasaview1{
+        width: 90px;
+        height: 105px;
+        position: absolute;
+        top: 2300px;
+        right: 120px;
+    }
+    .jasaproduk .produk .container .jasaview1 img{
+        width: 30px;
+    }
+    .jasaproduk .produk .container .jasaview1 h2{
+        font-size: 12px;
+    }
+    .jasaproduk .produk .container .jasaview2{
+        width: 90px;
+        height: 105px;
+        position: absolute;
+        top: 2300px;
+        right: 17px;
+    }
+    .jasaproduk .produk .container .jasaview2 img{
+        width: 30px;
+    }
+    .jasaproduk .produk .container .jasaview2 h2{
+        font-size: 12px;
+    }
+    .jasaproduk .produk .container .jasaview3{
+        width: 90px;
+        height: 105px;
+        position: absolute;
+        top: 2420px;
+        right: 120px;
+    }
+    .jasaproduk .produk .container .jasaview3 img{
+        width: 30px;
+    }
+    .jasaproduk .produk .container .jasaview3 h2{
+        font-size: 12px;
+    }
+    .jasaproduk .produk .container .jasaview4{
+        width: 90px;
+        height: 105px;
+        position: absolute;
+        top: 2420px;
+        right: 17px;
+    }
+    .jasaproduk .produk .container .jasaview4 img{
+        width: 30px;
+    }
+    .jasaproduk .produk .container .jasaview4 h2{
+        font-size: 12px;
+    }
+    .jasaproduk .produk .container .more{
+        font-size: 4px;
+        position: absolute;
+        top: 2530px;
+        right: 20px;
+    }
+}

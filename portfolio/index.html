@@ -32,26 +32,26 @@
       }
       body {
         font-family: "Lato", sans-serif;
-        background-image: url('background.jpg');
+        background-image: linear-gradient(235deg,#54f1ff,#4758aa );
     }
+      .footer {
+        
+        position: relative;
+        padding: 3px 3px;
+        color: white;
+      }
       </style>
       </head>
       <body>
       
         <div id="menu-area">
-
-            <button class="openbtn" onclick="openNav()">☰</button>
-            <div class="logo">
-              <a  href="#">Logo</a>
-            </div>
-            <div id="mySidebar" class="sidebar">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-              <a href="#">Jasa Design</a>
-              <a href="#">Jasa Foto Produk</a>
-              <a href="#">Jasa Iklan</a>
-              <a href="#">About us</a>
-            </div>
             <ul>  
+              <li><a class="logo" href="#"><img src="logoahlibisnis.jpg" width="50px"></a></li>
+              <li><a class="portofolio" href="#">Portofolio</a></li>
+              <li><a class="jasadesign" href="#">Jasa Design</a></li>
+              <li><a class="jasaproduk" href="#">Jasa Foto Produk</a></li>
+              <li><a class="jasaiklan"href="#">Jasa Iklan</a></li>
+              <li><a class="aboutus" href="#">About us</a></li>
               <li><a class="Cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
               <li><a class="login" href="#">Login</a></li> 
               <li><a class="register" href="#">Register</a></li> 
@@ -60,8 +60,10 @@
 
         <div class="banner-area">
           <div class="banner-text">
-            <h2>Quotes</h2>
-            <a>blablablabla</a>
+            <h2>A wise man Once Said</h2>
+            <b><p class="quotes">“A life spent making mistakes is not only more honorable, but more useful 
+              than a life spent doing nothing.”
+              ― George Bernard Shaw</p></b>
           </div>
         </div>
         <img class="gambariklan" src="logoahlibisnis.jpg">
@@ -71,6 +73,68 @@
             
           </div>
         </div>
+
+        <div class="container">
+          <div class="kontenportofolio">
+            <h2>Portofolio Kami</h2>
+            <img src="bgiklan2.jpg" width="550px" height="550px" >
+            <img class="portofolio2" src="bgiklan2.jpg" width="500px" height="265px">
+            <img class="portofolio3" src="bgiklan2.jpg" width="500px" height="275px">
+            <b><a class="moreporto" href="#">More...</a></b>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="kontenaboutus">
+            <h2>About Us</h2>
+            <p>AhliBisnis.id
+
+              merupakan produk yang bergerak di bidang teknologi dan dibuat untuk memudahkan masyarakat khususnya usaha mikro dalam memulai usaha ataupun mengembangkan usahanya terkhusus dalam pencatatan data-data yang akan diolah menjadi informasi yang bermanfaat dan juga untuk membantu para pengusaha khususnya pebisnis yang baru memulai bisnisnya atau akan memulai bisnis untuk mengatasi permasalahan bisnis pada bidang keuangan dan operasional. Banyak pebisnis baru bahkan menengah yang tidak menggunakan pencatatan keuangan dengan baik sehingga meyebabkan lambannya pertumbuhan perusahaan.
+              
+              Selain itu, Ahlibisnis juga bisa membantu mencatat penjualan secara mudah dan langsung terhubung dengan pembukuan sehingga UMKM tidak perlu mencatat secara manual. Berbagai fitur yang diberikan ini yang diharapkan dapat memajukan Negara Indonesia dengan meningkatkan jumlah pengusaha</p>
+          </div>
+        </div>
+
+        
+        <footer class="footer" role="contentinfo">
+          <div class="absolute footer-bg"></div>
+          <div class="kontenlain">
+            <h2>Hubungi Kami</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="side-icon-box">
+                    <div class="side-icon float-left">
+                      <p>Alamat: Jl. Baros No. 78, Utama,
+                        Kec. Cimahi Sel, Kota Cimahi,
+                        Jawa Barat, 40533</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="side-icon-box">
+                    <div class="side-icon float-left">
+                      <p>Telephone: +62 821 2736 1573</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="side-icon-box">
+                    <div class="side-icon float-left">
+                      <p>
+                        E-mail: company@ahlibisnis.id</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
 
 
 
@@ -87,16 +151,7 @@
             menuArea.classList.remove("cus-nav")
           }
         });
-      
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
+    
       </script>
          
       </body>
