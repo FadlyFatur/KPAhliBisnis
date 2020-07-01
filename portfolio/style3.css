@@ -129,8 +129,8 @@ footer{
 {
     color: #fff;
     position: absolute;
-    right: 130px;
-    top: 2065px;
+    right: 200px;
+    top: 2138px;
 }
 
 .jasaproduk{
@@ -159,7 +159,7 @@ footer{
 .jasaproduk .produk .container .jasaview1{
     position: absolute;
     right: 33%;
-    top: 897px;
+    top: 972px;
     background: #fff;
     width: 300px;
     height: 250px;
@@ -170,7 +170,7 @@ footer{
 .jasaproduk .produk .container .jasaview2{
     position: absolute;
     right: 9%;
-    top: 897px;
+    top: 972px;
     background: #fff;
     width: 300px;
     height: 250px;
@@ -181,7 +181,7 @@ footer{
 .jasaproduk .produk .container .jasaview3{
     position: absolute;
     right: 33%;
-    top: 1158px;    
+    top: 1238px;    
     background: #fff;
     width: 300px;
     height: 250px;
@@ -192,7 +192,7 @@ footer{
 .jasaproduk .produk .container .jasaview4{
     position: absolute;
     right: 9%;
-    top: 1158px;     
+    top: 1238px;      
     background: #fff;
     width: 300px;
     height: 250px;
@@ -205,7 +205,7 @@ footer{
 }
 .jasaproduk .produk .container .more{
     position: absolute;
-    top: 1409px;
+    top: 1495px;
     right: 9%;
 }
 
@@ -239,8 +239,8 @@ footer{
 
 .jasadesign .design .container .more{
     position: absolute;
-    top: 2705px;
-    right: 9%;
+    top: 2785px;
+    right: 13%;
 }
 
 .jasalengkap{
@@ -274,8 +274,8 @@ footer{
 .jasalengkap .lengkap .container .Other{  
     color: #fff;
     position: absolute;
-    top: 3305px;
-    right: 9%;
+    top: 3383px;
+    right: 13%;
 }
 
 @media screen and (max-width: 576px)
@@ -316,52 +316,93 @@ footer{
     }
     .services .container a{
         position: absolute;
-        top: 300px;
-        right: 20px;
+        top: 2845px;
+        right: 78px;
+        font-size: 11px;
     }
     
     .jasaproduk{
         padding: 50px;
+        height: 800px;
     }
-    .jasaproduk .container{
+    .jasaproduk .produk .container{
         justify-content: center;
         margin-top: 10px;
     }
-    .jasaproduk .container .jasaPusat{
+    .jasaproduk .produk .container .jasaPusat{
         position: relative;
         margin: 10px;
+        width: 220px;
+        height: 280px;
     }
-    .jasaproduk .container .jasaview1{
-        position: relative;
-        margin: 10px;
+    .jasaproduk .produk .container .jasaview1{
+        position: absolute;
+        top: 1170px;
+        left: 75px;
+        width: 100px;
+        height: 130px;
     }
-    .jasaproduk .container .jasaview2{
-        position: relative;
-        margin: 10px;
+    .jasaproduk .produk .container .jasaview2{
+        position: absolute;
+        top: 1170px;
+        right: 75px;
+        width: 100px;
+        height: 130px;
     }
-    .jasaproduk .container .jasaview3{
-        position: relative;
-        margin: 10px;
+    .jasaproduk .produk .container .jasaview3{
+        position: absolute;
+        top: 1320px;
+        left: 75px;
+        width: 100px;
+        height: 130px;
     }
-    .jasaproduk .container .jasaview4{
-        position: relative;
-        margin: 10px;
+    .jasaproduk .produk .container .jasaview4{
+        position: absolute;
+        top: 1320px;
+        right: 75px;
+        width: 100px;
+        height: 130px;
     }
-    .jasaproduk .container a{
-        position: relative;
+    .jasaproduk .produk .container .more{
+        position: absolute;
+        top: 1460px;
+        font-size: 10px;
+    }
+    .jasaproduk .produk .container img{
+        max-width: 50px;
+    }
+    .jasaproduk .produk .container h2{
+        font-size: 18px;
     }
     .jasadesign{
         padding: 50px;
     }
-    .jasadesign .container{
+    .jasadesign .design .container{
         justify-content: center;
         margin-top: 10px;
     }
-    .jasadesign .container .jasaview{
+    .jasadesign .design .container .jasaview{
         margin: 10px;
     }
-    .jasadesign .container a{
-        position: relative;
+    .jasadesign .design .container .more{
+        position: absolute;
+        top: 4253px;
+        font-size: 10px;
+    }
+    .jasalengkap{
+        padding: 50px;
+    }
+    .jasalengkap .lengkap .container{
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .jasalengkap .lengkap .container .jasaview{
+        margin: 10px;
+    }
+    .jasalengkap .lengkap .container .Other{
+        position: absolute;
+        top: 5695px;
+        font-size: 10px;
     }
 
 }
