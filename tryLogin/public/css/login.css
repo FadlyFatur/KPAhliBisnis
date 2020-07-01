@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+    background-image: linear-gradient(235deg,#E14455, #E14455);
+    background-repeat: no-repeat;
+}
+nav img{
+    float: left;
+}
+nav p{
+    margin-left: 20px;
+    float: left;
+    font-family: 'Exo', sans-serif;
+    color: white;
+}
+
+.designPage{
+    height: 100%;
+    margin: 0 auto;
+}
+.designPage img{
+    display: none;
+}
+
+/* Login Forms Field */
+
+/* Change Placeholer color */
+form .form-group input::-webkit-input-placeholder { /* Edge */
+  color: white;
+  opacity: 0.7;
+}
+
+form .form-group input::-ms-input-placeholder { /* Internet Explorer */
+  color: white;
+  opacity: 0.7;
+}
+
+form .form-group input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+form .form-group input{
+    width: 100%;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+}
+.row .col-md-6:nth-child(2){
+    color: white;
+}
+
+.forms{
+    border-radius: 10px;
+    background: rgba(14, 16, 16, 0.4);
+    padding: 40px;
+}
+.forms #circle{
+    border-radius: 50%;
+    float: left;
+    margin-top: 3px;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: #FEDC56;
+}
+
+form button{
+    background: #d35c68;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    letter-spacing: 5px;
+    padding: 5px;
+}
+.forms p{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 6px;
+    font-size: 20px;
+}
+.forms h3{
+    font-family: 'Exo', sans-serif;
+    letter-spacing: 5px;
+}
+
+/* For Desktop */
+@media (min-width: 768px){
+    
+    .designPage img{
+        position: absolute;
+        display: block;
+        top: 50px;
+        right: 0;
+        left: 10px;
+        bottom: 0;
+        margin: auto;
+        height: auto;
+        width: 80%;
+    }
+    .forms{
+        padding: 50px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {  
+    .forms{
+        padding: 70px;
+    }
+}

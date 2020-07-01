@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* html,body{
+    height: 100%;
+    background-image: linear-gradient(235deg,#54f1ff,#4758aa );
+    background-repeat: no-repeat;
+}
+main{
+    height: 100%;
+    margin-bottom: 20px;
+}
+main h1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 100px;
+    letter-spacing: 20px;
+}
+
+main img{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left: 0; 
+} */
+.jasaFoto{
+    /* background: url("{{ URL::asset('/img/camera-1239384_1920.jpg') }}"); */
+    background: url("../img/camera-1239384_1920.jpg");
+    background-size: cover;
+    font-family: 'Exo', sans-serif;
+}
+
+h4{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.jasaDesain{
+    margin-top: 60px;
+}
+
+.jasaDesain .card{
+    border: none;
+    margin: auto;
+}
+
+.jasaDesain h5{
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 40%;
+}
+.jasaDesain .card button{
+    margin-bottom: 40px;
+}
+.jasaPromosi{
+    margin-top: 100px;
+}
+
+.jasaPromosi .titelPromo img{
+    width: 300px;
+    height: auto;
+}
+
+.jasaPromosi button{
+    padding:10px;
+}
+
+.jasaPromosi h5{
+    font-size: 22px;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+.jasaPromosi a{
+    cursor: pointer;
+}
+.jasaPromosi a img{
+    padding: 10px;
+    margin-top: 20px;
+    height: auto;
+    width: 50px;
+}
+
+.jasaPromosi .btnForMore{
+    margin: auto;
+}
+
+footer{
+    margin-top: 80px;
+    height: 50vh;
+    width: 100%;
+    background-color: #2e2d2d;
+}
+
+
+/* For Desktop */
+@media (min-width: 768px){
+    h4{
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    .jasaDesain{
+        margin-top: 150px;
+    }
+    .jasaDesain .card{
+        padding: 10px;
+    }
+    .jasaPromosi{
+        margin-top: 100px;
+    }
+
+    .jasaPromosi button{
+        padding:10px;
+        width: 70%;
+    }
+    .jasaDesain h5{
+        top: 30%;
+    }
+    .wave img{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    footer{
+        margin-top: 100px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .jasaFoto{
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+    }
+}
