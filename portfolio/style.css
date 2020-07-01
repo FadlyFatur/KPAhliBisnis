@@ -34,8 +34,46 @@
         text-decoration: none;
         color: #262626;
     }
+    .jasaproduk{
+        position: absolute;
+        left: 680px;
+        top: 25px;
+    }
+    .jasaiklan{
+        position: absolute;
+        left: 540px;
+        top: 25px;
+    }
+    .aboutus{
+        position: absolute;
+        left: 900px;
+        top: 25px;
+    }
+    .jasadesign{
+        position: absolute;
+        left: 380px;
+        top: 25px;
+    }
+    .portofolio{
+        position: absolute;
+        left: 250px;
+        top: 25px;
+    }
+    .kontenportofolio{
+        position: absolute;
+        top: 400px;
+        left: 50px;
+    }
+    .kontenaboutus{
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top: 1070px;
+        left: 50px;
+    }
+    .quotes{
+        position: absolute;
+    }
     .banner-area{
-        background: url(bg2.jpg);
         -webkit-background-size: cover;
         background-size: cover;
         background-position: center center;
@@ -43,10 +81,10 @@
     }
     .banner-text{
         position: absolute;
-        top: 30%;
-        left: 15%;
+        top: 35%;
+        left: 25%;
         transform: translate(-50%, -50%);
-        text-align: center;
+
     }
     .banner-text h2{
         font-family: big john;
@@ -59,12 +97,12 @@
     .gambariklan{
         background-color: black;
         color: #ffffff;
-        padding: 15px 30px;
+        padding: 80px 95px;
         display: inline-block;
         margin-top: 20px;
         border-radius: 50px;
         position: absolute;
-        right: 20%;
+        right: 10%;
         top: 20%;
     }
     .wrapping{
@@ -72,30 +110,56 @@
     }
     #menu-area.cus-nav{
         background:#262626;
+        height: 70px;
         z-index: 999;
     }
     #menu-area.cus-nav a{
         color: #fff;
     }
-    #menu-area.cus-nav .logo img{
+    #menu-area.cus-nav .logo{
         height: 65px;
+    }
+    .portofolio3{
+        position: absolute;
+        top: 320px;
+        left: 600px;
+    }
+    .portofolio2{
+        position: absolute;
+        top: 45px;
+        left: 600px;
+    }
+    .moreporto{
+        color: #000;
+        position: absolute;
+        top: 600px;
+        left: 1110px;
     }
     .Cart{
         color: #ffffff;
         position:absolute;
         right: 280px;
+        top: 25px;
+    }
+
+    .kontenlain{
+        position: absolute;
+        top: 1800px;
+        left: 100px;
     }
     .login{
         color:#ffffff;
         position:absolute;
         right: 180px;
         font-size: 20px;
+        top: 25px;
     }
     .register{
         color: #ffffff;
         position:absolute;
         right: 50px;
         font-size: 20px;
+        top: 25px;
     }
     #iklan{
         background-image: url('bgiklan2.jpg');
@@ -104,62 +168,13 @@
         padding: 16px;
         font-size: 25px;
         position: absolute;
-        top: 90px;
+        top: 200px;
     }
 
-    .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #000;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-        
-    }
-    
-    .sidebar a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #4588B5;
-        display: block;
-        transition: 0.3s;
-    }
-    
-    .sidebar a:hover {
-        color: #f1f1f1;
-    }
-    
-    .sidebar .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-        color: #4588B5;
 
-    }
-    
-    .openbtn {
-        font-size: 20px;
-        cursor: pointer;
-        background-color: #96D5E4;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-
-    }
     .container{
         position: absolute;
         top: 350px;
-    }
-    
-    .openbtn:hover {
-        background-color: #444;
     }
     
     #menu-area {
@@ -171,15 +186,11 @@
     
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     @media screen and (max-height: 300px) {
-        .sidebar {padding-top: 15px;}
-        .sidebar a {font-size: 18px;}
         #main{
             width: 100%;
         }
         #iklan{
             width: 100%;
         }
-        .closebtn{
-            width: 100%;
-        }
+
     }

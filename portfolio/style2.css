@@ -1,7 +1,57 @@
-*{color: #000}
-.bg{background: url('../portfolio/background.jpg') no-repeat; width: 100%; height: 100vh;}
-.form-container{border:2px solid; padding: 30px 40px; margin-top: 7vh;
-            -webkit-box-shadow: 1px 4px 26px 11px rgba(0,0,0,0.75);
-            -moz-box-shadow: 1px 4px 26px 11px rgba(0,0,0,0.75);
-            box-shadow: 1px 4px 26px 11px rgba(0,0,0,0.75);
+*{color: #FFf}
+html,body{ 
+    background-image: linear-gradient(235deg,#E14455, #2B1615 );
+    background-repeat: no-repeat;
+}
+.form-container{padding: 50px; margin-top: 4vh;
+            -webkit-box-shadow: 1px 6px 26px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 6px 26px 0px rgba(0,0,0,0.75);
+            box-shadow: 1px 6px 26px 0px rgba(0,0,0,0.75);
+            border-radius: 12px 12px 12px 12px;
+            -moz-border-radius: 12px 12px 12px 12px;
+            -webkit-border-radius: 12px 12px 12px 12px;
+            border: 0px solid #000000;
+            /* position: absolute;
+            left: 50px;
+            top: 30px; */
+}
+nav{
+    padding-top: 30px;
+}
+nav img{
+    float: left;
+}
+nav p{
+    margin-left: 9px;
+    margin-top: 8px;
+    float: left;
+    font-family: 'Exo', sans-serif;
+    color: white;
+}
+form a{
+    color: #fff;
+    position: relative;
+}
+.container .frms{
+    width: 50%;
+}
+
+.container .bg{
+    padding: 50px;
+}
+
+@media (max-width: 992px) {
+    .container .frms{
+        width: 100%;
+    }
+    .navbar-brand{
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {    
+    .container .frms{
+        width: 70%;
+    }
 }
