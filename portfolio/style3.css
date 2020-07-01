@@ -98,7 +98,7 @@ footer{
 }
 .services
 {
-    background: #C92C3D;
+    background: #E14455;
     padding: 100px;
     text-align: center;
 }
@@ -125,9 +125,17 @@ footer{
     max-width: 100px;
 
 }
+.services .container a
+{
+    color: #fff;
+    position: absolute;
+    right: 130px;
+    top: 2065px;
+}
+
 .jasaproduk{
-    background-color: #E14455;
-    padding: 40px;
+    background-color: #C92C3D;
+    padding: 50px;
     text-align: center;
 }
 .jasaproduk .container
@@ -151,7 +159,7 @@ footer{
 .jasaproduk .produk .container .jasaview1{
     position: absolute;
     right: 33%;
-    top: 1617px;
+    top: 897px;
     background: #fff;
     width: 300px;
     height: 250px;
@@ -162,7 +170,7 @@ footer{
 .jasaproduk .produk .container .jasaview2{
     position: absolute;
     right: 9%;
-    top: 1617px;
+    top: 897px;
     background: #fff;
     width: 300px;
     height: 250px;
@@ -173,7 +181,7 @@ footer{
 .jasaproduk .produk .container .jasaview3{
     position: absolute;
     right: 33%;
-    top: 1880px;    
+    top: 1158px;    
     background: #fff;
     width: 300px;
     height: 250px;
@@ -184,7 +192,7 @@ footer{
 .jasaproduk .produk .container .jasaview4{
     position: absolute;
     right: 9%;
-    top: 1880px;  
+    top: 1158px;     
     background: #fff;
     width: 300px;
     height: 250px;
@@ -197,7 +205,76 @@ footer{
 }
 .jasaproduk .produk .container .more{
     position: absolute;
-    top: 2130px;
+    top: 1409px;
+    right: 9%;
+}
+
+.jasadesign{
+    background-color: #C92C3D;
+    padding: 50px;
+    text-align: center;
+}
+.jasadesign .container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.jasadesign .design .container .jasaview{
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jasadesign .design .container img{
+    max-width: 100px;
+}
+
+.jasadesign .design .container .more{
+    position: absolute;
+    top: 2705px;
+    right: 9%;
+}
+
+.jasalengkap{
+    background-color: #E14455;
+    padding: 50px;
+    text-align: center;
+}
+.jasalengkap .lengkap .container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.jasalengkap .lengkap .container .jasaview{
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jasalengkap .lengkap .container img{
+    max-width: 100px;
+}
+
+.jasalengkap .lengkap .container .Other{  
+    color: #fff;
+    position: absolute;
+    top: 3305px;
     right: 9%;
 }
 
@@ -238,86 +315,54 @@ footer{
         margin: 10px;
     }
     .services .container a{
-        position: relative;
-    }
-    .jasaproduk{
-        width: 100%;
-        height: 400px;
-        padding: 50px;
-    }
-    .jasaproduk .produk .container{
-        width: 100%;
-    }
-    .jasaproduk .produk .container img{
-        width: 50px;
-        
-    }
-    .jasaproduk .produk .container .jasaPusat h2{
-        font-size: 12px;
-    }
-    .jasaproduk .produk .container .jasaPusat{
-        width: 120px;
-        height: 225px;
         position: absolute;
-        top: 2300px;
-        left: 20px;
-    }
-    .jasaproduk .produk .container .jasaview1{
-        width: 90px;
-        height: 105px;
-        position: absolute;
-        top: 2300px;
-        right: 120px;
-    }
-    .jasaproduk .produk .container .jasaview1 img{
-        width: 30px;
-    }
-    .jasaproduk .produk .container .jasaview1 h2{
-        font-size: 12px;
-    }
-    .jasaproduk .produk .container .jasaview2{
-        width: 90px;
-        height: 105px;
-        position: absolute;
-        top: 2300px;
-        right: 17px;
-    }
-    .jasaproduk .produk .container .jasaview2 img{
-        width: 30px;
-    }
-    .jasaproduk .produk .container .jasaview2 h2{
-        font-size: 12px;
-    }
-    .jasaproduk .produk .container .jasaview3{
-        width: 90px;
-        height: 105px;
-        position: absolute;
-        top: 2420px;
-        right: 120px;
-    }
-    .jasaproduk .produk .container .jasaview3 img{
-        width: 30px;
-    }
-    .jasaproduk .produk .container .jasaview3 h2{
-        font-size: 12px;
-    }
-    .jasaproduk .produk .container .jasaview4{
-        width: 90px;
-        height: 105px;
-        position: absolute;
-        top: 2420px;
-        right: 17px;
-    }
-    .jasaproduk .produk .container .jasaview4 img{
-        width: 30px;
-    }
-    .jasaproduk .produk .container .jasaview4 h2{
-        font-size: 12px;
-    }
-    .jasaproduk .produk .container .more{
-        font-size: 4px;
-        position: absolute;
-        top: 2530px;
+        top: 300px;
         right: 20px;
     }
+    
+    .jasaproduk{
+        padding: 50px;
+    }
+    .jasaproduk .container{
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .jasaproduk .container .jasaPusat{
+        position: relative;
+        margin: 10px;
+    }
+    .jasaproduk .container .jasaview1{
+        position: relative;
+        margin: 10px;
+    }
+    .jasaproduk .container .jasaview2{
+        position: relative;
+        margin: 10px;
+    }
+    .jasaproduk .container .jasaview3{
+        position: relative;
+        margin: 10px;
+    }
+    .jasaproduk .container .jasaview4{
+        position: relative;
+        margin: 10px;
+    }
+    .jasaproduk .container a{
+        position: relative;
+    }
+    .jasadesign{
+        padding: 50px;
+    }
+    .jasadesign .container{
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .jasadesign .container .jasaview{
+        margin: 10px;
+    }
+    .jasadesign .container a{
+        position: relative;
+    }
+
 }
+
