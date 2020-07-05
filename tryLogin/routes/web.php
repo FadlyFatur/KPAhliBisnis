@@ -48,6 +48,7 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact.index');
 });
+
 Route::get('/detailProduk','detailProdukController@index');
 
 // Proses Autentikasi
@@ -55,4 +56,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //pindah ke Kategori
-Route::view('kategori','kategori'); 
+Route::view('kategori','kategori');

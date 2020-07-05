@@ -6,7 +6,8 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link {{request()->is('/') ? 'active' :''}}" href="/">UntukMasarin <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link {{request()->is('kategori') ? 'active' :''}}" href="/kategori">Kategori</a>
-        <a class="nav-item nav-link {{request()->is('about') ? 'active' :''}}" href="contact.index">Contact</a>
+        <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="/contact">Contact</a>
+        <a class="nav-item nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="/login">Login</a>
         <a class="nav-item nav-link {{request()->is('register') ? 'active' :''}}" href="/register">Register</a>
       </div>

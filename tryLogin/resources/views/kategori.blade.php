@@ -46,8 +46,6 @@
       </div>
     </div>
 
-
-
     <!-- testimonial -->
     <div class="base2">
       <h1 style="text-align: center; padding-top:50px;">Testimonial</h1>
