@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 footer{
     text-align: center;
@@ -13,12 +13,12 @@ footer{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(img/Thumbs/1.png);
+    background-image: url("img/Tampilan\ 1.png");
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 #menu-area .banner img{
     position: absolute;
@@ -43,7 +43,7 @@ footer{
 #menu-area .banner .content p{
     color: #000;
     font-size: 18px;
-
+    
 }
 
 
@@ -67,7 +67,7 @@ footer{
     height: 45px;
 }
 
-
+  
 .more{
     color: #fff;
     text-decoration: none;
@@ -76,18 +76,8 @@ footer{
     font-weight: 700;
     letter-spacing: 1px;
     position: absolute;
-    top:
 }
-.about{
-    position: relative;
-    width: 100%;
-    display: flex;
-}
-.about .contentBx{
-    background: #172232;
-    padding: 100px;
-    width: 100%;
-}
+
 .heading{
     color: #fff;
     font-size: 30px;
@@ -103,41 +93,54 @@ footer{
 }
 .services
 {
-    background: #E14455;
+    background-image: url(img/Tampilan\ 3.png);
     background-position: center;
     padding: 100px;
     text-align: center;
+    height: 750px;
+}
+.services .heading{
+    color: #000;
+    position: absolute;
+    top: 1810px;
+    right: 320px;
 }
 .services .container
 {
-    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 60px;
 }
-.services .container .serviceBx
-{
-    position: relative;
-    background: #fff;
-    width: 350px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.services .container .serviceBx img{
-    max-width: 100px;
+
+.services .container img{
+    max-width: 100%;
 
 }
-.services .container a
-{
-    color: #fff;
+.services .container .serviceBx1{
     position: absolute;
-    right: 145px;
-    top: 2168px;
+    top: 1860px;
+    left: 390px;
+    width: 350px;
+    height: 400px;
 }
+.services .container .serviceBx2{
+    position: absolute;
+    top: 1860px;
+    right: 345px;
+    width: 350px;
+    height: 400px;
+}
+.services .container .serviceBx3{
+    position: absolute;
+    top: 1860px;
+    right: 80px;
+    width: 350px;
+    height: 400px;
+}
+
 
 .jasaproduk{
     background-image: url(img/Tampilan\ 2.png);
@@ -161,7 +164,7 @@ footer{
     position: absolute;
     top: 900px;
     left: 350px;
-
+    
 
 }
 .jasaproduk .produk .container .jasaPusat{
@@ -215,7 +218,7 @@ footer{
 .jasaproduk .produk .container .jasaview3{
     position: absolute;
     right: 6%;
-    top: 1010px;
+    top: 1010px;    
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -233,7 +236,7 @@ footer{
 .jasaproduk .produk .container .jasaview4{
     position: absolute;
     right: 38%;
-    top: 1238px;
+    top: 1238px;      
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -251,7 +254,7 @@ footer{
 .jasaproduk .produk .container .jasaview5{
     position: absolute;
     right: 22%;
-    top: 1238px;
+    top: 1238px;      
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -269,7 +272,7 @@ footer{
 .jasaproduk .produk .container .jasaview6{
     position: absolute;
     right: 6%;
-    top: 1238px;
+    top: 1238px;      
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -289,9 +292,16 @@ footer{
 }
 
 .jasadesign{
-    background-color: #C92C3D;
+    background-image: url(img/tampilan\ 4.png);
     padding: 50px;
     text-align: center;
+    height: 750px;
+}
+.jasadesign .heading{
+    color: #000;
+    position: absolute;
+    top: 2550px;
+    left: 400px;
 }
 .jasadesign .container
 {
@@ -302,9 +312,29 @@ footer{
     flex-wrap: wrap;
     margin-top: 60px;
 }
-.jasadesign .design .container .jasaview{
-    position: relative;
-    background: #fff;
+.jasadesign .design .container .jasaview1{
+    position: absolute;
+    top: 2580px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasadesign .design .container .jasaview2{
+    position: absolute;
+    top: 2580px;
+    left: 380px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasadesign .design .container .jasaview3{
+    position: absolute;
+    top: 2580px;
+    right: 360px;
     width: 350px;
     height: 400px;
     display: flex;
@@ -313,32 +343,55 @@ footer{
 }
 
 .jasadesign .design .container img{
-    max-width: 100px;
+    max-width: 100%;
 }
 
-.jasadesign .design .container .more{
-    position: absolute;
-    top: 2815px;
-    right: 10%;
-}
 
 .jasalengkap{
-    background-color: #E14455;
+    background-image: url(img/tampilan\ 5.png);
     padding: 50px;
     text-align: center;
+    height: 768px;
+}
+.jasalengkap .lengkap .heading{
+    color: #000;
+    position: absolute;
+    top: 3310px;
+    right: 370px;
 }
 .jasalengkap .lengkap .container
 {
-    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 60px;
 }
-.jasalengkap .lengkap .container .jasaview{
-    position: relative;
-    background: #fff;
+.jasalengkap .lengkap .container .jasaview1{
+    position: absolute;
+    top: 3350px;
+    left: 380px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasalengkap .lengkap .container .jasaview2{
+    position: absolute;
+    top: 3350px;
+    right: 360px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jasalengkap .lengkap .container .jasaview3{
+    position: absolute;
+    top: 3350px;
+    right: 100px;
     width: 350px;
     height: 400px;
     display: flex;
@@ -347,15 +400,10 @@ footer{
 }
 
 .jasalengkap .lengkap .container img{
-    max-width: 100px;
+    max-width: 100%;
 }
 
-.jasalengkap .lengkap .container .Other{
-    color: #fff;
-    position: absolute;
-    top: 3407px;
-    right: 11%;
-}
+
 
 @media screen and (max-width: 576px)
 {
@@ -387,23 +435,37 @@ footer{
         height: 45px;
         right: 1px;
     }
-    .about{
-        flex-direction: column;
-    }
-    .about .imgBx{
-        width: 100%;
-        padding: 50px;
-        text-align: center;
-    }
     .services{
+        background-size: 1200px;
         padding: 50px;
+    }
+    .services .heading{
+        position: absolute;
+        top: 1650px;
+        right: 30px;
     }
     .services .container{
         justify-content: center;
         margin-top: 10px;
     }
-    .services .container .serviceBx{
-        margin: 10px;
+    .services .container .serviceBx1{
+        position: absolute;
+        top: 1730px;
+        left: 17%;
+        width: 200px;
+        height: 260px;
+    }
+    .services .container .serviceBx2{
+        top: 1930px;
+        left: 0px;
+        width: 200px;
+        height: 260px;
+    }
+    .services .container .serviceBx3{
+        top: 1930px;
+        right: 20px;
+        width: 200px;
+        height: 260px;
     }
     .services .container a{
         position: absolute;
@@ -411,7 +473,7 @@ footer{
         right: 78px;
         font-size: 11px;
     }
-
+    
     .jasaproduk{
         padding: 50px;
         height: 800px;
@@ -531,35 +593,67 @@ footer{
     .jasadesign{
         padding: 50px;
     }
+    .jasadesign .design .heading{
+        position: absolute;
+        top: 2400px;
+        left: 15px;
+    }
     .jasadesign .design .container{
         justify-content: center;
         margin-top: 10px;
     }
-    .jasadesign .design .container .more{
+    .jasadesign .design .container .jasaview1{
         position: absolute;
-        top: 4305px;
-        right: 80px;
-        font-size: 10px;
+        top: 2430px;
+        left: 17%;
+        width: 200px;
+        height: 260px;
     }
-    .jasadesign .design .container .jasaview{
-        margin: 10px;
+    .jasadesign .design .container .jasaview2{
+        top: 2630px;
+        left: 0px;
+        width: 200px;
+        height: 260px;
+    }
+    .jasadesign .design .container .jasaview3{
+        top: 2630px;
+        right: 20px;
+        width: 200px;
+        height: 260px;
     }
 
     .jasalengkap{
         padding: 50px;
     }
+    .jasalengkap .lengkap .heading{
+        position: absolute;
+        top: 3180px;
+        left: 100px;
+    }
     .jasalengkap .lengkap .container{
         justify-content: center;
         margin-top: 10px;
     }
-    .jasalengkap .lengkap .container .jasaview{
-        margin: 10px;
-    }
-    .jasalengkap .lengkap .container .Other{
+    .jasalengkap .lengkap .container .jasaview1{
         position: absolute;
-        top: 5745px;
-        right: 80px;
-        font-size: 10px;
+        top: 3280px;
+        left: 17%;
+        width: 200px;
+        height: 260px;
+    }
+    .jasalengkap .lengkap .container .jasaview2{
+        top: 3480px;
+        left: 0px;
+        width: 200px;
+        height: 260px;
+    }
+    .jasalengkap .lengkap .container .jasaview3{
+        top: 3480px;
+        right: 20px;
+        width: 200px;
+        height: 260px;
     }
 
+
 }
+
