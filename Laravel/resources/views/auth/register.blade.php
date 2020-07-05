@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet" href="style2.css" type="text/css">
 @section('content')
 <div class="container bg">
         <nav>
