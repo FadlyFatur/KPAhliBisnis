@@ -33,7 +33,7 @@ Route::get('/sendNotif', function () {
     echo "Notif Success";
 });
 
-// Coba Setelah User ter-autentikasi, nantinya hal ini diganti 
+// Coba Setelah User ter-autentikasi, nantinya hal ini diganti
 // sama homepage yang dibikin zul
 Route::get('/', function () {
     $user = "";
@@ -53,3 +53,6 @@ Route::get('/detailProduk','detailProdukController@index');
 // Proses Autentikasi
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+//pindah ke Kategori
+Route::view('kategori','kategori'); 
