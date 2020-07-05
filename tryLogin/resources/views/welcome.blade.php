@@ -1,81 +1,150 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+@section('title','UntukMasarin.id')
+@section('style')
+<link rel="stylesheet" href="css/style3.css">
+@endsection
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    @section('content')
+    <div id="menu-area">
+        <div class="banner">
+            <div class="content">
+                <h2>UntukMasarin</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.corporis explicabo nam adipisci saepe dolore tenetur reiciendis. Praesentium ratione ex, nesciunt perspiciatis velit quam est deserunt.</p>
+                <a href="#" class="button button3"><img src="{{ URL::asset('assets/img/Button pesan sekarang.png') }}"></a>
+                <a href="#" class="button button4"><img src="{{ URL::asset('assets/img/BUTTON KONTAK KAMI.png') }}"></a>
+            </div>
+            
+        </div>
+    </div>
+    <!--Services-->
+    
+    <section class="jasaproduk">
+        <div class="produk">
+            <h2 class="heading">BEBERAPA HASIL DARI JASA <b>UNTUKMASARIN</b></h2>
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                    <div><img src="/svg/freeCodeCampLogo.svg" style="height: 20px; border-right: 1px solid #333;" class="pr-3"></div>
-                    <div class="pl-3">Logo</div>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->username }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                <div class="jasaPusat">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                    </div>
+                </div>
+                <div class="jasaview1">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                        <b><p>Portofolio 1</p></b>
+                    </div>
+ 
+                </div>
+                <div class="jasaview2">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                        <b><p>Portofolio 2</p></b>
+                    </div>
+                </div>
+                <div class="jasaview3">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                        <b><p>Portofolio 3</p></b>
+                    </div>
+                </div>
+                <div class="jasaview4">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                        <b><p>Portofolio 4</p></b>
+                    </div>
+                </div>
+                <div class="jasaview5">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                        <b><p>Portofolio 5</p></b>
+                    </div>
+                </div>
+                <div class="jasaview6">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                        <b><p>Portofolio 6</p></b>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-</body>
-</html>
+    
+    <section class="services">
+        <h2 class="heading">PAKET JASA FOTO PRODUK</h2>
+        <div class="container">
+            <div class="serviceBx1">
+                <div>
+                    <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
+                   
+                </div>
+            </div>
+            <div class="serviceBx2">
+                <div>
+                    <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
+                    
+                </div>
+            </div>
+            <div class="serviceBx3">
+                <div>
+                    <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="jasadesign">
+        <div class="design">
+            <h2 class="heading">PAKET JASA DESAIN</h2>
+            <div class="container">
+                <div class="jasaview1">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
+                    
+                    </div>
+                </div>
+                <div class="jasaview2">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
+                    
+                    </div>
+                </div>
+                <div class="jasaview3">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="jasalengkap">
+        <div class="lengkap">
+            <h2 class="heading">PAKET JASA LENGKAP</h2>
+            <div class="container">
+                <div class="jasaview1">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
+                    
+                    </div>
+                </div>
+                <div class="jasaview2">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
+                    
+                    </div>
+                </div>
+                <div class="jasaview3">
+                    <div>
+                        <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    @endsection
