@@ -4,17 +4,17 @@
 <link rel="stylesheet" href="css/Kategori_style.css">
 @endsection
     @section('content')
-    <div class="base">
-      <h1 style="text-align: center; padding-top:100px;">KATEGORI</h1>
-      <div class="container">
+
+    <div class="container">
+      <h1>KATEGORI</h1>
         <!-- start card -->
         <div class="row p-3">
-           <div class="col-md-6">
              <!-- card1 -->
-             <div class="card main-card flex-md-row mb-4 h-md-250">
+           <div class="main-card col">
+             <div class="card bg-light border-light p-3 flex-md-row h-md-250">
                <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="img/banner-img.png" style="width: 226px; height: 175px;">
                    <div class="card-body d-flex flex-column align-items-start">
-                   <h3 class="mb-0">
+                   <h3 class="mb-1">
                       Temukan partner bisnis anda bersama kami.
                    </h3>
                    <p class=" mb-auto">Pililah jasa sesuai dengan kebutuhan anda disni</p>
@@ -22,7 +22,7 @@
              </div>
            </div>
            <!-- card2 -->
-           <div class="col-sm">
+           <div class=" col-sm text-center">
              <div class="card-deck">
                 <div class="card side-card">
                   <img class="card-img-top" src="img/desain-grafis.jpg" alt="Card image cap">
@@ -42,37 +42,38 @@
            </div>
          </div>
          <!-- end card -->
-         <strong class="d-inline-block mb-3 text-primary">By AhliBisnis</strong>
-      </div>
+         <strong class="produk text-primary">By AhliBisnis</strong>
     </div>
 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E14455" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,202.7C384,213,480,139,576,133.3C672,128,768,192,864,197.3C960,203,1056,149,1152,106.7C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
+    <div class="bottom">
 
-    <!-- testimonial -->
-    <div class="base2">
-      <h1 style="text-align: center; padding-top:50px;">Testimonial</h1>
-      <div class="container p-2 sizing">
-        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+      <!-- <div class="container" style="background-color:#E14455;" > -->
+        <h1 class="text-center">Testimoni</h1>
+
+          <!-- start card -->
+          <div id="carouselExampleFade" class="carousel slide carousel-fade mx-auto" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-interval="10000">
-                <img src="img/photo-produk.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-interval="2000">
-                <img src="img/desain-grafis.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/studio-2.jpg" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img src="img/promosi.jpg" class="d-block w-100" alt="...">
+                <img class="d-block w-100" src="img/studio-3.jpg" alt="Second slide">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
+      <!-- </div> -->
 
-    </div>
+  </div>
+
+    <!-- testimonial -->
     @endsection
