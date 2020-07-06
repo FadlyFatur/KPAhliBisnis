@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+@include('layouts.navigation')
     <div class="containers">
         <h2>CONTACT US</h2>
     </div>

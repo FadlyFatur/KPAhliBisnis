@@ -12,7 +12,8 @@
           <div class="container frms">
             <div class="wrapper">
                   <!--form start-->
-                  <form class="form-container">
+                  <form class="form-container" method="POST" action="{{ route('register') }}">
+                    @csrf
                     <h1>Register</h1>
                     <div class="form-row">
                       <div class="form-group row">

@@ -5,11 +5,32 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link {{request()->is('/') ? 'active' :''}}" href="/">UntukMasarin <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link {{request()->is('kategori') ? 'active' :''}}" href="/kategori">Kategori</a>
-        <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="/contact">Contact</a>
-        <a class="nav-item nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-        <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="/login">Login</a>
-        <a class="nav-item nav-link {{request()->is('register') ? 'active' :''}}" href="/register">Register</a>
+        <a class="nav-item nav-link {{request()->is('kategori') ? 'active' :''}}" href="{{ url('/kategori') }}">Kategori</a>
+        <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Contact</a>
+        @guest
+          <a class="nav-item nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="{{ url('/login') }}">{{ __('Login') }}</a>
+          @if (Route::has('register'))
+            <a class="nav-item nav-link {{request()->is('register') ? 'active' :''}}" href="{{ url('/register') }}">{{ __('Register') }}</a>
+          @endif
+        @else
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ Auth::user()->name }} <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+            </div>
+          </div>
+        @endguest
       </div>
     </div>
 </nav>

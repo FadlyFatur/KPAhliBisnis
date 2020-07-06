@@ -47,13 +47,15 @@ Route::get('/', function () {
 // Route untuk halaman detail dan kontak
 Route::get('/contact', function () {
     return view('contact.index');
-});
+})->middleware('auth');
 
 Route::get('/detailProduk','detailProdukController@index');
+
+
+//pindah ke Kategori
+Route::view('/kategori','kategori');
 
 // Proses Autentikasi
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-//pindah ke Kategori
-Route::view('kategori','kategori');
