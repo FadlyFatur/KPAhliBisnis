@@ -1,9 +1,9 @@
 @extends('layouts.template')
-
 @section('title','Contact')
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/contact.css') }}">
 @endsection
+
 @section('content')
     <div class="containers">
         <h2>CONTACT US</h2>
