@@ -31,7 +31,7 @@
                           <div class="form-group row">
                           <label for="number" class="col-md-4 col-form-label">{{ __('NO.HP') }}</label>
                           <div class="col-md-12">
-                                  <input id="name" type="number" class="form-control @error('no.hp') is-invalid @enderror" name="no.hp" value="{{ old('no.hp') }}" required autocomplete="no.hp" autofocus>
+                                  <input id="no.hp" type="number_format" class="form-control @error('no.hp') is-invalid @enderror" name="no.hp" value="{{ old('no.hp') }}" required autocomplete="no.hp" autofocus>
 
                                   @error('no.hp')
                                       <span class="invalid-feedback" role="alert">
