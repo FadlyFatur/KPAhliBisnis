@@ -18,7 +18,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 #menu-area .banner img{
     position: absolute;
@@ -43,7 +43,7 @@ footer{
 #menu-area .banner .content p{
     color: #000;
     font-size: 18px;
-    
+
 }
 
 
@@ -67,7 +67,7 @@ footer{
     height: 45px;
 }
 
-  
+
 .more{
     color: #fff;
     text-decoration: none;
@@ -164,7 +164,7 @@ footer{
     position: absolute;
     top: 900px;
     left: 350px;
-    
+
 
 }
 .jasaproduk .produk .container .jasaPusat{
@@ -218,7 +218,7 @@ footer{
 .jasaproduk .produk .container .jasaview3{
     position: absolute;
     right: 6%;
-    top: 1010px;    
+    top: 1010px;
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -236,7 +236,7 @@ footer{
 .jasaproduk .produk .container .jasaview4{
     position: absolute;
     right: 38%;
-    top: 1238px;      
+    top: 1238px;
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -254,7 +254,7 @@ footer{
 .jasaproduk .produk .container .jasaview5{
     position: absolute;
     right: 22%;
-    top: 1238px;      
+    top: 1238px;
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -272,7 +272,7 @@ footer{
 .jasaproduk .produk .container .jasaview6{
     position: absolute;
     right: 6%;
-    top: 1238px;      
+    top: 1238px;
     background: #E14455;
     width: 200px;
     height: 175px;
@@ -473,7 +473,7 @@ footer{
         right: 78px;
         font-size: 11px;
     }
-    
+
     .jasaproduk{
         padding: 50px;
         height: 800px;
@@ -656,4 +656,3 @@ footer{
 
 
 }
-

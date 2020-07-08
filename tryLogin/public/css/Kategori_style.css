@@ -14,8 +14,8 @@ padding-bottom: 32px;
 }
 
 .no-svg{
-background: url("../img/waveup.svg") no-repeat;
-text-align: center;
+/* background: url("../img/Testimonial.png") cover no-repeat; */
+/* text-align: center; */
 }
 
 
@@ -23,12 +23,12 @@ text-align: center;
 background-color: #E14455;
 }
 
-.container h1{
-text-align: center;
+.container h1,p{
+text-align: left;
 }
 
 .container .produk{
-text-align: center;
+/* text-align: center; */
 }
 
 .main-card{
@@ -39,14 +39,21 @@ width: 534px;
 height: 226px;
 }
 
+/* .kat-1{
+  padding: 0px
+} */
+
 .side-card{
   border: 0;
   box-shadow:  -8px 10px 5px 0px rgba(0,0,0,0.11);
 }
 
 .side-card img{
-width: auto;
 height: 150px;
+}
+
+.bottom h1{
+text-align: left;  
 }
 
 #carouselExampleFade{

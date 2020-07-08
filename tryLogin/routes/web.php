@@ -55,7 +55,9 @@ Route::get('/detailProduk','detailProdukController@index');
 //pindah ke Kategori
 Route::view('/kategori','kategori');
 
+//pindah ke checkout
+Route::view('/checkout','checkout.Checkout');
+
 // Proses Autentikasi
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-

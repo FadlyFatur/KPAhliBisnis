@@ -1,15 +1,17 @@
 @extends('layouts.app')
-@section('title','UntukMasarin.id - Kategori')
+@section('title', 'Checkout')
 @section('style')
-<link rel="stylesheet" href="css/checkout-style.css">
+    <link rel="stylesheet" href="checkout-style.css">
 @endsection
 
-  @section('content')
+@section('content')
     <!-- <header class="d-flex flex-column flex-md-row align-item-md-center p-5 bg-light">
       <div class="pt-md-3 pb-md-4">
         <h1 class="bd-title mt-0">CHECKOUT</h1>
       </div
     </header> -->
+  <div class="no-svg">
+
     <div class="container">
      <div class="py-5" >
        <h1>CHECKOUT</h1>
@@ -90,7 +92,7 @@
            </div>
 
            <div class="mb-3">
-             <label for="email">Email </label>
+             <label for="email">Email</label>
              <input type="email" class="form-control" id="email" placeholder="nama@example.com">
              <div class="invalid-feedback">
                Masuka email yang valid untuk informasi pemesanan.
@@ -125,7 +127,7 @@
                </div>
              </div>
              <div class="col-md-4 mb-3">
-               <label for="state">Kabupate/Kota</label>
+               <label for="state">Kabupaten/Kota</label>
                <select class="custom-select d-block w-100" id="state" required>
                  <option value="">Pilih...</option>
                  <option>California</option>
@@ -160,5 +162,6 @@
        </div>
      </div>
    </div>
+  </div>
 
-    @endsection
+@endsection

@@ -10,7 +10,8 @@
   <div class="no-svg">
       <!-- <img class="img-fluid" style=""src="img/wave_up.svg" alt=""> -->
     <div class="container">
-      <!-- <h1>KATEGORI</h1> -->
+    <h1 style="color:#172232">KATEGORI</h1>
+    <p>Belum mengetahui cara bagaimana semua ini bekerja <a href="#"> <span style="color:red;">Cek disini </span></a></p>
         <!-- start card -->
         <div class="row p-3">
              <!-- card1 -->
@@ -29,14 +30,14 @@
            <div class=" col-sm text-center">
              <div class="card-deck">
                 <div class="card side-card">
-                  <img class="card-img-top" src="img/desain-grafis.jpg" alt="Card image cap">
+                  <a class="kat-1" href="#"><img class="card-img-top" src="img/desain-grafis.jpg" alt="Card image cap"></a>
                   <div class="card-body">
                     <h5 class="card-title">DESAIN GRAFIS</h5>
                   </div>
                 </div>
                 <!-- start card3 end card2 -->
                 <div class="card side-card">
-                  <img class="card-img-top" src="img/photo-produk.jpg" alt="Card image cap">
+                  <a class="kat-1" href="#"> <img class="card-img-top" src="img/photo-produk.jpg" alt="Card image cap"></a>
                   <div class="card-body">
                     <h5 class="card-title">FOTO PRODUK</h5>
                   </div>
@@ -56,16 +57,15 @@
   <div class="bottom">
 
       <!-- <div class="container" style="background-color:#E14455;" > -->
-        <!-- <h1 class="text-center">Testimoni</h1> -->
-
+        <h1 class="text-center">Testimoni</h1>
           <!-- start card -->
-          <div id="carouselExampleFade" class="carousel slide carousel-fade mx-auto" data-ride="carousel">
+          <div id="carouselExampleFade" style="padding-top:0px" class="carousel slide carousel-fade mx-auto" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="img/studio-2.jpg" alt="First slide">
+                <img class="d-block w-100" src="img/testi1.png" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/studio-3.jpg" alt="Second slide">
+                <img class="d-block w-100" src="img/testi2.png" alt="Second slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
