@@ -1,132 +1,126 @@
-<!doctype html>
-<html lang="en">
-
-<head>  
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+@extends('layouts.template')
+@section('title','Detail Produk')
+@section('css')
     <link rel="stylesheet" href="{{ URL::asset('css/detailProduk.css') }}" type="text/css">
-    <title>AhliBisnis - Detail Produk</title>
-</head>
+@endsection
 
-<body>
-    <div class="row mt-5">
-        <div class="col-sm-6 jasaFoto">
-             
-        </div>
-        
-        <div class="col-sm-6 mt-2">
-            <form style="padding: 20px;">
-                <h4>Foto Produk</h4>
-                <div class="form-row mt-4">
-                    <div class="form-group col-md-8">
-                        <input type="text" class="form-control" id="alamat" placeholder="Alamat">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <button type="submit" class="btn btn-outline-danger btn-block">CARI</button>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="jam">Jam</label>
-                        <input type="text" class="form-control" id="jam">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="shot">xShot</label>
-                        <input type="text" class="form-control" id="shot">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="foto">xFoto</label>
-                        <input type="text" class="form-control" id="foto">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputState">PP?</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Pakai</option>
-                            <option>Tidak</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row mt-4">
-                    <div class="form-group col-md-10">
-                        <button type="submit" class="btn btn-outline-danger btn-block">PESAN</button>
-                    </div>
-                </div>
-            </form>
-        </div> 
-    </div>
+@section('content')
+@include('layouts.navigation')
+<main>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6 text-center">
+                <img src="{{ URL::asset('img/iconDuduk.webp') }}">
+            </div>
+            <div class="col-md-6">
+                <h1>Detail Produk</h1>
+                <hr>
+                <p>Need More Question ?</p>
+                <button type="button" class="btn btn-danger">Contact Us</button>
 
-    <div class="text-center jasaDesain">
-        <h4>DESAIN PRODUK</h4>
-        <div class="row mt-5 justify-content-center">
-            <div class="col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ URL::asset('img/desainKemasan.webp') }}" alt="Card image cap">
-                    <div class="card-img-overlay    ">
-                        <h5 class="card-title">DESAIN KEMASAN</h5>
-                    </div>
-                    <button type="submit" class="btn btn-outline-danger btn-block mt-4">PILIH PAKET</button>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ URL::asset('img/DesainLogo.webp') }}" alt="Card image cap">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">DESAIN LOGO</h5>
-                    </div>
-                    <button type="submit" class="btn btn-outline-danger btn-block mt-4">PILIH PAKET</button>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ URL::asset('img/desainIG.webp') }}" alt="Card image cap">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">DESAIN LOGO</h5>
-                    </div>
-                    <button type="submit" class="btn btn-outline-danger btn-block mt-4">PILIH PAKET</button>
-                </div>
             </div>
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1"
+            d="M0,224L60,192C120,160,240,96,360,85.3C480,75,600,117,720,144C840,171,960,181,1080,186.7C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+    </svg>
+</main>
+<!-- Foto Produk Section -->
+<div class="fotoProduk">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 text-center mt-5">
+                <img src="{{ URL::asset('img/iconFoto.webp') }}">
+            </div>
+            <div class="col-md-6 ">
+                <h1>Foto Produk</h1>
+                <p>first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+                sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free
+                from repetition, injected humour, or non-characteristic words etc.</p>
+                <button type="button" class="btn btn-danger">PESAN</button>
+                <button type="button" class="btn btn-danger">LIHAT CONTOH</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Foto Produk Section -->
 
-    <div class="jasaPromosi">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col titelPromo">
-                    <img src="{{ URL::asset('img/model.webp') }}">
-                    <h5 class="mt-3">500.000 Followers</h5>
+<!-- Jasa Desain Section -->
+<div class="jasaDesain">
+    <div class="container">
+        <h1 class="text-center">Jasa Desain</h1>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="{{ URL::asset('img/iconFeed.webp') }}">
+                    <h5>Desain Feed Instagram</h5>
+                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                    injected humour, or non-characteristic words etc.</p>
+                    <button type="button" class="btn btn-warning">PESAN</button>
                 </div>
-                <div class="col btnForMore">
-                    <h4>JASA PROMOSI</h4>
-                    <button type="submit" class="btn btn-outline-danger mt-4">CLICK FOR MORE</button><br>
-                    <a><img src="{{ URL::asset('img/facebook.webp') }}"></a>
-                    <a><img src="{{ URL::asset('img/instagram.webp') }}"></a>
-                    <a><img src="{{ URL::asset('img/youtube.webp') }}"></a>
-                    <a><img src="{{ URL::asset('img/twitter.webp') }}"></a>
+            </div>
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="{{ URL::asset('img/iconStory.webp') }}">
+                    <h5>Desain Instastory</h5>
+                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                    injected humour, or non-characteristic words etc.</p>
+                    <button type="button" class="btn btn-warning">PESAN</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box">
+                    <img src="{{ URL::asset('img/iconVideo.webp')}}">
+                    <h5>Desain Video Animasi</h5>
+                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                    injected humour, or non-characteristic words etc.</p>
+                    <button type="button" class="btn btn-warning">PESAN</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box">
+                    
+                    <img src="{{ URL::asset('img/iconLogo.webp') }}">
+                    <h5>Desain Logo</h5>
+                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                    injected humour, or non-characteristic words etc.</p>
+                    <button type="button" class="btn btn-warning">PESAN</button>
                 </div>
             </div>
         </div>
     </div>
-    <footer></footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
+</div>
+<!-- End Jasa Desain Section -->
 
-</html>
+<!-- Carousel Section -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ URL::asset('img/new-york-1745089_1920.jpg') }}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ URL::asset('img/bgDesigner.jpg') }}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ URL::asset('img/photography-of-sea-during-sunset-258210.jpg') }}" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+@endsection

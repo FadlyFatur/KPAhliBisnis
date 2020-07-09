@@ -7,6 +7,7 @@
         <a class="nav-item nav-link {{request()->is('/') ? 'active' :''}}" href="/">UntukMasarin <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link {{request()->is('kategori') ? 'active' :''}}" href="{{ url('/kategori') }}">Kategori</a>
         <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Contact</a>
+        <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}">Detail Produk</a>
         @guest
           <a class="nav-item nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="{{ url('/login') }}">{{ __('Login') }}</a>
