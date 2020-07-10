@@ -30,9 +30,9 @@
                               </div>
                           </div>
                           <div class="form-group row">
-                          <label for="number" class="col-md-4 col-form-label">{{ __('NO.HP') }}</label>
+                          <label for="number" class="col-md-6 col-form-label">{{ __('NO.HP') }}</label>
                           <div class="col-md-12">
-                                  <input id="nohp" type="number_format" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus>
+                                  <input id="nohp" type="number" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus>
 
                                   @error('nohp')
                                       <span class="invalid-feedback" role="alert">
@@ -42,9 +42,9 @@
                               </div>
                           </div>
                         <div class="form-group row">
-                              <label for="email" class="col-md-4 col-form-label">{{ __('E-Mail Address') }}</label>
+                              <label for="email" class="col-md-6 col-form-label">{{ __('E-Mail Address') }}</label>
 
-                              <div class="col-md-12">
+                              <div class="col-md-10">
                                   <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                   @error('email')
@@ -55,9 +55,9 @@
                               </div>
                           </div>
                             <div class="form-group row">
-                              <label for="password" class="col-md-4 col-form-label">{{ __('Password') }}</label>
+                              <label for="password" class="col-md-6 col-form-label">{{ __('Password') }}</label>
 
-                              <div class="col-md-12">
+                              <div class="col-md-11">
                                   <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                   @error('password')
@@ -69,9 +69,9 @@
                           </div>
 
                           <div class="form-group row">
-                              <label for="password-confirm" class="col-md-4 col-form-label">{{ __('Confirm Password') }}</label>
+                              <label for="password-confirm" class="col-md-6 col-form-label">{{ __('Confirm Password') }}</label>
 
-                              <div class="col-md-12">
+                              <div class="col-md-9">
                                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                               </div>
                           </div>
@@ -83,7 +83,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-                                <a href="#" type="submit">
+                                <a href="{{ url('/login') }}" type="submit">
                                     {{__('Already have an account?') }}
                                 </a>
                             </div>

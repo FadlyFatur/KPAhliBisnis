@@ -1,6 +1,6 @@
 *{color: #FFf}
 html,body{ 
-    background-image: linear-gradient(235deg,#E14455, #2B1615 );
+    background-image: linear-gradient(235deg,#E14455, #E14455);
     background-repeat: no-repeat;
 }
 .form-container{padding: 50px; margin-top: 4vh;
