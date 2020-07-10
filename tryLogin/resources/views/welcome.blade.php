@@ -24,7 +24,10 @@
             <div class="container">
                 <div class="jasaPusat">
                     <div>
-                        <img src="{{ URL::asset('assets/img/assets/icon1.png') }}">
+                    <video width="560" height="430" controls>
+                        <source src="{{ URL::asset('img/umi.MP4') }}" type="video/mp4">
+                        <source src="{{ URL::asset('img/umi.ogg') }}" type="video/ogg">
+                    </video>
                     </div>
                 </div>
                 <div class="jasaview1">

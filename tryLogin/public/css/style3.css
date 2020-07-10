@@ -174,9 +174,6 @@ footer{
     position: absolute;
     left: 50px;
     top: 1010px;
-    background: #E14455;
-    width: 560px;
-    height: 430px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -500,8 +497,12 @@ footer{
         top: 970px;
         left: 30px;
         margin: 10px;
+    }
+    .jasaproduk .produk .container .jasaPusat video{
         width: 280px;
         height: 220px;
+
+
     }
     .jasaproduk .produk .container .jasaview1{
         position: absolute;
