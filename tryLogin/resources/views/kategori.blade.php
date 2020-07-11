@@ -16,7 +16,7 @@
         <div class="row p-3">
              <!-- card1 -->
            <div class="main-card col">
-             <div class="card bg-light border-light p-3 flex-md-row h-md-250">
+             <div class="card bg-light border-light flex-md-row h-md-250">
                <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="img/banner-img.png" style="width: 226px; height: 175px;">
                    <div class="card-body d-flex flex-column align-items-start">
                    <h3 class="mb-1">
