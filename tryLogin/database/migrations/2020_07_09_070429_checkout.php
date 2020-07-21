@@ -15,6 +15,14 @@ class Checkout extends Migration
     {
         Schema::create('checkout', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_brand');
+            $table->integer('jumlah_produk')
+            $table->string('jenis_produk');
+            $table->string('konsep');
+            $table->string('penggunaan');
+            $table->string('data_pemesan');             #nama, alamat lengkap, no.hp, email
+            $table->string('request')->nullable();
+            $table->string('format_foto');    
             $table->timestamps();
         });
     }
