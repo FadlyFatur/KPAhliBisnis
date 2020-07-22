@@ -47,7 +47,7 @@ Route::get('/', function () {
 // Route untuk halaman detail dan kontak
 Route::get('/contact', function () {
     return view('contact.index');
-})->middleware('auth');
+});
 
 Route::get('/detailProduk','detailProdukController@index');
 
