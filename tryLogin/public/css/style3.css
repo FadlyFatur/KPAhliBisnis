@@ -292,11 +292,11 @@ footer{
 }
 
 .jasadesign{
-    background-image: url(img/tampilan\ 4.png);
+    background: url("../img/jasadesign.webp");
     padding: 50px;
     text-align: center;
     background-repeat: no-repeat;
-    height: 768px;
+    height: 758px;
 }
 .jasadesign .heading{
     color: #000;
