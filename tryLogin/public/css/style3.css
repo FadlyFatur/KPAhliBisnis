@@ -13,9 +13,9 @@ footer{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("img/Tampilan\ 1.png");
+    background: url("../img/home.webp");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,12 +94,12 @@ footer{
 }
 .services
 {
-    background-image: url(img/Tampilan\ 3.png);
+    background: url("../img/produk.webp");
     background-position: center;
     background-repeat: no-repeat;
     padding: 100px;
     text-align: center;
-    height: 750px;
+    height: 748px;
 }
 .services .heading{
     color: #000;
@@ -145,11 +145,11 @@ footer{
 
 
 .jasaproduk{
-    background-image: url(img/Tampilan\ 2.png);
+    background: url("../img/3-layers.webp");
     text-align: center;
     background-repeat: no-repeat;
     padding: 180px;
-    height: 768px;
+    height: 760px;
 
 }
 .jasaproduk .container
@@ -296,7 +296,7 @@ footer{
     padding: 50px;
     text-align: center;
     background-repeat: no-repeat;
-    height: 750px;
+    height: 768px;
 }
 .jasadesign .heading{
     color: #000;
@@ -349,7 +349,7 @@ footer{
 
 
 .jasalengkap{
-    background-image: url(img/tampilan\ 5.png);
+    background: url("../img/jasalengkap.webp");
     padding: 50px;
     background-repeat: no-repeat;
     text-align: center;

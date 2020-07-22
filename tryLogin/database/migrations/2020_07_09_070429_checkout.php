@@ -16,7 +16,7 @@ class Checkout extends Migration
         Schema::create('checkout', function (Blueprint $table) {
             $table->id();
             $table->string('nama_brand');
-            $table->integer('jumlah_produk')
+            $table->integer('jumlah_produk');
             $table->string('jenis_produk');
             $table->string('konsep');
             $table->string('penggunaan');
