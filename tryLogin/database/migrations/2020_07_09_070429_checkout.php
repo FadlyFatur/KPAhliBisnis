@@ -20,7 +20,7 @@ class Checkout extends Migration
             $table->string('jenis_produk');
             $table->string('konsep');
             $table->string('penggunaan');
-            $table->string('data_pemesan');             #nama, alamat lengkap, no.hp, email
+            // $table->string('data_pemesan');        #nama, alamat lengkap, no.hp, email #dihubungin sama user
             $table->string('request')->nullable();
             $table->string('format_foto');    
             $table->timestamps();
