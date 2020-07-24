@@ -1,23 +1,12 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .container{
-  /* background-color: #f2f2f2; */
-  /* margin-top: 10%; */
-  text-align: center;
+text-align: center;
 padding-top: 32px;
-padding-bottom: 32px;
 }
-
-.no-svg{
-/* background: url("../img/Testimonial.png") cover no-repeat; */
-/* text-align: center; */
-}
-
 
 .bottom{
 background-color: #E14455;
@@ -56,6 +45,14 @@ height: 150px;
 text-align: left;
 }
 
+.page2{
+  background: url("../img/kategori1.webp");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 #carouselExampleFade{
 margin-right: 50%;
 width: 1000px;
@@ -67,4 +64,14 @@ padding: 32px;
   width: 400px;
   height: 500px;
 box-shadow:  -8px 10px 5px 0px rgba(0,0,0,0.11);
+}
+
+#svg-page2{
+  margin-top: -32px;
+  margin: 0px;
+  padding: 0px;
+}
+
+svg {
+vertical-align:top;
 }

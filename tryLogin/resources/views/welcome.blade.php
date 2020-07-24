@@ -11,8 +11,8 @@
           <div class="col">
             <h1>UntukMasarin</h1>
             <p> <b>UntukMasarin</b> bertujuan membantu UMKM dalam mempermudah <br>berbagai kegiatan promosi UMKM  dengan menyediakan beragam jasa <br> seperti Foto produk, Desain, Mengatur sosial media pembuatan video promosi </p>
-            <button type="button" class="btn btn-danger btn-psn">PESAN</button>
-            <button type="button" class="btn btn-danger btn-ktk">KONTAK</button>
+            <a href="/kategori"> <button type="button" class="btn btn-danger btn-psn">PESAN</button></a>
+            <a href="/contact"> <button type="button" class="btn btn-danger btn-ktk">KONTAK</button></a>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@
 <section class="page2">
   <div class="container text-center">
       <h2 class="heading mb-5">BEBERAPA HASIL DARI JASA <b>UNTUKMASARIN</b></h2>
-      <div class="row">
+      <div class="row mb-3">
         <!-- video -->
         <div class="col mr-5">
         <!-- <p>test</p> -->
@@ -82,6 +82,7 @@
 
         </div>
       </div>
+    <strong class="produk text-primary">By AhliBisnis</strong>
   </div>
 </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -102,6 +103,7 @@
         <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
       </div>
     </div>
+    <strong class="produk text-primary">By AhliBisnis</strong>
   </div>
 </section>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#E14354" fill-opacity="1" d="M0,64L48,53.3C96,43,192,21,288,32C384,43,480,85,576,101.3C672,117,768,107,864,117.3C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
@@ -120,6 +122,7 @@
         <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
       </div>
     </div>
+  <strong class="produk text-primary">By AhliBisnis</strong>
   </div>
 </section>
 
