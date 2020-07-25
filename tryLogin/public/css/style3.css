@@ -10,6 +10,7 @@ html,body{
 main {
   background: url("../img/web_home2.webp");
   height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -27,7 +28,7 @@ top: 20%;
 .btn{
   padding: 10px;
   width: 150px;
-  border-radius: : 50px;
+  border-radius: 50px;
 }
 
 .btn-psn{
@@ -35,41 +36,147 @@ margin-left: 0px;
 margin-right: 10px;
 }
 
+    /* ==END HOME== */
+
 .page2{
   background: url("../img/web_home3.webp");
   height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
 }
+
+.page2 .jasa-produk .card-group .card1{
+  position: absolute;
+  right: 70%;
+  top: 0%;
+  width: 200px;
+  height: 200px;
+}
+.page2 .jasa-produk .card-group .card2{
+  position: absolute;
+  right: 30%;
+  top: 0%;
+  width: 200px;
+  height: 200px;
+}
+.page2 .jasa-produk .card-group .card3{
+  position: absolute;
+  right: -10%;
+  top: 0%;
+  width: 200px;
+  height: 200px;
+}
+.page2 .jasa-produk .card-group .card4{
+  position: absolute;
+  right: 70%;
+  top: 52%;
+  width: 200px;
+  height: 200px;
+}
+.page2 .jasa-produk .card-group .card5{
+  position: absolute;
+  right: 30%;
+  top: 52%;
+  width: 200px;
+  height: 200px;
+}
+.page2 .jasa-produk .card-group .card6{
+  position: absolute;
+  right: -10%;
+  top: 52%;
+  width: 200px;
+  height: 200px;
+}
+
+    /* ==END PORTOFOLIO== */
 
 .page3{
   background: url("../img/web_home4.webp");
   height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
 }
+.page3 .heading{
+  position: absolute;
+  top: -50px;
+  left: 270px;
+}
+.page3 .produk{
+  position: absolute;
+  top: 380px;
+  left: 420px;
+}
+.page3 .produk1{
+  position: absolute;
+  left: 0px;
+}
+.page3 .produk2{
+  position: absolute;
+  left: 280px;
+}
+.page3 .produk3{
+  position: absolute;
+  left: 560px;
+}
+
+    /* ==END FOTO PRODUK== */
 
 .page4{
   background: url("../img/web_home5.webp");
   height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
 }
+.page4 .heading{
+  position: absolute;
+  top: -40px;
+  left: 290px;
+}
+.page4 .produk{
+  position: absolute;
+  top: 370px;
+  left: 470px;
+}
+.page4 .produk1{
+  position: absolute;
+  right: 150px;
+}
+.page4 .produk2{
+  position: absolute;
+  right: 430px;
+}
+.page4 .produk3{
+  position: absolute;
+  right: 710px;
+}
+    /* ==END DESIGN PRODUK== */
 
 .col .jasa-produk{
   color: #000;
   font-size: 20px;
 }
 
+.card-group{
+  height: 80%;
+  width: 80%;
+  padding: 50px;
+}
 .card-group img{
-  height: 70%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
+  position: relative;
+}
+.card-group p{
+  font-size: 12px;
 }
 
 .service img{
@@ -80,4 +187,321 @@ margin-right: 10px;
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
+}
+
+/* ==MOBILE VERSION== */
+@media (max-width: 575.98px){
+  main{
+    width: 100%;
+
+  }
+  main .container{
+    position: absolute;
+    left: 10px; 
+  }
+  main .container .row .col p{
+    text-align: justify;
+
+  }
+  main .container .row .col button{
+    width: 100px;
+  }
+  main .container .row .col .pesan{
+    position: absolute;
+    left: 30px;
+  }
+  main .container .row .col .kontak{
+    position: absolute;
+    left: 170px;
+  }
+
+  /* ==END Home== */
+
+  .page2{
+    width: 100%;
+    height: 800px;
+  }
+  .page2 video{
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    width: 300px;
+    height: 300px;
+
+  }
+  .page2 .container .produk{
+    position: absolute;
+    top: 635px;
+    left: 110px;
+  }
+  .page2 .heading{
+    font-size: 16px;
+  }
+  .page2 .jasa-produk .card-group .card1{
+    position: absolute;
+    font-size: 8px;
+    right: 260px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card2{
+    position: absolute;
+    font-size: 8px;
+    right: 150px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card3{
+    position: absolute;
+    font-size: 8px;
+    right: 40px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card4{
+    position: absolute;
+    font-size: 8px;
+    right: 260px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card5{
+    position: absolute;
+    font-size: 8px;
+    right: 150px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card6{
+    position: absolute;
+    right: 40px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+  }
+
+    /* ==END PORTOFOLIO== */
+
+  .page3{
+    width: 100%;
+  }
+  .page3 .heading{
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    font-size: 22px;
+  }
+  .page3 .produk{
+    position: absolute;
+    top: 150px;
+    left: 110px;
+  }
+  .page3 .produk1 {
+    position: absolute;
+    left: 0px;
+
+  }
+  .page3 .produk2{
+    position: absolute;
+    left: 100px;
+  }
+  .page3 .produk3{
+    position: absolute;
+    left: 200px;
+  }
+
+      /* ==END FOTO PRODUK== */
+
+  .page4{
+    width: 100%;
+  }
+  .page4 .heading{
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    font-size: 22px;
+  }
+  .page4 .produk{
+    position: absolute;
+    top: 130px;
+    left: 110px;
+  }
+  .page4 .produk1{
+    position: absolute;
+    left: 0px;
+  }
+  .page4 .produk2{
+    position: absolute;
+    left: 100px;
+  }
+  .page4 .produk3{
+    position: absolute;
+    left: 200px;
+  }
+
+      /* ==END DESIGN PRODUK== */
+
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main{
+    width: 100%;
+    height: 800px;
+  }
+  main .container{
+    position: absolute;
+    left: 10px; 
+  }
+  main .container .row .col p{
+    text-align: justify;
+
+  }
+  main .container .row .col button{
+    width: 100px;
+  }
+  main .container .row .col .pesan{
+    position: absolute;
+    left: 30px;
+  }
+  main .container .row .col .kontak{
+    position: absolute;
+    left: 170px;
+  }
+
+      /* ==END HOME== */
+
+  .page2{
+    width: 100%;
+    height: 800px;
+  }
+  .page2 video{
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    width: 300px;
+    height: 300px;
+
+  }
+  .page2 .container .produk{
+    position: absolute;
+    top: 635px;
+    left: 110px;
+  }
+  .page2 .heading{
+    font-size: 16px;
+  }
+  .page2 .jasa-produk .card-group .card1{
+    position: absolute;
+    font-size: 8px;
+    right: 260px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card2{
+    position: absolute;
+    font-size: 8px;
+    right: 150px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card3{
+    position: absolute;
+    font-size: 8px;
+    right: 40px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card4{
+    position: absolute;
+    font-size: 8px;
+    right: 260px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card5{
+    position: absolute;
+    font-size: 8px;
+    right: 150px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+  }
+  .page2 .jasa-produk .card-group .card6{
+    position: absolute;
+    right: 40px;
+    top: 440px;
+    width: 100px;
+    height: 100px;
+  }
+
+    /* ==END PORTOFOLIO== */
+
+  .page3{
+    width: 100%;
+  }
+  .page3 .heading{
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    font-size: 22px;
+  }
+  .page3 .produk{
+    position: absolute;
+    top: 150px;
+    left: 110px;
+  }
+  .page3 .produk1 {
+    position: absolute;
+    left: 0px;
+
+  }
+  .page3 .produk2{
+    position: absolute;
+    left: 100px;
+  }
+  .page3 .produk3{
+    position: absolute;
+    left: 200px;
+  }
+
+    /* ==END FOTO PRODUK== */
+
+  .page4{
+    width: 100%;
+  }
+  .page4 .heading{
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    font-size: 22px;
+  }
+  .page4 .produk{
+    position: absolute;
+    top: 130px;
+    left: 110px;
+  }
+  .page4 .produk1{
+    position: absolute;
+    left: 0px;
+  }
+  .page4 .produk2{
+    position: absolute;
+    left: 100px;
+  }
+  .page4 .produk3{
+    position: absolute;
+    left: 200px;
+  }
+
+
+      /* ==END DESIGN PRODUK== */
+
 }

@@ -1,18 +1,18 @@
 @extends('layouts.template')
 @section('title','UntukMasarin.id')
 @section('css')
-<link rel="stylesheet" href="css/style3.css">
+<link rel="stylesheet" href="{{ URL::asset('css/style3.css') }}" type="text/css">
 @endsection
 @section('content')
 @include('layouts.navigation')
 <main>
-      <div class="container ">
+      <div class="container">
         <div class="row align-self-center">
           <div class="col">
             <h1>UntukMasarin</h1>
-            <p> <b>UntukMasarin</b> bertujuan membantu UMKM dalam mempermudah <br>berbagai kegiatan promosi UMKM  dengan menyediakan beragam jasa <br> seperti Foto produk, Desain, Mengatur sosial media pembuatan video promosi </p>
-            <a href="/kategori"> <button type="button" class="btn btn-danger btn-psn">PESAN</button></a>
-            <a href="/contact"> <button type="button" class="btn btn-danger btn-ktk">KONTAK</button></a>
+            <p> <b>UntukMasarin</b> bertujuan membantu <br>UMKM dalam mempermudah<br> berbagai kegiatan promosi UMKM<br> dengan menyediakan beragam jasa<br> seperti Foto produk, Desain, Mengatur<br>sosial media pembuatan video promosi </p>
+            <a href="/kategori"> <button type="button" class="btn btn-danger btn-psn pesan">PESAN</button></a>
+            <a href="/contact"> <button type="button" class="btn btn-danger btn-ktk kontak">KONTAK</button></a>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
         <!-- video -->
         <div class="col mr-5">
         <!-- <p>test</p> -->
-            <video width="560" height="480" controls
+            <video width="500" height="420" controls>
             <source src="{{ URL::asset('img/umi.MP4') }}" type="video/mp4">
             <source src="{{ URL::asset('img/umi.ogg') }}" type="video/ogg">
           </video>
@@ -36,22 +36,22 @@
 
           <div class="row jasa-produk mr-1 mb-1">
             <div class="card-group">
-              <div class="card">
+              <div class="card card1">
                 <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Portofolio 1</h5>
+                  <p class="card-title">Portofolio 1</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card card2">
                 <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Portofolio 2</h5>
+                  <p class="card-title">Portofolio 2</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card card3">
                 <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Portofolio 3</h5>
+                  <p class="card-title">Portofolio 3</p>
                 </div>
               </div>
             </div>
@@ -59,22 +59,22 @@
 
           <div class="row jasa-produk mr-1">
             <div class="card-group">
-              <div class="card">
+              <div class="card card4">
                 <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Portofolio 4</h5>
+                  <p class="card-title">Portofolio 4</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card card5">
                 <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Portofolio 5</h5>
+                  <p class="card-title">Portofolio 5</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card card6">
                 <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Portofolio 6</h5>
+                  <p class="card-title">Portofolio 6</p>
                 </div>
               </div>
             </div>
@@ -93,13 +93,13 @@
   <div class="container text-center">
     <h2 class="heading">PAKET JASA FOTO PRODUK</h2>
     <div class="row service ">
-      <div class="col-4 nopadding">
+      <div class="col-4 nopadding produk1">
         <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
       </div>
-      <div class="col-4 nopadding">
+      <div class="col-4 nopadding produk2">
         <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
       </div>
-      <div class="col-4 nopadding">
+      <div class="col-4 nopadding produk3">
         <img src="{{ URL::asset('assets/img/kOTAK TABEL MERAH.png') }}">
       </div>
     </div>
@@ -112,13 +112,13 @@
   <div class="container text-center">
     <h2 class="heading">PAKET JASA DESAIN PRODUK</h2>
     <div class="row service ">
-      <div class="col-4 nopadding">
+      <div class="col-4 nopadding produk1">
         <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
       </div>
-      <div class="col-4 nopadding">
+      <div class="col-4 nopadding produk2">
         <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
       </div>
-      <div class="col-4 nopadding">
+      <div class="col-4 nopadding produk3">
         <img src="{{ URL::asset('assets/img/KOTAK TABEL KUNING.png') }}">
       </div>
     </div>
