@@ -44,6 +44,7 @@ section{
 }
 .image img{
     clip-path: circle(50px at center);
+    /* border-radius: 50%; */
     margin-top: 30px;
 }
 h5{
@@ -79,7 +80,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: #ffdbdb;
+    color: #ffdbdb; 
 }
 .link{
     position: relative;

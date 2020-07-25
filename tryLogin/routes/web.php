@@ -49,6 +49,7 @@ Route::get('/contact', function () {
     return view('contact.index');
 });
 
+
 Route::get('/detailProduk','detailProdukController@index');
 
 
@@ -61,3 +62,4 @@ Route::view('/checkout','checkout.Checkout');
 // Proses Autentikasi
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@update')->name('homeUpdate');
