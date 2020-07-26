@@ -126,8 +126,7 @@
   </div>
 </section>
 
-<!-- <footer style="text-align=center">
-  <p>Copyright 2020</p>
-</footer> -->
+<footer>&copy; Copyright 2020 Ahlibisnis.id</footer>
+
 
     @endsection

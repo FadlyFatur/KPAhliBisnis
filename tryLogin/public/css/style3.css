@@ -191,6 +191,13 @@ margin-right: 10px;
    margin: 0 !important;
 }
 
+footer {
+  text-align: center;
+  padding: 0px;
+  background-color: DarkSalmon;
+  color: white;
+}
+
 /* ==MOBILE VERSION== */
 @media (max-width: 575.98px){
   main{
