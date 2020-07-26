@@ -9,7 +9,7 @@
         <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Contact</a>
         <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}">Detail Produk</a>
         @guest
-          <a class="nav-item nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          <a class="nav-item nav-link {{request()->is('checkout') ? 'active' :''}}" href="{{ url('/checkout') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="{{ url('/login') }}">{{ __('Login') }}</a>
           @if (Route::has('register'))
             <a class="nav-item nav-link {{request()->is('register') ? 'active' :''}}" href="{{ url('/register') }}">{{ __('Register') }}</a>
