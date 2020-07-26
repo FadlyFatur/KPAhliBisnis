@@ -4,7 +4,7 @@
 <div class="container bg">
         <nav>
           <a class="navbar-brand" href="#">
-              <img src="img/logo.webp" width="45" height="auto" class="d-inline-block align-top"
+              <img src="img/iconLogo.webp" width="45" height="auto" class="d-inline-block align-top"
                   alt="">
               <p>UntukMasarin</p>
           </a>
@@ -17,9 +17,9 @@
                     <h1>Register</h1>
                     <div class="form-row">
                       <div class="form-group row">
-                              <label for="name" class="col-md-4 col-form-label ">{{ __('Name') }}</label>
+                              <label for="name" class="col-md-6 col-form-label ">{{ __('Name') }}</label>
 
-                              <div class="col-md-12">
+                              <div class="inputreg1">
                                   <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                   @error('name')
@@ -31,7 +31,7 @@
                           </div>
                           <div class="form-group row">
                           <label for="number" class="col-md-6 col-form-label">{{ __('NO.HP') }}</label>
-                          <div class="col-md-12">
+                          <div class="inputreg2">
                                   <input id="nohp" type="number" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus>
 
                                   @error('nohp')
@@ -44,7 +44,7 @@
                         <div class="form-group row">
                               <label for="email" class="col-md-6 col-form-label">{{ __('E-Mail Address') }}</label>
 
-                              <div class="col-md-10">
+                              <div class="inputreg3">
                                   <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                   @error('email')
@@ -57,7 +57,7 @@
                             <div class="form-group row">
                               <label for="password" class="col-md-6 col-form-label">{{ __('Password') }}</label>
 
-                              <div class="col-md-11">
+                              <div class="inputreg4">
                                   <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                   @error('password')
@@ -71,7 +71,7 @@
                           <div class="form-group row">
                               <label for="password-confirm" class="col-md-6 col-form-label">{{ __('Confirm Password') }}</label>
 
-                              <div class="col-md-9">
+                              <div class="inputreg5">
                                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                               </div>
                           </div>

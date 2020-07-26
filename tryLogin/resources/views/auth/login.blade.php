@@ -10,9 +10,9 @@
     <div class="container">
         <nav class="navbar navbar-light mt-3">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ URL::asset('img/logo.webp') }}" width="30" height="auto" class="d-inline-block align-top"
+                <img src="{{ URL::asset('img/iconLogo.webp') }}" width="30" height="auto" class="d-inline-block align-top"
                     alt="">
-                <p>ahlibisnis.id</p>
+                <p>UntukMasarin</p>
             </a>
         </nav>
         <div class="designPage">
