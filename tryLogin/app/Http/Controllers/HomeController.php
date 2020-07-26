@@ -106,6 +106,9 @@ class HomeController extends Controller
                         $user->save();
                     }
                 }
+                $data = [
+                    "data_user" => Auth::user()
+                ];
                 
                 
                 return view("home",["data"=>$data]);
