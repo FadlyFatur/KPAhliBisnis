@@ -49,7 +49,7 @@ Route::get('/contact', function () {
     return view('contact.index');
 });
 
-
+// pindah detail produk
 Route::get('/detailProduk','detailProdukController@index');
 
 
