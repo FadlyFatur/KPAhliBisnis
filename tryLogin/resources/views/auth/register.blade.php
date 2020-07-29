@@ -9,14 +9,14 @@
               <p>UntukMasarin</p>
           </a>
         </nav>
-          <div class="container frms">
-            <div class="wrapper">
+          <div class="container frms ">
+            <div class="wrapper ">
                   <!--form start-->
-                  <form class="form-container" method="POST" action="{{ route('register') }}">
+                  <form class="form-container  " method="POST" action="{{ route('register') }}">
                     @csrf
-                    <h1>Register</h1>
-                    <div class="form-row">
-                      <div class="form-group row">
+                    <h1 class="text-center">Register</h1>
+                    <div class="form-row ">
+                      <div class="form-group row ">
                               <label for="name" class="col-md-6 col-form-label ">{{ __('Name') }}</label>
 
                               <div class="inputreg1">
@@ -29,7 +29,7 @@
                                   @enderror
                               </div>
                           </div>
-                          <div class="form-group row">
+                          <div class="form-group row" >
                           <label for="number" class="col-md-6 col-form-label">{{ __('NO.HP') }}</label>
                           <div class="inputreg2">
                                   <input id="nohp" type="number" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus>
@@ -76,11 +76,11 @@
                               </div>
                           </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                     </div>
-                    <div class="form-group row mb-0">
-                            <div class="col-md-6-md-4">
-                                <button type="submit" class="btn btn-primary">
+                    <div class="form-group row mb-0 ">
+                            <div class="col-md-6-md-4 ">
+                                <button type="submit" class="btn btn-primary ">
                                     {{ __('Register') }}
                                 </button>
                                 <a href="{{ url('/login') }}" type="submit">

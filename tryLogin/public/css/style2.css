@@ -14,6 +14,8 @@ html,body{
             /* position: absolute;
             left: 50px;
             top: 30px; */
+
+            
 }
 nav{
     padding-top: 30px;
@@ -21,6 +23,7 @@ nav{
 nav img{
     float: left;
 }
+
 nav p{
     margin-left: 9px;
     margin-top: 8px;
@@ -35,6 +38,8 @@ form a{
 
 .container .frms{
     width: 50%;
+
+    
     
 }
 
@@ -43,6 +48,9 @@ form a{
 }
 
 @media (max-width: 992px) {
+    .form-container{
+        margin-top: 4vh; margin-left: 0vh; margin-right: 0vh;
+    }
     .container .frms{
         width: 100%;
     }
@@ -52,7 +60,10 @@ form a{
 
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {    
+@media (min-width: 992px) and (max-width: 1199.98px) {   
+    .form-container{
+        margin-top: 4vh; margin-left: 0vh; margin-right: 0vh;
+    } 
     .container .frms{
         width: 70%;
     }
