@@ -13,10 +13,11 @@
                 <img src="{{ URL::asset('img/iconDuduk.webp') }}">
             </div>
             <div class="col-md-6">
-              <h1>Produk dari UntukMasarin</h1>
-              <hr>
-              <p>Membutuhkan Bantuan?</p>
-              <a href="/contact"> <button type="button" class="btn btn-danger">Kontak kami</button> </a>
+                <h1>Produk Jasa dari Kami</h1>
+                <hr>
+                <p>Membuatuhkan Bantuan?</p>
+                <button type="button" class="btn btn-danger">Contact Us</button>
+
             </div>
         </div>
     </div>
@@ -26,8 +27,9 @@
         </path>
     </svg>
 </main>
+
 <!-- Foto Produk Section -->
-<div class="fotoProduk">
+<!-- <div class="fotoProduk">
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6 text-center mt-5">
@@ -43,11 +45,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End of Foto Produk Section -->
 
 <!-- Jasa Desain Section -->
-<!-- <div class="jasaDesain">
+<div class="jasaDesain">
     <div class="container">
         <h1 class="text-center">Jasa Desain</h1>
         <div class="row mt-5">
@@ -92,7 +94,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- End Jasa Desain Section -->
 
 <!-- Carousel Section -->

@@ -6,8 +6,8 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link {{request()->is('/') ? 'active' :''}}" href="/"><img src="{{ URL::asset('assets/img/LOGO UMI.png') }}" width="30" height="30"> <span class="sr-only">(current)</span></a>
         <!-- <a class="nav-item nav-link {{request()->is('kategori') ? 'active' :''}}" href="{{ url('/kategori') }}">Kategori</a> -->
-        <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Contact</a>
         <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}">Produk</a>
+        <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Contact</a>
         @guest
           <a class="nav-item nav-link {{request()->is('checkout') ? 'active' :''}}" href="{{ url('/checkout') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="{{ url('/login') }}">{{ __('Login') }}</a>
