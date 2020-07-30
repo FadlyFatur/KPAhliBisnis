@@ -94,13 +94,13 @@
     <h2 class="heading">PAKET JASA FOTO PRODUK</h2>
     <div class="row service ">
       <div class="col-4 nopadding produk1">
-        <img src="{{ URL::asset('img/paket1-makanan.png') }}">
+      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-makanan.png') }}"></a>
       </div>
       <div class="col-4 nopadding produk2">
-        <img src="{{ URL::asset('img/paket2.png') }}">
+      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2.png') }}"></a>
       </div>
       <div class="col-4 nopadding produk3">
-        <img src="{{ URL::asset('img/studio1.png') }}">
+      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/studio1.png') }}"></a>
       </div>
     </div>
     <strong class="produk text-primary">By AhliBisnis</strong>
