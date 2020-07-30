@@ -8,7 +8,7 @@ html,body{
 }
 
 h1{
-    font-family: "Exo Black";
+    /* font-family: "Exo Black"; */
     text-transform: uppercase;
     letter-spacing: 5px;
 }
@@ -46,29 +46,28 @@ main hr{
     background-color: #f9dc56;
 }
 main p{
-    font-family: "Expressway";
-    letter-spacing: 10px;
-    font-size: 12px;
+    /* font-family: "Expressway"; */
+    /* letter-spacing: 10px; */
+    font-size: 15px;
 }
 
 /* ========================================== */
 /* Foto Produk Section */
-
 .fotoProduk img{
     width: 70%;
+}
+.fotoProduk button{
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%;
 }
 .fotoProduk p{
     text-align: justify;
     width: 90%;
 }
-.fotoProduk button{
-    border-radius: 5px;
-    padding: 10px;
-    font-family: "Exo Black";
-    width: 30%;
-}
 .fotoProduk .row .col-md-6:last-child{
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 /* End of foto produk section */
@@ -135,7 +134,7 @@ main p{
     main .row .col-md-6:last-child{
         margin-top: 0px;
     }
-    
+
     h1{
         letter-spacing: 2px;
         font-size: 25px;
@@ -173,12 +172,12 @@ main p{
         padding: 10px;
         width: 35%;
     }
-    
+
     /* End of foto produk section */
     /* ========================================= */
     /* Jasa Desain Section */
 
-    
+
     .jasaDesain{
         margin-top: 100px;
     }
@@ -200,7 +199,7 @@ main p{
 
     /* End of Jasa Desain Section */
     /* ===================================== */
-    
+
     .carousel .carousel-item{
         height: 200px;
     }
@@ -216,7 +215,7 @@ main p{
     main .row .col-md-6:last-child{
         margin-top: 0px;
     }
-    
+
     h1{
         letter-spacing: 2px;
         font-size: 25px;
@@ -254,12 +253,12 @@ main p{
         padding: 10px;
         width: 35%;
     }
-    
+
     /* End of foto produk section */
     /* ========================================= */
     /* Jasa Desain Section */
 
-    
+
     .jasaDesain{
         margin-top: 100px;
     }
@@ -281,7 +280,7 @@ main p{
 
     /* End of Jasa Desain Section */
     /* ===================================== */
-    
+
     .carousel .carousel-item{
         height: 200px;
     }
