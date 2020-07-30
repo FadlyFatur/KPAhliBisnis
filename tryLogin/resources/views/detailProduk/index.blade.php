@@ -27,7 +27,49 @@
     </svg>
 </main>
 <!-- Foto Produk Section -->
-<div class="fotoProduk">
+
+<div class="fotoProduk mb-5">
+  <div class="container">
+    <div class="row mb-5">
+        <div class="col-lg-3 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket1(foto-produk).png')}}" class="img-fluid">
+                <button type="button" class="btn btn-danger">PESAN</button>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket2(foto-produk).png')}}" class="img-fluid">
+                <button type="button" class="btn btn-danger">PESAN</button>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/studio1(foto-produk).png')}}" class="img-fluid">
+                <button type="button" class="btn btn-danger">PESAN</button>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/studio2(foto-produk).png')}}" class="img-fluid">
+                <button type="button" class="btn btn-danger">PESAN</button>
+        </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-3 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/outdoor(foto-produk).png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket1-makanan(foto-produk).png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket2-makanan(foto-produk).png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket3-makanan(foto-produk).png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="fotoProduk">
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6 text-center mt-5">
@@ -43,7 +85,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
 <!-- End of Foto Produk Section -->
 
 <!-- Jasa Desain Section -->

@@ -50,10 +50,23 @@ main p{
     /* letter-spacing: 10px; */
     font-size: 15px;
 }
+/* ========================================== */
+
+.fotoProduk button{
+margin-top: 16px;
+}
+
+.fotoProduk img:hover{
+  transform: scale(1.5);
+  transition: 1s;
+  z-index: 1;
+}
+
+
 
 /* ========================================== */
 /* Foto Produk Section */
-.fotoProduk img{
+/* .fotoProduk img{
     width: 70%;
 }
 .fotoProduk button{
@@ -68,7 +81,7 @@ main p{
 .fotoProduk .row .col-md-6:last-child{
     margin-top: 60px;
     margin-bottom: 60px;
-}
+} */
 
 /* End of foto produk section */
 /* ========================================= */
