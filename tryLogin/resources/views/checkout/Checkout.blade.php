@@ -21,7 +21,7 @@
        <!-- shopping cart -->
        <div class="col-md-4 order-md-2 mb-4 ">
          <h4 class="d-flex justify-content-between align-items-center mb-3">
-           <span class="text-muted">Daftar Pemesanan</span>
+           <span class="text-muted">Daftar Pesanan</span>
            <span class="badge badge-secondary badge-pill">3</span>
          </h4>
          <ul class="list-group mb-3 ">
@@ -71,8 +71,9 @@
 
        <!-- form -->
        <div class="col-md-8 order-md-1">
-         <h5 class="mb-3">Detail Identitas</h5>
+         <h5 class="mb-3">Identitas Pemesan</h5>
          <hr>
+
          <form class="needs-validation" novalidate>
            <div class="row">
              <div class="col-md-6 mb-3">
@@ -101,9 +102,11 @@
 
            <div class="mb-3">
              <label for="email">Nomer Telepon</label>
-             <input type="email" class="form-control" id="email" placeholder="+62 8xxx xxxx">
-             <div class="invalid-feedback">
-               Masuka Nomor telepon yang valid untuk informasi pemesanan.
+             <div class="input-group mb-3">
+               <div class="input-group-prepend">
+                 <span class="input-group-text" id="basic-addon1">+62</span>
+               </div>
+               <input type="tel" class="form-control" placeholder="" aria-label="telephone" aria-describedby="basic-addon1" required>
              </div>
            </div>
 
@@ -116,10 +119,20 @@
            </div>
 
            <div class="row">
-             <div class="col-md-5 mb-3">
+             <div class="col-md-4 mb-3">
+               <label for="state">Provinsi</label>
+               <select class="custom-select d-block w-100" id="state" required>
+                 <option value="">Pilih...</option>
+                 <option>California</option>
+               </select>
+               <div class="invalid-feedback">
+                 Please provide a valid state.
+               </div>
+             </div>
+             <div class="col-md-4 mb-2">
                <label for="country">Kecamatan</label>
                <select class="custom-select d-block w-100" id="country" required>
-                 <option value="">pilih...</option>
+                 <option value="">Pilih...</option>
                  <option>United States</option>
                </select>
                <div class="invalid-feedback">
@@ -136,26 +149,68 @@
                  Please provide a valid state.
                </div>
              </div>
-             <div class="col-md-4 mb-3">
-               <label for="state">Provinsi</label>
-               <select class="custom-select d-block w-100" id="state" required>
-                 <option value="">Pilih...</option>
-                 <option>California</option>
-               </select>
-               <div class="invalid-feedback">
-                 Please provide a valid state.
-               </div>
-             </div>
            </div>
 
-           <h5 class="mt-5">Detail Pembayaran</h5>
-           <hr class="mb-4">
-           <h4 class="mb-3">Payment</h4>
+           <hr>
 
-           <div class="mb-4">
+            <!-- identitas brand -->
+           <h5 class="mt-5">Identitas Brand</h5>
+           <hr>
+            <div class="row">
+              <div class="col mb-3 ">
+                <label for="firstName">Nama Produk/Brand</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Nama Produk/Brand harus diisi.
+                </div>
+              </div>
+            </div>
+
+              <div class="mb-3">
+                <label for="firstName">Jenis Produk</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Makanan/minuman, sepatu, baju, dll." value="" required>
+                <div class="invalid-feedback">
+                  Nama Produk/Brand harus diisi.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="state">Konsep</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                  <option value="">Pilih...</option>
+                  <option>Catalogue</option>
+                  <option>Lookbook</option>
+                  <option>Creativedesk</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="state">Pengunaan Foto</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                  <option value="">Pilih...</option>
+                  <option>Online media</option>
+                  <option>Commercial printing</option>
+                  <option>Private photoshoot</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1">Dengan ini saya menyetujui</label> <a href="#">Term & Condition</a>
+
+           <!-- <h5 class="mt-5">Detail Pembayaran</h5>
+           <hr class="mb-4">
+           <h4 class="mb-3">Payment</h4> -->
+
+           <!-- <div class="mb-4">
              <label for="country">Transfer Bank</label>
-           </div>
-           <hr class="mb-4">
+           </div> -->
+           <hr class="mb-4 mt-5">
            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
          </form>
          <p class="p-5 text-center">Copyright 2020</p>
