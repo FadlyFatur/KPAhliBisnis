@@ -63,3 +63,14 @@ Route::view('/checkout','checkout.Checkout');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@update')->name('homeUpdate');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Proses Session
+Route::get('/session/get', 'UserController@getSessionData');
+
+Route::get('/session/set', 'UserController@storeSessionData');
+
+Route::get('/session/remove', 'UserController@deleteSessionData');
