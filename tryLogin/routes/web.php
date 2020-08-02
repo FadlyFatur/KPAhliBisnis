@@ -4,7 +4,7 @@ use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Route;
 use App\Notifications\InvoicePaid;
 use App\User;
-
+use Illuminate\Support\Str;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,15 +16,6 @@ use App\User;
 |
 */
 
-// Percobaan pengiriman email
-Route::get('/sendMail', function () {
-    $order = [
-        "Title" => "Confirmation Links",
-        "Success" => "Success"
-    ];
-    Mail::to("coolblackman411@gmail.com")->send( new OrderShipped($order));
-    echo "Mail sent!";
-});
 
 // Percobaan Notifikasi untuk nanti dipakai proses pemesanan
 Route::get('/sendNotif', function () {
@@ -72,3 +63,27 @@ Route::get('/home/infoPemesanan', 'PemesananController@index')->name('infoPemesa
 Route::get('/session/get', 'UserController@getSessionData');
 Route::get('/session/set', 'UserController@storeSessionData');
 Route::get('/session/remove', 'UserController@deleteSessionData');
+
+
+// Mengirimkan Email untuk autentiasi admin Login
+Route::get('/sendMail', function () {
+    $random = Str::random(40);
+    session(["key"=>$random]);
+    $order = [
+        "RandomString" => $random,
+        "Title" => "Confirmation Links",
+        "Success" => "Success"
+    ];
+    Mail::to("coolblackman411@gmail.com")->send( new OrderShipped($order));
+    echo "Mail sent!,Check your inbox";
+});
+
+Route::get('adminLogin/{key}', function ($key) {
+    $link = session("key");
+    if($key == $link){
+        return redirect("/adminLogin");
+    }else{
+        return redirect("/");
+    }
+});
+Route::get('/adminLogin',"adminLogin@index");

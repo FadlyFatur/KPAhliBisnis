@@ -18,10 +18,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Styles -->
-</head>
+</head> 
 <body>
     <h1>{{ $order["Title"] }}</h1>
-    <p>{{ $order["Success"] }}</p>
+    <p>Click the link to redirect to admin login page</p>
+    <a href="http://127.0.0.1:8000/adminLogin/{{ $order['RandomString'] }}">{{ $order["RandomString"] }}</a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
