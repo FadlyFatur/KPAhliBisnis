@@ -74,18 +74,16 @@ Route::get('/sendMail', function () {
         "Title" => "Confirmation Links",
         "Success" => "Success"
     ];
-    Mail::to("coolblackman411@gmail.com")->send( new OrderShipped($order));
+    Mail::to("zulfikrimirza3@gmail.com")->send( new OrderShipped($order));
     echo "Mail sent!,Check your inbox";
 });
 
 Route::get('adminLogin/{key}', function ($key) {
     $link = session("key");
     if($key == $link){
-        return view("adminLogin.index");
+        return redirect("/adminLogin");
     }else{
         return redirect("/");
     }
 });
-Route::post('/adminLogin/{key}',"adminLogin@store");
-//pindah ke adminDashboard
-Route::view('/adminDashboard','adminDashboard.index');
+Route::get('/adminLogin',"adminLogin@index");
