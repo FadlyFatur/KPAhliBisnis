@@ -25,8 +25,8 @@
                     <a href="#" class="mt-2">Untuk Masarin</a>
                 </div>
                 <div class="link">
-                    <p>Pengaturan Akun<i class='fas fa-angle-right' style='font-size:20px'></i></p>
-                    <p>Info Pemesanan</p>
+                        <a style="cursor: pointer;"><p>Pengaturan Akun<i class='fas fa-angle-right' style='font-size:20px'></i></a>
+                        <a href= "{{ route('infoPemesanan') }}"><p>Info Pemesanan</p></a>
                 </div>
                 <a href="{{route('logout')}}" class="btn btn-outline-light" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">LOGOUT</a>

@@ -67,20 +67,28 @@ main p{
 .fotoProduk .col{
   position: fixed;
     z-index: 10000;
-}
+} 
  */
-.fotoProduk img{
+.fotoProduk .col-lg-3{
 z-index: 10;
+transition: 0.5s;
 position: relative;
 }
 
 .fotoProduk button{
 margin-top: 16px;
 }
+.fotoProduk .row .col-lg-3{
+    transition: 0.2s ease-in-out;
+}
 
-.fotoProduk img:hover{
-  transform: scale(1.5);
-  transition: 1s;
+.fotoProduk:hover .col-lg-3{
+    transform: scale(0.95);
+}
+
+.fotoProduk .col-lg-3:hover{
+  transform: scale(1.25);
+  filter: blur(0px);
   z-index: 100;
 }
 
@@ -202,10 +210,29 @@ margin-top: 16px;
     }
     .fotoProduk button{
         font-size: 10px;
-        margin: 20px 10px;
+        margin: 10px 10px 50px 10px;
         border-radius: 5px;
         padding: 10px;
         width: 35%;
+    }
+
+    .fotoProduk .row .col-lg-3{
+        transition: 0.2s ease-in-out;
+    }
+
+    .fotoProduk:hover .col-lg-3{
+        transform: scale(1);
+    }
+
+    .fotoProduk .col-lg-3:hover{
+        cursor: pointer;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+    .fotoProduk .col-lg-3 img{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 10px;
     }
 
     /* End of foto produk section */
@@ -287,6 +314,19 @@ margin-top: 16px;
         border-radius: 5px;
         padding: 10px;
         width: 35%;
+    }
+    .fotoProduk .row .col-lg-3{
+        transition: 0.2s ease-in-out;
+    }
+
+    .fotoProduk:hover .col-lg-3{
+        transform: scale(1);
+    }
+
+    .fotoProduk .col-lg-3:hover{
+        cursor: pointer;
+        transform: scale(1);
+        filter: blur(0px);
     }
 
     /* End of foto produk section */

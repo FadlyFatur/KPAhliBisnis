@@ -59,18 +59,16 @@ Route::view('/kategori','kategori');
 //pindah ke checkout
 Route::view('/checkout','checkout.Checkout');
 
-// Proses Autentikasi
+// Proses Autentikasid dan Halaman Profile
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@update')->name('homeUpdate');
+Route::get('/home/infoPemesanan', 'PemesananController@index')->name('infoPemesanan');
+// Route::get('/home/infoPemesanan', 'PemesananController@index')->name('infoPemesanan');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::view('/home/infoPemesanan','infoPemesanan');
 
 // Proses Session
 Route::get('/session/get', 'UserController@getSessionData');
-
 Route::get('/session/set', 'UserController@storeSessionData');
-
 Route::get('/session/remove', 'UserController@deleteSessionData');
