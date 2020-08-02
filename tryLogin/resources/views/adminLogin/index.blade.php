@@ -6,17 +6,24 @@
 @section('content')
 @include('layouts.navigation')
 <div class="container">
-    <form method="POST">
+    <form method="POST" action="{{ route('index') }}">
         @csrf
-        <h3>Admin Login</h3>
-        <div class="form-group mt-4">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
+        <div class="form-group">
+            <input id="email" type="email" class=" mt-1 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukan Email">
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input id="password" type="password" class=" mt-1 @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukan Password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror    
         </div>
         <!-- <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

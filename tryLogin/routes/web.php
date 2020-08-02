@@ -87,3 +87,5 @@ Route::get('adminLogin/{key}', function ($key) {
     }
 });
 Route::post('/adminLogin/{key}',"adminLogin@store");
+//pindah ke adminDashboard
+Route::view('/adminDashboard','adminDashboard.index');

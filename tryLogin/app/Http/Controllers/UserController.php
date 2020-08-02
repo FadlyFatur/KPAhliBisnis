@@ -39,5 +39,6 @@ class UserController extends Controller
         echo "key has been removed from the session";
     }
 
+    
     //
 }

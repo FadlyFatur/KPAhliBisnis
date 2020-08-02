@@ -34,7 +34,9 @@ class adminLogin extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        if(dd($request)){
+            return view('adminDashboard.index');
+        };
     }
 
     /**
