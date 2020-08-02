@@ -13,7 +13,7 @@ class adminLogin extends Controller
      */
     public function index()
     {
-        return view("adminLogin.index");
+
     }
 
     /**
@@ -34,7 +34,7 @@ class adminLogin extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

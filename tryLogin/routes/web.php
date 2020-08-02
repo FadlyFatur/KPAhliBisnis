@@ -81,9 +81,9 @@ Route::get('/sendMail', function () {
 Route::get('adminLogin/{key}', function ($key) {
     $link = session("key");
     if($key == $link){
-        return redirect("/adminLogin");
+        return view("adminLogin.index");
     }else{
         return redirect("/");
     }
 });
-Route::get('/adminLogin',"adminLogin@index");
+Route::post('/adminLogin/{key}',"adminLogin@store");
