@@ -27,8 +27,39 @@
     </svg>
 </main>
 <!-- Foto Produk Section -->
+<div class="btn-group mb-5 d-flex justify-content-center" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary btn-lg btn1 border border-light" id="btn1" onclick="myFunction()">Foto Produk</button>
+  <button type="button" class="btn btn-secondary btn-lg btn2 border border-light" id="btn2" onclick="btn2Function()">Desain Grafis</button>
+</div>
 
-<div class="fotoProduk mb-5">
+<script>
+function myFunction() {
+  var x = document.getElementById("kol-1");
+  var y = document.getElementById("kol-2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+else{
+    x.style.display = "block";
+  }
+}
+
+function btn2Function(){
+  var x = document.getElementById("kol-1");
+  var y = document.getElementById("kol-2");
+  if (y.style.display == "none") {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+else{
+    y.style.display = "none";
+  }
+}
+</script>
+
+
+<div class="fotoProduk fp1 mb-5" id="kol-1">
   <div class="container">
     <div class="row mb-5">
         <div class="col-lg-3 col-md-6 text-center">
@@ -69,75 +100,38 @@
   </div>
 </div>
 
-<!-- <div class="fotoProduk">
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-6 text-center mt-5">
-                <img src="{{ URL::asset('img/iconFoto.webp') }}">
-            </div>
-            <div class="col-md-6 ">
-                <h1>Foto Produk</h1>
-                <p>first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
-                sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free
-                from repetition, injected humour, or non-characteristic words etc.</p>
+<div class="fotoProduk mb-5" id="kol-2">
+  <div class="container">
+    <div class="row mb-5">
+        <div class="col-lg-4 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket1(jasa-desain).png')}}" class="img-fluid">
                 <button type="button" class="btn btn-danger">PESAN</button>
-                <button type="button" class="btn btn-danger">LIHAT CONTOH</button>
-            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket2(jasa-desain).png')}}" class="img-fluid">
+                <button type="button" class="btn btn-danger">PESAN</button>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+                <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paketStory(jasa-desain).png')}}" class="img-fluid">
+                <button type="button" class="btn btn-danger">PESAN</button>
         </div>
     </div>
-</div> -->
-
-
-<!-- End of Foto Produk Section -->
-
-<!-- Jasa Desain Section -->
-<!-- <div class="jasaDesain">
-    <div class="container">
-        <h1 class="text-center">Jasa Desain</h1>
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <div class="box">
-                    <img src="{{ URL::asset('img/iconFeed.webp') }}">
-                    <h5>Desain Feed Instagram</h5>
-                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
-                    injected humour, or non-characteristic words etc.</p>
-                    <button type="button" class="btn btn-warning">PESAN</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box">
-                    <img src="{{ URL::asset('img/iconStory.webp') }}">
-                    <h5>Desain Instastory</h5>
-                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
-                    injected humour, or non-characteristic words etc.</p>
-                    <button type="button" class="btn btn-warning">PESAN</button>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="box">
-                    <img src="{{ URL::asset('img/iconVideo.webp')}}">
-                    <h5>Desain Video Animasi</h5>
-                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
-                    injected humour, or non-characteristic words etc.</p>
-                    <button type="button" class="btn btn-warning">PESAN</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box">
-
-                    <img src="{{ URL::asset('img/iconLogo.webp') }}">
-                    <h5>Desain Logo</h5>
-                    <p>to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
-                    injected humour, or non-characteristic words etc.</p>
-                    <button type="button" class="btn btn-warning">PESAN</button>
-                </div>
-            </div>
-        </div>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket1-logo.png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
+      <div class="col-lg-4 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket2-logo.png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
+      <div class="col-lg-4 col-md-6 text-center">
+              <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/video-animasi.png')}}" class="img-fluid">
+              <button type="button" class="btn btn-danger">PESAN</button>
+      </div>
     </div>
-</div> -->
-<!-- End Jasa Desain Section -->
+  </div>
+</div>
 
 <!-- Carousel Section -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

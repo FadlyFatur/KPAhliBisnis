@@ -52,23 +52,22 @@ main p{
     /* letter-spacing: 10px; */
     font-size: 15px;
 }
+
+
+.btn-group .btn1:hover{
+background-color: #E14455;
+}
+
 /* ========================================== */
 
-/* .fotoProduk .container{
-  position:relative;
-  z-index: 100;
+.fotoProduk{
+display: none;
 }
+/* 
+.fp1{
+display: block;
+} */
 
-.fotoProduk .row{
-  position:relative;
-  z-index: 1000;
-}
-
-.fotoProduk .col{
-  position: fixed;
-    z-index: 10000;
-} 
- */
 .fotoProduk .col-lg-3{
 z-index: 10;
 transition: 0.5s;
@@ -78,6 +77,7 @@ position: relative;
 .fotoProduk button{
 margin-top: 16px;
 }
+
 .fotoProduk .row .col-lg-3{
     transition: 0.2s ease-in-out;
 }
@@ -91,8 +91,6 @@ margin-top: 16px;
   filter: blur(0px);
   z-index: 100;
 }
-
-
 
 /* ========================================== */
 /* Foto Produk Section */
