@@ -7,3 +7,13 @@ html,body{
     height: 100%;
     background-color: #E14455;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 5px;
+      
+}
+th, td {
+    padding: 5px;
+  }
+  

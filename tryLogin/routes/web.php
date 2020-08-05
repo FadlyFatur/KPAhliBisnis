@@ -83,7 +83,8 @@ Route::get('adminLogin/{key}', function ($key) {
     if($key == $link){
         return redirect("/adminLogin");
     }else{
-        return redirect("/");
+        return redirect("/adminLogin");
     }
 });
 Route::get('/adminLogin',"adminLogin@index");
+Route::get('books/create', 'adminLogin@create');

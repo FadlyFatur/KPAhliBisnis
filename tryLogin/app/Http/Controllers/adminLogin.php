@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class adminLogin extends Controller
 {
@@ -13,8 +14,11 @@ class adminLogin extends Controller
      */
     public function index()
     {
-        return view('adminDashboard.index');
-    }
+        // mengambil data dari table books
+        $checkout = DB::table('checkout')->get();
+        // mengirim data books ke view books
+        return view('adminDashboard.index', ['checkout' => $checkout]);
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +27,8 @@ class adminLogin extends Controller
      */
     public function create()
     {
-        //
+        // memanggil view create
+        return view('create');
     }
 
     /**
