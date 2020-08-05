@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="{{ URL::asset('css/detailProduk.css') }}" type="text/css">
 @endsection
 
+@section('js')
+    <script src="{{ URL::asset('js/cart.js') }}"></script>
+@endsection
+
 @section('content')
 @include('layouts.navigation')
 <main>
@@ -32,31 +36,6 @@
   <button type="button" class="btn btn-secondary btn-lg btn2 border border-light" id="btn2" onclick="btn2Function()">Desain Grafis</button>
 </div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("kol-1");
-  var y = document.getElementById("kol-2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.style.display = "none";
-  }
-else{
-    x.style.display = "block";
-  }
-}
-
-function btn2Function(){
-  var x = document.getElementById("kol-1");
-  var y = document.getElementById("kol-2");
-  if (y.style.display == "none") {
-    x.style.display = "none";
-    y.style.display = "block";
-  }
-else{
-    y.style.display = "none";
-  }
-}
-</script>
 
 
 <div class="fotoProduk fp1 mb-5" id="kol-1">
@@ -64,37 +43,37 @@ else{
     <div class="row mb-5">
         <div class="col-lg-3 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket1(foto-produk).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a class="add-cart"> <button type="button" class="btn btn-danger" id="btn" >PESAN</button> </a>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket2(foto-produk).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/foto_produk/studio1(foto-produk).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/foto_produk/studio2(foto-produk).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
         </div>
     </div>
     <div class="row mt-5">
       <div class="col-lg-3 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/foto_produk/outdoor(foto-produk).png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
       <div class="col-lg-3 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket1-makanan(foto-produk).png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
       <div class="col-lg-3 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket2-makanan(foto-produk).png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
       <div class="col-lg-3 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket3-makanan(foto-produk).png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
     </div>
   </div>
@@ -105,34 +84,54 @@ else{
     <div class="row mb-5">
         <div class="col-lg-4 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket1(jasa-desain).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
         </div>
         <div class="col-lg-4 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket2(jasa-desain).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
         </div>
         <div class="col-lg-4 col-md-6 text-center">
                 <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paketStory(jasa-desain).png')}}" class="img-fluid">
-                <button type="button" class="btn btn-danger">PESAN</button>
+                <a class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
         </div>
     </div>
     <div class="row mt-5">
       <div class="col-lg-4 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket1-logo.png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
       <div class="col-lg-4 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/paket2-logo.png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
       <div class="col-lg-4 col-md-6 text-center">
               <img class="img-fluid" src="{{ URL::asset('img/desain_grafis/video-animasi.png')}}" class="img-fluid">
-              <button type="button" class="btn btn-danger">PESAN</button>
+              <a class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
       </div>
     </div>
   </div>
 </div>
 
+<script>
+var x = document.getElementById("kol-1");
+var y = document.getElementById("kol-2");
+x.style.display = "block";
+
+function myFunction() {
+  var x = document.getElementById("kol-1");
+  var y = document.getElementById("kol-2");
+  x.style.display = "block";
+  y.style.display = "none";
+}
+
+function btn2Function(){
+  var x = document.getElementById("kol-1");
+  var y = document.getElementById("kol-2");
+  x.style.display = "none";
+  y.style.display = "block";
+}
+
+</script>
 <!-- Carousel Section -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
