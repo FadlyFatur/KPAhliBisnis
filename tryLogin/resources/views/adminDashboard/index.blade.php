@@ -31,6 +31,20 @@
     <div class="container">
         <table style="width:100%">
             <?php $i = 1; ?>
+                <tr>
+                    <th>No.</th>
+                    <th>Id</th>
+                    <th>Nama Brand</th>
+                    <th>Jumlah Produk</th>
+                    <th>Jenis Produk</th>
+                    <th>Konsep</th>
+                    <th>Penggunaan</th>
+                    <th>Request</th>
+                    <th>Format Foto</th>
+                    <th>Created at</th>
+                    <th>updated at</th>
+                    <th>Edit/Delete</th>
+                </tr>
                 @foreach($checkout as $checkout)
                 <tr>
                     <td class="text-center">{{$loop->iteration}}</td>
@@ -47,7 +61,7 @@
                     <td>
                         <a href="{{url('/edit')}}" class="btn btn-xs btn-primary">Edit</a> |
                         <a href="#" class="btn btn-xs btn-danger" onclick="return confirm('yakin?');">Delete</a>
-                    </td>
+                    </th>
                 </tr>
                 @endforeach
         </table>
