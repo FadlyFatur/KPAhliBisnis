@@ -58,12 +58,17 @@ main p{
 background-color: #E14455;
 }
 
+.btn-group .btn2:hover{
+background-color: #FEDC56;
+}
+
+
 /* ========================================== */
 
 .fotoProduk{
 display: none;
 }
-/* 
+/*
 .fp1{
 display: block;
 } */
