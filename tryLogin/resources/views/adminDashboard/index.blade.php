@@ -100,11 +100,11 @@
                     <td>{{$admin->name}}</td>
                     <td>{{$admin->kode_pembelian}}</td>
                     <td class="text-center">{{$admin->BuktiPembayaran}}</td>
-                    <td class="text-center">{{$admin->Status}}</td>
-                    <td class="text-center">{{$checkout->created_at}}</td>
-                    <td class="text-center">{{$checkout->updated_at}}</td>
+                    <td class="text-center">{{$admin->status}}</td>
+                    <td class="text-center">{{$admin->created_at}}</td>
+                    <td class="text-center">{{$admin->updated_at}}</td>
                     <td>
-                        <a href="#" class="btn btn-xs btn-primary">Bukti Terkonfirmasi</a> |
+                        <a href="{{ url('/adminLogin/update/'.$admin->id) }}" class="btn btn-xs btn-primary">Bukti Terkonfirmasi</a> |
                         <a href="#" class="btn btn-xs btn-danger">Belum Terkonfirmasi</a>
                     </th>
                 </tr>

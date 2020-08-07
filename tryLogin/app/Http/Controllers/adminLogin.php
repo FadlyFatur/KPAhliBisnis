@@ -14,9 +14,9 @@ class adminLogin extends Controller
      */
     public function index()
     {
-        // mengambil data dari table books
+        // mengambil data dari table admin
         $admin = DB::table('admin')->get();
-        // mengirim data books ke view books
+        // mengirim data admin ke view admin
         return view('adminDashboard.index', ['admin' => $admin]);
         }
 
@@ -73,7 +73,10 @@ class adminLogin extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // DB::table('admin')
+        // ->where('id', $id)
+        // ->update(['status' => '1']);
+        // return view('adminDashboard.index');
     }
 
     /**
