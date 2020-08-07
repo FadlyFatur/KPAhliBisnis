@@ -15,9 +15,9 @@ class adminLogin extends Controller
     public function index()
     {
         // mengambil data dari table books
-        $checkout = DB::table('checkout')->get();
+        $admin = DB::table('admin')->get();
         // mengirim data books ke view books
-        return view('adminDashboard.index', ['checkout' => $checkout]);
+        return view('adminDashboard.index', ['admin' => $admin]);
         }
 
     /**

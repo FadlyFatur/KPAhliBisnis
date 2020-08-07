@@ -27,75 +27,57 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-        <!-- Main content -->
-        <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-
-                <p>New Orders</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Aktivitas Toko</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="callout callout-info">
+                                        <small class="text-muted">Omset Harian</small>
+                                        <br>
+                                        <strong class="h4">Rp 0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-danger">
+                                        <small class="text-muted">Pelanggan Baru (H-7)</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-primary">
+                                        <small class="text-muted">Perlu Dikirim</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-success">
+                                        <small class="text-muted">Total Produk</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                <p>Bounce Rate</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
-
-                <p>User Registrations</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
-        <!-- /.row -->
-            <!-- /.card -->
+    </div>
+</main>
 
     <div class="container">
         <table style="width:100%">
@@ -103,39 +85,34 @@
                 <tr>
                     <th>No.</th>
                     <th>Id</th>
-                    <th>Nama Brand</th>
-                    <th>Jumlah Produk</th>
-                    <th>Jenis Produk</th>
-                    <th>Konsep</th>
-                    <th>Penggunaan</th>
-                    <th>Request</th>
-                    <th>Format Foto</th>
+                    <th>Nama</th>
+                    <th>Kode Pembelian</th>
+                    <th>Bukti Pembayaran</th>
+                    <th>Status</th>
                     <th>Created at</th>
                     <th>updated at</th>
                     <th>Edit/Delete</th>
                 </tr>
-                @foreach($checkout as $checkout)
+                @foreach($admin as $admin)
                 <tr>
                     <td class="text-center">{{$loop->iteration}}</td>
-                    <td>{{$checkout->id}}</td>
-                    <td>{{$checkout->nama_brand}}</td>
-                    <td>{{$checkout->jumlah_produk}}</td>
-                    <td class="text-center">{{$checkout->jenis_produk}}</td>
-                    <td>{{$checkout->konsep}}</td>
-                    <td>{{$checkout->penggunaan}}</td>
-                    <td class="text-center">{{$checkout->request}}</td>
-                    <td class="text-center">{{$checkout->format_foto}}</td>
+                    <td>{{$admin->id}}</td>
+                    <td>{{$admin->name}}</td>
+                    <td>{{$admin->kode_pembelian}}</td>
+                    <td class="text-center">{{$admin->BuktiPembayaran}}</td>
+                    <td class="text-center">{{$admin->Status}}</td>
                     <td class="text-center">{{$checkout->created_at}}</td>
                     <td class="text-center">{{$checkout->updated_at}}</td>
                     <td>
-                        <a href="{{url('/edit')}}" class="btn btn-xs btn-primary">Edit</a> |
-                        <a href="#" class="btn btn-xs btn-danger" onclick="return confirm('yakin?');">Delete</a>
+                        <a href="#" class="btn btn-xs btn-primary">Bukti Terkonfirmasi</a> |
+                        <a href="#" class="btn btn-xs btn-danger">Belum Terkonfirmasi</a>
                     </th>
                 </tr>
                 @endforeach
         </table>
         <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
 </div>
+
 
 <!-- jQuery -->
 <script src="{{ asset('/dashboard/plugins/jquery/jquery.min.jss') }}"></script>
