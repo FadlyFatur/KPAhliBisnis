@@ -41,46 +41,20 @@
 
 <div class="fotoProduk fp1 mb-5" id="kol-1">
   <div class="container">
-    <div class="row mb-5">
-        <div class="col-lg-3 col-md-6 text-center">
-                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket1(foto-produk).png')}}" class="img-fluid">
-                <a class="add-cart"> <button type="button" class="btn btn-danger" id="btn" >PESAN</button> </a>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket2(foto-produk).png')}}" class="img-fluid">
-                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/studio1(foto-produk).png')}}" class="img-fluid">
-                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-                <img class="img-fluid" src="{{ URL::asset('img/foto_produk/studio2(foto-produk).png')}}" class="img-fluid">
-                <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
-        </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-lg-3 col-md-6 text-center">
-              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/outdoor(foto-produk).png')}}" class="img-fluid">
-              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
+    @foreach($produk->chunk(4) as $produkChunks)
+      <div class="row mb-5" >
+          @foreach($produkChunks as $produk)
+            <div class="col-lg-3 col-md-6 text-center">
+              <img class="img-fluid" src="{{$produk->imagePath}}" class="img-fluid">
+              <a class="add-cart"> <button type="button" class="btn btn-danger" id="btn">PESAN</button> </a>
+            </div>
+          @endforeach
       </div>
-      <div class="col-lg-3 col-md-6 text-center">
-              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket1-makanan(foto-produk).png')}}" class="img-fluid">
-              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket2-makanan(foto-produk).png')}}" class="img-fluid">
-              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-              <img class="img-fluid" src="{{ URL::asset('img/foto_produk/paket3-makanan(foto-produk).png')}}" class="img-fluid">
-              <a  class="add-cart"> <button type="button" class="btn btn-danger">PESAN</button> </a>
-      </div>
-    </div>
+    @endforeach
   </div>
 </div>
-
-<div class="fotoProduk mb-5" id="kol-2">
+<!--
+<div class="fotoProduk mb-5">
   <div class="container">
     <div class="row mb-5">
         <div class="col-lg-4 col-md-6 text-center">
@@ -111,7 +85,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <script>
 var x = document.getElementById("kol-1");
@@ -131,7 +105,6 @@ function btn2Function(){
   x.style.display = "none";
   y.style.display = "block";
 }
-
 </script>
 <!-- Carousel Section -->
 <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

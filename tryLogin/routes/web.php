@@ -41,8 +41,7 @@ Route::get('/contact', function () {
 });
 
 // pindah detail produk
-Route::get('/detailProduk','detailProdukController@index');
-
+Route::get('/detailProduk','detailProdukController@index')->name('detailproduk');
 
 //pindah ke Kategori
 Route::view('/kategori','kategori');

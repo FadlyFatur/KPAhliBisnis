@@ -42,7 +42,6 @@
         @endguest
         <!-- cart -->
         <div class="dropdown">
-          <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> Keranjang <span class="badge">0</span> -->
           <button type="button" class="btn btn-light" data-toggle="dropdown">
 				     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">0</span>
 				    </button>
@@ -72,12 +71,8 @@
                 </a>
               </div>
             </div>
-
           </div>
         </div>
-        <!-- <a class="nav-item nav-link cart">
-        </a> -->
-        <!-- end cart -->
       </div>
     </div>
   </div>
