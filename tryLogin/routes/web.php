@@ -92,8 +92,15 @@ Route::get('adminLogin/{key}', function ($key) {
         return redirect("/adminLogin");
     }
 });
-Route::get('/adminLogin',"adminLogin@index");
-Route::post('/adminLogin',[
-    'uses'=> 'adminLogin@update',
-    'as'=>'adminDashboard.index'
+
+Route::get('/adminLogin',[
+  'uses'=> 'adminLogin@index',
+  'as'=>'adminDashboard.index'
+]);
+
+Route::get('adminUpdate/{id}','adminLogin@edit');
+
+Route::post('update/{id}',[
+  'uses'=>'adminLogin@update',
+  'as'=>'adminUpdate'
 ]);

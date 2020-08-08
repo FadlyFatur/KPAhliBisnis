@@ -13,7 +13,7 @@ class adminLogin extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id=0)
     {
         // mengambil data dari table admin
         $admin = DB::table('admins')->get();
@@ -72,12 +72,12 @@ class adminLogin extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
-        $admin = admin::find($request->id);
-        $admin->status = 1;
-        $admin->update();
-    
+        // $admin_edit = $request->input('status');
+        $admin_edit = admin::find($id);
+        $admin_edit->status = 'yes';
+        $admin_edit->save();
         return redirect()->route('adminDashboard.index');
     }
 

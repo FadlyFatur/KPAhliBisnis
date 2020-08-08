@@ -104,12 +104,12 @@
                     <td class="text-center">{{$admin->created_at}}</td>
                     <td class="text-center">{{$admin->updated_at}}</td>
                     <td>
-                    <form method="post" action="{{Route('adminDashboard.index')}}">
+                    <form method="post" action="{{Route('adminUpdate',$admin->id)}}">
                         @csrf
                         <input type="hidden" name="adminid" value="{{$admin->id}}"/>
-                        <button class="btn btn-lg btn-success" type="submit">
-                            Konfirmasi
-                        </button>
+                        <a href="">
+                          <button class="btn btn-lg btn-success" type="submit">Konfirmasi</button>
+                        </a>
                     </form>
                     </th>
                 </tr>

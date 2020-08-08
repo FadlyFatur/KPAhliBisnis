@@ -13,13 +13,12 @@ class Admin extends Migration
      */
     public function up()
     {
-        //
         Schema::create('admins', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->integer('kode_pembelian');
             $table->string("BuktiPembayaran")->default("default.png");
-            $table->boolean('status')->default('0');
+            $table->string('status')->default('no');
             $table->timestamps();
         });
     }
