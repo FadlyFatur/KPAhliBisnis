@@ -41,14 +41,20 @@ Route::get('/contact', function () {
 });
 
 // pindah detail produk
-Route::get('/detailProduk','detailProdukController@index');
-
+Route::get('/detailProduk',[
+  'uses'=>'detailProdukController@index',
+  'as'=>'detailProduk.index'
+]);
 
 //pindah ke Kategori
-Route::view('/kategori','kategori');
+// Route::view('/kategori','kategori');
 
 //pindah ke checkout
-Route::view('/checkout','checkout.Checkout');
+Route::get('/checkout',[
+  'uses'=>'checkoutController@getData',
+  'as'=>'checkout.index',
+  'middleware'=>'auth'
+]);
 
 // Proses Autentikasid dan Halaman Profile
 Auth::routes();
@@ -88,4 +94,3 @@ Route::get('adminLogin/{key}', function ($key) {
 });
 Route::get('/adminLogin',"adminLogin@index");
 Route::get('books/create', 'adminLogin@create');
-// Route::post('/adminLogin/update', "adminLogin@update");
