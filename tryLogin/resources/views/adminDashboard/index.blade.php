@@ -104,7 +104,12 @@
                     <td class="text-center">{{$admin->created_at}}</td>
                     <td class="text-center">{{$admin->updated_at}}</td>
                     <td>
-                        <a href="{{ url('/adminLogin/update/'.$admin->id) }}" class="btn btn-xs btn-primary">Bukti Terkonfirmasi</a> |
+                    <form method="post" action="/adminLogin">
+                        <input type="hidden" name="adminidid" value="{{$admin->id}}"/>
+                        <button class="btn btn-lg btn-success" type="submit">
+                            Konfirmasi
+                        </button>
+                    </form> |
                         <a href="#" class="btn btn-xs btn-danger">Belum Terkonfirmasi</a>
                     </th>
                 </tr>

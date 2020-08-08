@@ -71,12 +71,13 @@ class adminLogin extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        // DB::table('admin')
-        // ->where('id', $id)
-        // ->update(['status' => '1']);
-        // return view('adminDashboard.index');
+        $admin = admin::find($request->id);
+        $admin->status = '1';
+        $admin->update();
+    
+        return redirect()->back()->with('message', 'admin updated');
     }
 
     /**

@@ -19,7 +19,7 @@ class Admin extends Migration
             $table->string('name');
             $table->integer('kode_pembelian');
             $table->string("BuktiPembayaran")->default("default.png");
-            $table->enum('status', ['1', '0'])->default('0');
+            $table->boolean('status')->default('0');
             $table->timestamps();
         });
     }

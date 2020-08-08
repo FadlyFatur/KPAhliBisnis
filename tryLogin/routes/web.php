@@ -88,4 +88,4 @@ Route::get('adminLogin/{key}', function ($key) {
 });
 Route::get('/adminLogin',"adminLogin@index");
 Route::get('books/create', 'adminLogin@create');
-// Route::post('/adminLogin/update', "adminLogin@update");
+Route::post('adminLogin', 'adminLogin@update');
