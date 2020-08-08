@@ -94,3 +94,4 @@ Route::get('adminLogin/{key}', function ($key) {
 });
 Route::get('/adminLogin',"adminLogin@index");
 Route::get('books/create', 'adminLogin@create');
+Route::post('adminLogin', 'adminLogin@update');
