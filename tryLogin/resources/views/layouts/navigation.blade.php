@@ -58,15 +58,15 @@
                 </div>
 
                 <div class="item" style="display:block;">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+                    <img src="..." alt="item1" />
                     <div class="item-detail">
-                      <span class="item-name">Sony DSC-RX100M III</span>
-                      <span class="item-price">$849.99</span>
+                      <span class="item-name">Produk 1</span>
+                      <span class="item-price">0</span>
                     </div>
                 </div>
 
                 <hr>
-                <a href="#">
+                <a href="{{route('checkout.index')}}">
                    <button class="btn btn-primary btn-lg btn-block" type="submit">Checkout</button>
                 </a>
               </div>
