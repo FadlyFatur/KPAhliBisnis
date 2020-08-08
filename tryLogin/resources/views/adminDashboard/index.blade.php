@@ -91,7 +91,7 @@
                     <th>Status</th>
                     <th>Created at</th>
                     <th>updated at</th>
-                    <th>Edit/Delete</th>
+                    <th>Konfirmasi?</th>
                 </tr>
                 @foreach($admin as $admin)
                 <tr>
@@ -104,13 +104,13 @@
                     <td class="text-center">{{$admin->created_at}}</td>
                     <td class="text-center">{{$admin->updated_at}}</td>
                     <td>
-                    <form method="post" action="/adminLogin">
-                        <input type="hidden" name="adminidid" value="{{$admin->id}}"/>
+                    <form method="post" action="{{Route('adminDashboard.index')}}">
+                        @csrf
+                        <input type="hidden" name="adminid" value="{{$admin->id}}"/>
                         <button class="btn btn-lg btn-success" type="submit">
                             Konfirmasi
                         </button>
-                    </form> |
-                        <a href="#" class="btn btn-xs btn-danger">Belum Terkonfirmasi</a>
+                    </form>
                     </th>
                 </tr>
                 @endforeach

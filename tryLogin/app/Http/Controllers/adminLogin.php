@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\admin;
 
 class adminLogin extends Controller
 {
@@ -74,10 +75,10 @@ class adminLogin extends Controller
     public function update(Request $request)
     {
         $admin = admin::find($request->id);
-        $admin->status = '1';
+        $admin->status = 1;
         $admin->update();
     
-        return redirect()->back()->with('message', 'admin updated');
+        return redirect()->route('adminDashboard.index');
     }
 
     /**
