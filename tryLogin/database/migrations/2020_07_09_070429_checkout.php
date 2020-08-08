@@ -13,7 +13,7 @@ class Checkout extends Migration
      */
     public function up()
     {
-        Schema::create('checkout', function (Blueprint $table) {
+        Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
             $table->string('nama_brand');
             $table->integer('jumlah_produk');

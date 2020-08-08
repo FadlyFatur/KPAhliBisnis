@@ -93,7 +93,7 @@
                     <th>updated at</th>
                     <th>Konfirmasi?</th>
                 </tr>
-                @foreach($admin as $admin)
+                @foreach($admins as $admin)
                 <tr>
                     <td class="text-center">{{$loop->iteration}}</td>
                     <td>{{$admin->id}}</td>
