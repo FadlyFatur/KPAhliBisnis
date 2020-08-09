@@ -48,36 +48,6 @@
           <span class="badge badge-pill badge-danger">{{Session::has('cart') ? Session::get('cart')->totalQty:'0'}}</span>
         <!-- </button> -->
         </a>
-
-        <!-- <div class="dropdown">
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div class="container" style="width: 500px;">
-              <div class="shopping-cart">
-                <div class="shopping-cart-header">
-                  <i class="fa fa-shopping-cart cart-icon cart"></i><span class="badge"> 0 </span>
-                  <div class="sc-total">
-                    <span class="lighter-text">Total: Rp. </span>
-                    <span class="main-color-text">0</span>
-                    <hr>
-                  </div>
-                </div>
-
-                <div class="item" style="display:block;">
-                    <img src="..." alt="item1" />
-                    <div class="item-detail">
-                      <span class="item-name">Produk 1</span>
-                      <span class="item-price">0</span>
-                    </div>
-                </div>
-
-                <hr>
-                <a href="{{route('checkout.index')}}">
-                   <button class="btn btn-primary btn-lg btn-block" type="submit">Checkout</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>

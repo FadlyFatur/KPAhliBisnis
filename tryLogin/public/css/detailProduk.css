@@ -15,6 +15,11 @@ h1{
     letter-spacing: 5px;
 }
 
+.sukses{
+  background-color: #f46170;
+  font-style: italic;
+}
+
 main{
     position: relative;
     height: 100%;

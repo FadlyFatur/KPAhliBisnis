@@ -61,9 +61,14 @@ Route::get('/detailProduk',[
 
 //pindah ke checkout
 Route::get('/checkout',[
-  'uses'=>'checkoutController@getData',
-  'as'=>'checkout.index'
-  // 'middleware'=>'auth'
+  'uses'=>'checkoutController@getCheckout',
+  'as'=>'checkout',
+  'middleware'=>'auth'
+]);
+
+Route::post('/checkout',[
+  'uses'=>'checkoutController@postCheckout',
+  'as'=>'checkout'
 ]);
 
 // Proses Autentikasid dan Halaman Profile

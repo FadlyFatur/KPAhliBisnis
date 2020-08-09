@@ -35,10 +35,4 @@ class detailProdukController extends Controller
       $cart = new Cart($oldCart);
       return view('detailProduk.keranjang',['produk'=>$cart->items, 'totalHarga'=>$cart->totalHarga]);
     }
-
-    // public function getData(jenis $jenis)
-    // {
-    //   $jenis = Produk::select('imagePath')->where('jenis', $jenis)->get();
-    //   return view('detailProduk.index',['jenis'->$jenis]);
-    // }
 }
