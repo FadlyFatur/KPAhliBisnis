@@ -46,7 +46,7 @@
           @foreach($produkChunks as $produk)
             <div class="col-lg-3 col-md-6 text-center">
               <img class="img-fluid" src="{{$produk->imagePath}}" class="img-fluid">
-              <a class="add-cart"> <button type="button" class="btn btn-danger" id="btn">PESAN</button> </a>
+              <a href="{{route('detailProduk.TambahKeranjang',['id'=>$produk->id])}}" class="add-cart"> <button type="button" class="btn btn-danger" id="btn">PESAN</button> </a>
             </div>
           @endforeach
       </div>

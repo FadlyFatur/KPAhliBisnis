@@ -1,15 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.template')
 @section('title', 'Checkout')
-@section('style')
+@section('css')
     <link rel="stylesheet" href="checkout-style.css">
 @endsection
 
 @section('content')
-    <!-- <header class="d-flex flex-column flex-md-row align-item-md-center p-5 bg-light">
-      <div class="pt-md-3 pb-md-4">
-        <h1 class="bd-title mt-0">CHECKOUT</h1>
-      </div
-    </header> -->
+@include('layouts.navigation')
   <div class="no-svg">
 
     <div class="container">

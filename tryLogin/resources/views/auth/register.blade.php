@@ -1,14 +1,19 @@
-@extends('layouts.app')
-<link rel="stylesheet" href="css/style2.css" type="text/css">
+@extends('layouts.template')
+
+@section('title','Register')
+@section('css')
+    <link rel="stylesheet" href="css/style2.css" type="text/css">
+@endsection
 @section('content')
+@include('layouts.navigation')
 <div class="container bg">
-        <nav>
+        <!-- <nav>
           <a class="navbar-brand" href="#">
               <img src="img/iconLogo.webp" width="45" height="auto" class="d-inline-block align-top"
                   alt="">
               <p>UntukMasarin</p>
           </a>
-        </nav>
+        </nav> -->
           <div class="container frms ta-center ">
             <div class="wrapper ">
                   <!--form start-->
@@ -93,5 +98,5 @@
                 </div>
           </div>
       </div>
-         
+
 @endsection

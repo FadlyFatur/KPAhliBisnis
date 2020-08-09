@@ -16,6 +16,16 @@ use Illuminate\Support\Str;
 |
 */
 
+Route::get('/Tambah-keranjang/{id}',[
+  'uses' => 'detailProdukController@getTambahKeranjang',
+  'as'=> 'detailProduk.TambahKeranjang'
+]);
+
+Route::get('/Keranjang',[
+  'uses' => 'detailProdukController@getCart',
+  'as'=> 'detailProduk.keranjang'
+]);
+
 
 // Percobaan Notifikasi untuk nanti dipakai proses pemesanan
 Route::get('/sendNotif', function () {
@@ -52,8 +62,8 @@ Route::get('/detailProduk',[
 //pindah ke checkout
 Route::get('/checkout',[
   'uses'=>'checkoutController@getData',
-  'as'=>'checkout.index',
-  'middleware'=>'auth'
+  'as'=>'checkout.index'
+  // 'middleware'=>'auth'
 ]);
 
 // Proses Autentikasid dan Halaman Profile

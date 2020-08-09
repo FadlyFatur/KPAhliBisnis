@@ -40,11 +40,16 @@
           </div>
         </div>
         @endguest
+
         <!-- cart -->
-        <div class="dropdown">
-          <button type="button" class="btn btn-light" data-toggle="dropdown">
-				     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">0</span>
-				    </button>
+        <a class="nav-item nav-link" href="{{route('detailProduk.keranjang')}}">
+        <!-- <button type="button" class="btn btn-light" data-toggle="dropdown"> -->
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+          <span class="badge badge-pill badge-danger">{{Session::has('cart') ? Session::get('cart')->totalQty:'0'}}</span>
+        <!-- </button> -->
+        </a>
+
+        <!-- <div class="dropdown">
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <div class="container" style="width: 500px;">
               <div class="shopping-cart">
@@ -72,7 +77,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
