@@ -50,7 +50,7 @@ Route::get('/contact', function () {
     return view('contact.index');
 });
 
-// pindah detail produk
+// pindah detail produk {{fdly}}
 Route::get('/detailProduk',[
   'uses'=>'detailProdukController@index',
   'as'=>'detailProduk.index'
@@ -75,7 +75,10 @@ Route::post('/checkout',[
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@update')->name('homeUpdate');
-Route::get('/home/infoPemesanan', 'PemesananController@index')->name('infoPemesanan');
+
+
+// route ke info pemesanan
+Route::get('/home/infoPemesanan', 'PemesananController@getInfo')->name('infoPemesanan');
 // Route::get('/home/infoPemesanan', 'PemesananController@index')->name('infoPemesanan');
 
 // Route::view('/home/infoPemesanan','infoPemesanan');

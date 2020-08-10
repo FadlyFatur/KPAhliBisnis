@@ -48,8 +48,6 @@
   <button type="button" class="btn btn-secondary btn-lg btn2 border border-light" id="btn2" onclick="btn2Function()">Desain Grafis</button>
 </div>
 
-
-
 <div class="fotoProduk fp1 mb-5" id="kol-1">
   <div class="container">
     @foreach($produk->chunk(4) as $produkChunks)
@@ -64,8 +62,7 @@
     @endforeach
   </div>
 </div>
-<!--
-<div class="fotoProduk mb-5">
+<!--<div class="fotoProduk mb-5">
   <div class="container">
     <div class="row mb-5">
         <div class="col-lg-4 col-md-6 text-center">

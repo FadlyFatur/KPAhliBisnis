@@ -27,10 +27,11 @@
                 <div class="link">
                         <a style="cursor: pointer;"><p>Pengaturan Akun<i class='fas fa-angle-right' style='font-size:20px'></i></a>
                         <a href= "{{ route('infoPemesanan') }}"><p>Info Pemesanan</p></a>
+                        <a href= ""><p>Konfirmasi Pembayaran</p></a>
                 </div>
                 <a href="{{route('logout')}}" class="btn btn-outline-light" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">LOGOUT</a>
-                                    
+
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -65,7 +66,7 @@
                                                     </div>
                                                     <div class="modal-body text-center">
                                                         <p style="color:black;">Upload foto disini..</p>
-                                                        <input type="file" name="foto" id="foto">   
+                                                        <input type="file" name="foto" id="foto">
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="submit" name="form3" class="btn btn-outline-danger">Simpan</button>
@@ -74,7 +75,7 @@
                                             </div>
                                         </div>
                                         </div>
-                                   
+
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -92,7 +93,7 @@
                                         <input type="email" class="form-control" id="exampleInputPassword1" name="email"
                                         value="<?= $data["data_user"]['email']; ?>">
                                     </div>
-                                    <button type="submit" class="btn btn-danger" name="form1">PERBARUI</button>
+                                    <button type="submit" class="btn btn-danger" name="form1">Perbarui</button>
                                 </form>
                                 <hr>
                                 <h5 class="ml-3">Ganti Password</h5>
@@ -121,6 +122,7 @@
         </div>
     </div>
 </main>
+
 <script>
     function showFunction() {
         document.getElementById("dashboard").style.left = "0";

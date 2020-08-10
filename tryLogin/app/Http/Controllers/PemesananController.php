@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Order;
 
 class PemesananController extends Controller
 {
-    
+
     /**
      * Create a new controller instance.
      *
@@ -90,5 +92,16 @@ class PemesananController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getInfo()
+    {
+      $orders = Auth::user()->orders;
+      $orders->transform(function($order, $key){
+        $order->cart = unserialize($order->cart);
+        return $order;
+      });
+      // $user = Order::all();
+      return view('infoPemesanan',['orders'=>$orders]);
     }
 }

@@ -13,7 +13,7 @@ main > .container-fluid,.row{
 }
 
 .col-md-3{
-    background-color: #fa556d;
+    background-color: #E14354;
     position: relative;
 }
 
@@ -80,7 +80,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: #ffdbdb; 
+    color: #ffdbdb;
 }
 .link{
     position: relative;
@@ -135,11 +135,11 @@ i{
         position: absolute;
         right: 50px;
     }
-    
+
     .content > i:hover{
         cursor: pointer;
     }
-    
+
     #close{
         display: none;
         transition: 0.2 ease-out;
@@ -153,7 +153,7 @@ i{
     main .row .col-md-3{
         width: 70%;
     }
-    
+
     form{
         padding: 0px 20px;
     }
@@ -162,7 +162,7 @@ i{
         height: 80%;
         padding: 50px 10px 10px 10px;
     }
-    
+
     .content > i {
         right: 10px;
     }
