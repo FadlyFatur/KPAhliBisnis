@@ -25,7 +25,7 @@
               <ul class="dropdown-menu text-center">
                 <li><a href="#">Reduce by 1</a></li>
                 <li><a href="#">Reduce All</a></li>
-              </ul>
+              </ul> 
             </div>
           </li>
         @endforeach

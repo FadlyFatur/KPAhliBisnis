@@ -13,6 +13,36 @@ use Auth;
 
 class checkoutController extends Controller
 {
+    public function getLoc(){
+        // Get List of Cities data from Raja Ongkir
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://api.rajaongkir.com/starter/city",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => array(
+            "key: 37460c5743d1450a67372fe599cb23e5"
+        ),
+        ));
+
+        $response = curl_exec($curl);
+        // $response = json_decode($response,true);
+        
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+        return "cURL Error #:" . $err;
+        } else {
+        return $response;
+        }
+    }
     public function getCheckout()
     {
       if (!Session::has('cart')){
@@ -22,7 +52,14 @@ class checkoutController extends Controller
       $cart = new Cart($oldCart);
       $qty = $cart->totalQty;
       $total = $cart->totalHarga;
-      return view('checkout.index',['total'=>$total,'qty'=>$qty,'produks'=>$cart->items]);
+    
+      $list = json_decode($this->getLoc(),true)["rajaongkir"]["results"];
+      $list_provinsi = array_column($list,"province","province_id");
+      $id = array_column($list,"province_id","city_id");
+      $list_kota = array_column($list,"province","city_name");
+
+      return view('checkout.index',['total'=>$total,'qty'=>$qty,'produks'=>$cart->items,
+                                    "provinsi"=>$list_provinsi,"id_kota"=>$id]);
     }
 
     public function postCheckout(Request $request)
@@ -54,4 +91,16 @@ class checkoutController extends Controller
       Session::forget('cart');
       return redirect()->route('detailProduk.index')->with('success','Berhasil Melakukan Pemesanan Produk');
     }
+    
+    public function selectedCity(Request $request)
+    {
+        // Passing variabel with AJAX with POST method
+        $nama_prov = $request->prov;
+        $kota_selected = json_decode($this->getLoc(),true)["rajaongkir"]["results"];
+        $list_kota = array_column($kota_selected,"province","city_name");
+        $list_related_prov = array_keys($list_kota, $nama_prov);
+
+        return response()->json(['success2'=> $list_related_prov]);
+    }
 }
+ 

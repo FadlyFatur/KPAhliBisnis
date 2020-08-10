@@ -62,7 +62,8 @@
          <h4 class="mb-3 text-danger">Identitas Pemesan</h4>
          <hr>
          <!-- form pemesanan -->
-         <form class="needs-validation" action="{{route('checkout')}}" method="post">
+         <form class="needs-validation" action="{{route('checkout')}}" method="post" id="myForm">
+         @csrf
            <div class="row">
              <div class="col-md-6 mb-3">
                <div class="form-group">
@@ -119,11 +120,43 @@
            <div class="row">
              <div class="col-md-4 mb-3">
                <div class="form-group">
-               <label for="state">Provinsi</label>
-               <select class="custom-select d-block w-100" name="prov" id="state" required>
+               <label for="provinsi">Provinsi</label>
+               <select class="custom-select d-block w-100" name="prov" id="provinsi" required>
                  <option value="">Pilih...</option>
-                 <option>Jawa Barat</option>
+                  @foreach($provinsi as $list_prov)
+                    <option value="{{ $list_prov }}">{{ $list_prov }}</option>
+                  @endforeach
                </select>
+               <script>
+                $(function() {
+                      // when select changes
+                      $('#provinsi').on('change', function() {
+
+                          // create data from form input(s)
+                          const nama_provinsi = $("#provinsi").children("option:selected").val(); 
+                          let formData = $('#myForm').serialize();
+                          console.log(formData);
+
+                          // send data to your endpoint
+                          $.ajax({
+                              url: "{{ route('checkoutLoc') }}",
+                              type: 'post',
+                              data: formData,
+                              dataType: 'json', // we expect a json response
+                              success: function(response) {
+                                  console.log(response.success2);
+                                  var kota_list = response.success2;
+                                  var selop = "";
+
+                                  $.each(kota_list,function(i){
+                                    selop += "<option value='"+kota_list[i]+ "'>" + kota_list[i] + "</option>";
+                                  });
+                                  $("#kota").append(selop);
+                              }
+                          });
+                      });
+                  });
+              </script>
                <div class="invalid-feedback">
                  Please provide a valid state.
                </div>
@@ -131,10 +164,9 @@
              </div>
              <div class="col-md-4 mb-2">
                <div class="form-group">
-                 <label for="country">Kabupaten/Kota</label>
-                 <select class="custom-select d-block w-100" name="kab" id="country" required>
+                 <label for="kota">Kabupaten/Kota</label>
+                 <select class="custom-select d-block w-100" name="kab" id="kota" required>
                    <option value="">Pilih...</option>
-                   <option>Bandung</option>
                  </select>
                  <div class="invalid-feedback">
                    Please select a valid country.
@@ -143,11 +175,8 @@
              </div>
              <div class="col-md-4 mb-3">
                <div class="form-group">
-                 <label for="state">Kecamatan</label>
-                 <select class="custom-select d-block w-100" name="kec" id="state" required>
-                   <option value="">Pilih...</option>
-                   <option>Ujung Berung</option>
-                 </select>
+                 <label for="kecamatan">Kecamatan</label>
+                <input type="text" class="form-control" name="kec" id="kecamatan" placeholder="" value="" required>
                  <div class="invalid-feedback">
                    Please provide a valid state.
                  </div>
@@ -225,7 +254,6 @@
              <label for="country">Transfer Bank</label>
            </div> -->
            <hr class="mb-4 mt-5">
-           {{  csrf_field()}}
            <button class="btn btn-danger btn-lg btn-block" type="submit">Submit</button>
          </form>
 

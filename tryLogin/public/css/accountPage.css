@@ -99,7 +99,7 @@ p{
     left: 30%;
     /* right: 0; */
 }
-i{
+main .col-md-9 i{
     position: absolute;
     right: 0;
 }

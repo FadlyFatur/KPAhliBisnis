@@ -71,6 +71,8 @@ Route::post('/checkout',[
   'as'=>'checkout'
 ]);
 
+Route::post("/checkout/getCity","checkoutController@selectedCity")->name("checkoutLoc");
+
 // Proses Autentikasid dan Halaman Profile
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

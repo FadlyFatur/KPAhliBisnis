@@ -2,9 +2,6 @@
     padding: 0;
     margin: 0;
 }
-html,body{
-    height: 100%;
-}
 main{
     height: 100%;
 }
@@ -64,7 +61,7 @@ p{
     left: 30%;
     /* right: 0; */
 }
-i{
+main .col-md-9 i{
     position: absolute;
     right: 0;
 }
@@ -76,6 +73,9 @@ i{
 }
 #show{
     display: none;
+}
+.col-md-9{
+    overflow: scroll;
 }
 .col-md-9 .content table tr td img{
     width: 50%;
