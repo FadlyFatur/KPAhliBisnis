@@ -75,10 +75,19 @@ class adminLogin extends Controller
     public function update(Request $request,$id)
     {
         // $admin_edit = $request->input('status');
-        $admin_edit = admin::find($id);
-        $admin_edit->status = 'yes';
-        $admin_edit->save();
-        return redirect()->route('adminDashboard.index');
+        switch ($request->input('action')) {
+            case 'Konfirmasi':
+                $admin_edit = admin::find($id);
+                $admin_edit->status = 'yes';
+                $admin_edit->save();
+                return redirect()->route('adminDashboard.index');
+            
+            case 'cek':
+                $admin_edit = admin::find($id);
+
+                
+                return redirect()->route('adminDashboard.index');
+        }
     }
 
     /**

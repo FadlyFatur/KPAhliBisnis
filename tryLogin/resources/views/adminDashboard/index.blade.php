@@ -99,7 +99,14 @@
                     <td>{{$admin->id}}</td>
                     <td>{{$admin->name}}</td>
                     <td>{{$admin->kode_pembelian}}</td>
-                    <td class="text-center">{{$admin->BuktiPembayaran}}</td>
+                    <td class="edit text-center">
+                    <form method="post" action="{{Route('adminUpdate',$admin->id)}}">
+                        @csrf
+                        <input type="hidden" name="adminid" value="{{$admin->id}}"/>
+                        <a href="">
+                          <button class="btn btn-lg btn-success" type="submit" name ="action" value="cek">Cek Bukti</button>
+                        </a>
+                    </form>{{$admin->BuktiPembayaran}}</td>
                     <td class="text-center">{{$admin->status}}</td>
                     <td class="text-center">{{$admin->created_at}}</td>
                     <td class="text-center">{{$admin->updated_at}}</td>
@@ -108,10 +115,10 @@
                         @csrf
                         <input type="hidden" name="adminid" value="{{$admin->id}}"/>
                         <a href="">
-                          <button class="btn btn-lg btn-success" type="submit">Konfirmasi</button>
+                          <button class="btn btn-lg btn-success" type="submit" name="action" value="Konfirmasi">Konfirmasi</button>
                         </a>
                     </form>
-                    </th>
+                    </td>
                 </tr>
                 @endforeach
         </table>
@@ -120,6 +127,11 @@
 
 
 <!-- jQuery -->
+<script>
+$("#update").click(function() {
+    $(".edit").show();
+}
+</script>
 <script src="{{ asset('/dashboard/plugins/jquery/jquery.min.jss') }}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{ asset('/dashboard/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
