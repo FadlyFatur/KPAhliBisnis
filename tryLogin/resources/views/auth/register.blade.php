@@ -6,97 +6,67 @@
 @endsection
 @section('content')
 @include('layouts.navigation')
-<div class="container bg">
-        <!-- <nav>
-          <a class="navbar-brand" href="#">
-              <img src="img/iconLogo.webp" width="45" height="auto" class="d-inline-block align-top"
-                  alt="">
-              <p>UntukMasarin</p>
-          </a>
-        </nav> -->
-          <div class="container frms ta-center ">
-            <div class="wrapper ">
-                  <!--form start-->
-                  <form class="form-container" name="register_form" method="POST" action="{{ route('register') }}">
-                    @csrf
-                    <h1 class="text-center">Register</h1>
-                    <div class="form-row  ">
-                      <div class="form-group row  ">
-                              <label for="name" class="col-md-6 col-form-label ">{{ __('Name') }}</label>
 
-                              <div class="inputreg">
-                                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                  @error('name')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
-                              </div>
-                          </div>
-                          <div class="form-group row" >
-                          <label for="number" class="col-md-6 col-form-label">{{ __('NO.HP') }}</label>
-                          <div class="inputreg">
-                                  <input id="nohp" type="number" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus>
-
-                                  @error('nohp')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
-                              </div>
-                          </div>
-                        <div class="form-group row">
-                              <label for="email" class="col-md-6 col-form-label">{{ __('E-Mail Address') }}</label>
-
-                              <div class="inputreg">
-                                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                  @error('email')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
-                              </div>
-                          </div>
-                            <div class="form-group row">
-                              <label for="password" class="col-md-6 col-form-label">{{ __('Password') }}</label>
-
-                              <div class="inputreg">
-                                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                  @error('password')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
-                              </div>
-                          </div>
-
-                          <div class="form-group row">
-                              <label for="password-confirm" class="col-md-6 col-form-label">{{ __('Confirm Password') }}</label>
-
-                              <div class="inputreg">
-                                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                              </div>
-                          </div>
-                    </div>
-                    <div class="form-group ">
-                    </div>
-                    <div class="form-group row mb-0 ">
-                            <div class="col-md-6-md-4 ">
-                                <button type="submit" class="btn btn-primary ">
-                                    {{ __('Register') }}
-                                </button>
-                                <a href="{{ url('/login') }}" type="submit">
-                                    {{__('Already have an account?') }}
-                                </a>
-                            </div>
-                        </div>
-                  </form>
-                  <!--form end-->
-                </div>
-          </div>
+<div class="container mt-3 d-flex justify-content-center">
+  <!--form start-->
+    <form class="form-container" name="register_form" method="POST" action="{{ route('register') }}">
+      @csrf
+      <h1 class="text-center mb-2">Register</h1>
+      <div class="form-group">
+        <label for="name">Nama</label>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
       </div>
+      <div class="form-group" >
+        <label for="number">Nomer Hp</label>
+                <!-- <input id="nohp" type="number" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus> -->
+                <input Number type="tel"  pattern="[0-9]{3}[0-9]{2}[0-9]{3}" id="nohp" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" aria-label="telephone" aria-describedby="basic-addon1" autocomplete="nohp" autofocus required>
+                @error('nohp')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" >
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div>
+        <div class="form-group">
+            <label for="password-confirm" class="">Confim Password</label>
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+        </div>
+
+        <div class="mt-3">
+          <div class="col-md-6-md-4">
+            <button type="submit" class="btn btn-danger">
+              {{ __('Register') }}
+            </button>
+            <a href="{{ url('/login') }}" type="submit" class="text-white pull-right">
+              {{__('Sudah Punya Akun?') }}
+            </a>
+          </div>
+        </div>
+      </form>
+  <!--form end-->
+</div>
 
 @endsection

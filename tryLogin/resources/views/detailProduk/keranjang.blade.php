@@ -15,7 +15,8 @@
 
   <div class="row d-flex justify-content-center">
     <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 ">
-        <table class="table table-hoverr">
+      <div class="table-responsive-sm">
+        <table class="table table-hover">
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -45,6 +46,7 @@
            </tbody>
            @endforeach
         </table>
+      </div>
 
       </ul>
     </div>
@@ -61,7 +63,8 @@
     </div>
   </div>
   <br>
-  <div class="image d-flex mt-5 justify-content-center">
+  <!-- image -->
+  <div class="image img-fluid d-flex mt-5 justify-content-center">
     <img src="img/cart_visual.png" alt="cart visual">
   </div>
   @else

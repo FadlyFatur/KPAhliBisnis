@@ -1,8 +1,14 @@
+*{
+  font-family: 'Exo', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
 .far{
   color:grey;
 }
 
 .image img{
   width: auto;
-  height: 500px;
+  height: 300px;
 }

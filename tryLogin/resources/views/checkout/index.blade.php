@@ -1,7 +1,7 @@
 @extends('layouts.template')
 @section('title', 'Checkout')
 @section('css')
-    <link rel="stylesheet" href="checkout-style.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/checkout-style.css') }}">
 @endsection
 
 @section('content')
