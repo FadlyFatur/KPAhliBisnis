@@ -22,7 +22,7 @@
 <section class="page2">
   <div class="container text-center">
       <h2 class="heading mb-5">BEBERAPA HASIL DARI JASA <b>UNTUKMASARIN</b></h2>
-      <div class="row mb-3">
+      <div class="row">
         <!-- video -->
         <div class="col mr-5">
         <!-- <p>test</p> -->
@@ -93,13 +93,13 @@
   <div class="container text-center">
     <h2 class="heading">PAKET JASA FOTO PRODUK</h2>
     <div class="row service ">
-      <div class="col-4 nopadding produk1">
+      <div class="col-lg-4 col-md-6 nopadding produk1">
       <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-makanan.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk2">
+      <div class="col-lg-4 col-md-6 nopadding produk2">
       <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk3">
+      <div class="col-lg-4 col-md-6 nopadding produk3">
       <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/studio1.png') }}"></a>
       </div>
     </div>
@@ -112,13 +112,13 @@
   <div class="container text-center">
     <h2 class="heading">PAKET JASA DESAIN PRODUK</h2>
     <div class="row service ">
-      <div class="col-4 nopadding produk1">
+      <div class="col-lg-4 col-md-6 nopadding produk1">
         <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-logo.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk2">
+      <div class="col-lg-4 col-md-6 nopadding produk2">
         <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2-logo.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk3">
+      <div class="col-lg-4 col-md-6 nopadding produk3">
         <a  class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/video-animasi.png') }}"></a>
       </div>
     </div>
