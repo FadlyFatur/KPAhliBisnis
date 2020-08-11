@@ -43,10 +43,10 @@
 <br>
 @endif
 
-<div class="btn-group mb-5 d-flex justify-content-center" role="group" aria-label="Basic example">
+<!-- <div class="btn-group mb-5 d-flex justify-content-center" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary btn-lg btn1 border border-light" id="btn1" onclick="myFunction()">Foto Produk</button>
   <button type="button" class="btn btn-secondary btn-lg btn2 border border-light" id="btn2" onclick="btn2Function()">Desain Grafis</button>
-</div>
+</div> -->
 
 <div class="fotoProduk fp1 mb-5" id="kol-1">
   <div class="container">
