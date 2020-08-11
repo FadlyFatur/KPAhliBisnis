@@ -16,14 +16,42 @@ use Illuminate\Support\Str;
 |
 */
 
+// Coba Setelah User ter-autentikasi, nantinya hal ini diganti
+// sama homepage yang dibikin zul
+Route::get('/', function () {
+  $user = "";
+  if (Auth::check()){
+    $user = Auth::user();
+    $responses = "Welcome ".$user->name;
+  }
+  return view('welcome',compact("user"));
+});
+
+//route ke keranjang/cart --fdly
+Route::get('/Keranjang',[
+  'uses' => 'detailProdukController@getCart',
+  'as'=> 'detailProduk.keranjang'
+]);
+
+
 Route::get('/Tambah-keranjang/{id}',[
   'uses' => 'detailProdukController@getTambahKeranjang',
   'as'=> 'detailProduk.TambahKeranjang'
 ]);
 
-Route::get('/Keranjang',[
-  'uses' => 'detailProdukController@getCart',
-  'as'=> 'detailProduk.keranjang'
+Route::get('/Tambah/{id}',[
+  'uses' => 'detailProdukController@getTambah',
+  'as'=> 'detailProduk.plus'
+]);
+
+route::get('/reduce/{id}',[
+  'uses'=>'detailProdukController@getReduceOne',
+  'as'=>'detailproduk.reduceOne'
+]);
+
+route::get('/remove/{id}',[
+  'uses'=>'detailProdukController@getRemoveItem',
+  'as'=>'detailproduk.remove'
 ]);
 
 
@@ -34,16 +62,6 @@ Route::get('/sendNotif', function () {
     echo "Notif Success";
 });
 
-// Coba Setelah User ter-autentikasi, nantinya hal ini diganti
-// sama homepage yang dibikin zul
-Route::get('/', function () {
-    $user = "";
-    if (Auth::check()){
-        $user = Auth::user();
-        $responses = "Welcome ".$user->name;
-    }
-    return view('welcome',compact("user"));
-});
 
 // Route untuk halaman detail dan kontak
 Route::get('/contact', function () {

@@ -90,6 +90,10 @@ main .col-md-9 i{
     height: auto;
     color: white;
 }
+
+tr{
+  font-style: normal;
+}
 @media (max-width: 767.98px) {
     main .row .col-md-3{
         z-index: 1;

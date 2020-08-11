@@ -33,4 +33,23 @@ class Cart
     $this->totalQty++;
     $this->totalHarga += $item->harga;
   }
+
+  public function reduceOne($id)
+  {
+    $this->items[$id]['qty']--;
+    $this->items[$id]['harga'] -= $this->items[$id]['item']['harga'];
+    $this->totalQty--;
+    $this->totalHarga -=  $this->items[$id]['item']['harga'];
+
+    if ($this->items[$id]['qty']<=0){
+      unset($this->items[$id]);
+    }
+  }
+
+  public function removeItem($id)
+  {
+    $this->totalQty-= $this->items[$id]['qty'];
+    $this->totalHarga -=  $this->items[$id]['harga'];
+    unset($this->items[$id]);
+  }
 }

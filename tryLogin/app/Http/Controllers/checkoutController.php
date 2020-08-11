@@ -32,7 +32,7 @@ class checkoutController extends Controller
 
         $response = curl_exec($curl);
         // $response = json_decode($response,true);
-        
+
         $err = curl_error($curl);
 
         curl_close($curl);
@@ -43,6 +43,7 @@ class checkoutController extends Controller
         return $response;
         }
     }
+
     public function getCheckout()
     {
       if (!Session::has('cart')){
@@ -52,7 +53,7 @@ class checkoutController extends Controller
       $cart = new Cart($oldCart);
       $qty = $cart->totalQty;
       $total = $cart->totalHarga;
-    
+
       $list = json_decode($this->getLoc(),true)["rajaongkir"]["results"];
       $list_provinsi = array_column($list,"province","province_id");
       $id = array_column($list,"province_id","city_id");
@@ -62,6 +63,7 @@ class checkoutController extends Controller
                                     "provinsi"=>$list_provinsi,"id_kota"=>$id]);
     }
 
+    //record data checkout
     public function postCheckout(Request $request)
     {
       if (!Session::has('cart')){
@@ -91,7 +93,7 @@ class checkoutController extends Controller
       Session::forget('cart');
       return redirect()->route('detailProduk.index')->with('success','Berhasil Melakukan Pemesanan Produk');
     }
-    
+
     public function selectedCity(Request $request)
     {
         // Passing variabel with AJAX with POST method
@@ -103,4 +105,3 @@ class checkoutController extends Controller
         return response()->json(['success2'=> $list_related_prov]);
     }
 }
- 
