@@ -1,8 +1,8 @@
 *{
   font-family: 'Exo', sans-serif;
-  color:#F8F9FA;
 }
 html,body{
+    color:#F8F9FA;
     background-image: linear-gradient(235deg,#E14455, #E14455);
 }
 
