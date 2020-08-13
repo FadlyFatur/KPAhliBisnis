@@ -84,9 +84,9 @@ class adminLogin extends Controller
             
             case 'cek':
                 $admin_edit = admin::find($id);
+                $admin = echo $admin_edit->BuktiPembayaran;
 
-                
-                return redirect()->route('adminDashboard.index');
+                return redirect($admin);
         }
     }
 

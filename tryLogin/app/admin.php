@@ -7,6 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class admin extends Model
 {
-    protected $fillable = ['BuktiPembayaran,status'];
+    protected $fillable = ['status'];
 
 }
