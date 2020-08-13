@@ -19,9 +19,13 @@ main {
   position: relative;
 }
 
-.container{
-  position: relative;
-/* top:5%; */
+.judul{
+  position: absolute;
+  display: block;
+  width: 30%;
+  top:25%;
+  right: 60%;
+
 }
 
 .btn{
@@ -47,35 +51,17 @@ margin-right: 10px;
   position: relative;
 }
 
-.page2 .jasa-produk .card-group .card1{
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.page2 .jasa-produk .card-group .card2{
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.page2 .jasa-produk .card-group .card3{
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.page2 .jasa-produk .card-group .card4{
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.page2 .jasa-produk .card-group .card5{
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.page2 .jasa-produk .card-group .card6{
-  position: relative;
-  width: 200px;
-  height: 200px;
+.card-view{
+  display: inline;
+} */
+
+/* .card{
+  width: 50%;
+  height: 50%;
+} */
+
+.card img{
+
 }
 
     /* ==END PORTOFOLIO== */
@@ -138,36 +124,30 @@ margin-right: 10px;
 }
     /* ==END DESIGN PRODUK== */
 
-.col .jasa-produk{
+/* .col .jasa-produk{
   color: #000;
   font-size: 20px;
-}
+} */
 
 .card-group{
   height: 80%;
   width: 80%;
-  padding: 50px;
-}
-.card-group img{
-  height: 50%;
-  width: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.card-group p{
-  font-size: 12px;
+  margin-left: 200px;
+  margin-top: 30px;
+  justify-content: center;
 }
 
+
 .service img{
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
 }
 
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
 }
+
 
 footer {
   text-align: center;
@@ -437,7 +417,7 @@ footer {
   .page3 .produk{
     position: relative;
 
-  } 
+  }
   .page3 .produk1 {
     position: relative;
 

@@ -15,7 +15,7 @@
           </a>
           <!-- <a class="nav-item nav-link {{request()->is('kategori') ? 'active' :''}}" href="{{ url('/kategori') }}">Kategori</a> -->
           <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}">Produk</a>
-          <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Contact</a>
+          <a class="nav-item nav-link {{request()->is('contact') ? 'active' :''}}" href="{{ url('/contact') }}">Kontak</a>
           @guest
 
           <a class="nav-item nav-link {{request()->is('login') ? 'active' :''}}" href="{{ url('/login') }}">{{ __('Login') }}</a>

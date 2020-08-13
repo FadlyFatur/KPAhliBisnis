@@ -1,4 +1,5 @@
 *{
+      font-family: 'Exo', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -8,13 +9,13 @@ html,body{
     background-image: linear-gradient(235deg,#E14455, #E14455);
     background-repeat: no-repeat;
 }
+
 nav img{
     float: left;
 }
 nav p{
     margin-left: 20px;
     float: left;
-    font-family: 'Exo', sans-serif;
     color: white;
 }
 
@@ -89,7 +90,7 @@ form button{
 
 /* For Desktop */
 @media (min-width: 768px){
-    
+
     .designPage img{
         position: absolute;
         display: block;
@@ -107,7 +108,7 @@ form button{
 }
 
 /* Large Desktop */
-@media (min-width: 1200px) {  
+@media (min-width: 1200px) {
     .forms{
         padding: 70px;
     }
