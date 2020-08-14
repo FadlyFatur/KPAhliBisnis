@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+    background-color: #E14455;
+}
+
+.container{
+    position: relative;
+    top: 25%;
+}
+
+form{
+    background-color: #f2f2f2;
+    padding: 50px;
+    width: 40%;
+    margin: 0 auto;
+}
