@@ -1,85 +1,34 @@
 *{
-    color: #FFf;
-    -webkit-font-smoothing: antialiased;
+  font-family: 'Exo', sans-serif;
 }
-html,body{ 
+html,body{
+    color:#F8F9FA;
     background-image: linear-gradient(235deg,#E14455, #E14455);
-    background-repeat: no-repeat;
-}
-.form-container{padding: 50px 120px; margin-top: 4vh;
-            box-shadow: 1px 6px 26px 0px rgba(0,0,0,0.75);
-            border-radius: 12px 12px 12px 12px;
-            -moz-border-radius: 12px 12px 12px 12px;
-            -webkit-border-radius: 12px 12px 12px 12px;
-            border: 0px solid #000000;
-            /* position: absolute;
-            left: 50px;
-            top: 30px; */
-
-            
-}
-nav{
-    padding-top: 30px;
-}
-nav img{
-    float: left;
 }
 
-nav p{
-    margin-left: 9px;
-    margin-top: 8px;
-    float: left;
-    font-family: 'Exo', sans-serif;
-    color: white;
-}
 form{
-    margin: 0;
-}
-form a{
-    color: #fff;
-    position: relative;
-}
-
-.container .frms{
+    background-color: #b23943;
+    padding: 30px;
     width: 50%;
-
-}
-.inputreg{
-    width: 300px;
+    border-radius: 10px;
 }
 
-.container .bg{
-    padding: 50px;
-}
-/* .ta-center{
-    text-align: center!important;
-} */
-@media (max-width: 992px) {
-    .form-container{
-        margin-top: 4vh; margin-left: 0vh; margin-right: 0vh;
-        padding: 50px;
-    }
-    .inputreg{
-        width: 230px;
-    }
-    .container .frms{
-        width: 100%;
-    }
-    .navbar-brand{
-        width: 100%;
-    }
+@media only screen and (max-width: 992px){
 
+  form{
+      background-color: #b23943;
+      /* padding: 100px; */
+      width: 80%;
+      border-radius: 10px;
+  }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {   
-    .form-container{
-        margin-top: 4vh; margin-left: 0vh; margin-right: 0vh;
-        padding: 50px;
-    } 
-    .inputreg{
-        width: 230px;
-    }
-    .container .frms{
-        width: 70%;
-    }
+@media only screen and (max-width: 768px){
+
+  form{
+      background-color: #b23943;
+      /* padding: 100px; */
+      width: 100%;
+      border-radius: 10px;
+  }
 }

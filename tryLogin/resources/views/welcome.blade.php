@@ -6,12 +6,12 @@
 @section('content')
 @include('layouts.navigation')
 <main>
-      <div class="container">
+      <div class="container judul">
         <div class="row align-self-center">
           <div class="col">
             <h1>UntukMasarin</h1>
-            <p> <b>UntukMasarin</b> bertujuan membantu UMKM <br> dalam mempermudah berbagai kegiatan promosi UMKM<br> dengan menyediakan beragam jasa<br> seperti Foto produk, Desain, Dan pembuatan video promosi</p>
-            <a href="/kategori"> <button type="button" class="btn btn-danger btn-psn pesan">PESAN</button></a>
+            <p> <b class="text-danger">UntukMasarin</b> bertujuan membantu UMKM dalam mempermudah berbagai kegiatan promosi UMKM dengan menyediakan beragam jasa seperti Foto produk, Desain, Dan pembuatan video promosi</p>
+            <a href="{{route('detailProduk.index')}}"> <button type="button" class="btn btn-danger btn-psn pesan">PESAN</button></a>
             <a href="/contact"> <button type="button" class="btn btn-danger btn-ktk kontak">KONTAK</button></a>
           </div>
         </div>
@@ -21,58 +21,59 @@
 
 <section class="page2">
   <div class="container text-center">
-      <h2 class="heading mb-5">BEBERAPA HASIL DARI JASA <b>UNTUKMASARIN</b></h2>
-      <div class="row mb-3">
+
+    <h2 class="heading mb-5">BEBERAPA HASIL DARI JASA <b class="text-danger">UNTUKMASARIN</b></h2>
+      <div class="row mt-5">
         <!-- video -->
-        <div class="col mr-5">
-        <!-- <p>test</p> -->
+        <div class="col-4">
             <video width="500" height="420" controls>
-            <source src="{{ URL::asset('img/umi.MP4') }}" type="video/mp4">
-            <source src="{{ URL::asset('img/umi.ogg') }}" type="video/ogg">
-          </video>
+              <source src="{{ URL::asset('img/umi.MP4') }}" type="video/mp4">
+              <source src="{{ URL::asset('img/umi.ogg') }}" type="video/ogg">
+            </video>
         </div>
         <!-- card -->
-        <div class="col">
+        <div class="col-8">
+          <div class="row jasa-produk">
 
-          <div class="row jasa-produk mr-1 mb-1">
             <div class="card-group">
               <div class="card card1">
-                <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ URL::asset('img/desain-grafis.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-title">Portofolio 1</p>
                 </div>
               </div>
               <div class="card card2">
-                <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ URL::asset('img/desain-grafis.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-title">Portofolio 2</p>
                 </div>
               </div>
               <div class="card card3">
-                <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ URL::asset('img/desain-grafis.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-title">Portofolio 3</p>
                 </div>
               </div>
+
             </div>
           </div>
 
-          <div class="row jasa-produk mr-1">
+          <div class="row jasa-produk">
             <div class="card-group">
               <div class="card card4">
-                <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ URL::asset('img/photo-produk.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-title">Portofolio 4</p>
                 </div>
               </div>
               <div class="card card5">
-                <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ URL::asset('img/photo-produk.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-title">Portofolio 5</p>
                 </div>
               </div>
               <div class="card card6">
-                <img class="card-img-top" src="{{ URL::asset('assets/img/assets/icon1.png') }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ URL::asset('img/photo-produk.jpg') }}" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-title">Portofolio 6</p>
                 </div>
@@ -93,14 +94,14 @@
   <div class="container text-center">
     <h2 class="heading">PAKET JASA FOTO PRODUK</h2>
     <div class="row service ">
-      <div class="col-4 nopadding produk1">
-      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-makanan.png') }}"></a>
+      <div class="col-lg-4 col-md-6 nopadding produk1">
+      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-fp.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk2">
-      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2.png') }}"></a>
+      <div class="col-lg-4 col-md-6 nopadding produk2">
+      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2-fp.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk3">
-      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/studio1.png') }}"></a>
+      <div class="col-lg-4 col-md-6 nopadding produk3">
+      <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket3-fp.png') }}"></a>
       </div>
     </div>
     <strong class="produk text-primary">By ahlibisnis.id</strong>
@@ -112,14 +113,14 @@
   <div class="container text-center">
     <h2 class="heading">PAKET JASA DESAIN PRODUK</h2>
     <div class="row service ">
-      <div class="col-4 nopadding produk1">
-        <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-logo.png') }}"></a>
+      <div class="col-lg-4 col-md-6 nopadding produk1">
+        <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket1-dp.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk2">
-        <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2-logo.png') }}"></a>
+      <div class="col-lg-4 col-md-6 nopadding produk2">
+        <a class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket2-dp.png') }}"></a>
       </div>
-      <div class="col-4 nopadding produk3">
-        <a  class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/video-animasi.png') }}"></a>
+      <div class="col-lg-4 col-md-6 nopadding produk3">
+        <a  class="nav-item nav-link {{request()->is('detailProduk') ? 'active' :''}}" href="{{ url('/detailProduk') }}"><img src="{{ URL::asset('img/paket3-dp.png') }}"></a>
       </div>
     </div>
   <strong class="produk text-primary">By ahlibisnis.id</strong>

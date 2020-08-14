@@ -33,6 +33,7 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Nama Pemesan</th>
+                                    <th scope="col">Tanggal Order</th>
                                     <th scope="col">Alamat</th>
                                     <th scope="col">Provinsi</th>
                                     <th scope="col">Kabupaten</th>
@@ -45,6 +46,7 @@
                             <tbody>
                                 <tr>
                                   <th scope="col">{{$order->name_depan}} {{$order->name_belakang}} </th>
+                                  <th scope="col">{{date("d/m/Y", strtotime($order->created_at))}}</th>
                                   <th scope="col">{{$order->address}} </th>
                                   <th scope="col">{{$order->Provinsi}}</th>
                                   <th scope="col">{{$order->Kabupaten}}</th>
@@ -66,22 +68,23 @@
                             <table class="table">
                               <thead>
                                 <tr>
-                                  <th scope="col">#</th>
+                                  <th scope="col">No</th>
                                   <th scope="col">Nama Produk</th>
                                   <th scope="col">Quantity</th>
-                                  <th scope="col">Harga</th>
+                                  <th scope="col">Harga (Rp)</th>
                                 </tr>
                               </thead>
                               <tbody>
+                                <!-- {{$number=1}} JANGAN DIHAPUS-->
                                 @foreach ($order->cart->items as $item)
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">{{$number++}}</th>
                                   <td>{{$item['item']['nama']}}</td>
                                   <td>{{$item['qty']}}</td>
-                                  <td>{{$item['harga']}}</td>
+                                  <td>{{number_format($item['harga'],0,",",".")}}</td>
                                 </tr>
                                 @endforeach
-                                <strong>Total Harga : Rp.{{$order->cart->totalHarga}} </strong>
+                                <strong class="text-primary">Total Harga : Rp.{{number_format($order->cart->totalHarga,0,",",".")}} </strong>
                               </tbody>
                             </table>
                           </div>

@@ -10,20 +10,19 @@
     <div class="container">
         <nav class="navbar navbar-light mt-3">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ URL::asset('img/iconLogo.webp') }}" width="30" height="auto" class="d-inline-block align-top"
-                    alt="">
+                <img src="{{ URL::asset('img/iconLogo.webp') }}" width="30" height="auto" class="d-inline-block align-top" alt="">
                 <p>UntukMasarin</p>
             </a>
         </nav>
         <div class="designPage">
             <div class="row mt-3">
                 <div class="col-md-6">
-                    <img src="{{ URL::asset('img/2-layers.webp') }}" alt="workingAnimation"> 
+                    <img src="{{ URL::asset('img/2-layers.webp') }}" alt="workingAnimation">
                 </div>
                 <div class="col-md-6">
                     <div class="forms">
                         <div id="circle"></div><h3>LOGIN</h3>
-                        <p class="mt-4 mb-3">Log in to your account</p>               
+                        <p class="mt-4 mb-3">Log in to your account</p>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group">
@@ -41,9 +40,9 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror    
+                                @enderror
                             </div>
-                            
+
                             <!-- <div class="form-group row">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -57,19 +56,19 @@
                                 <div class="col-sm-5">
                                     @if (Route::has('password.request'))
                                         <a style="color:white;" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Password?') }}
+                                            Lupa Password
                                         </a>
                                     @endif
                                 </div>
-                                <div class="col-sm-7">
+                                <div class="col-sm-7 d-flex justify-content-end">
                                     @if (Route::has('register'))
-                                        <a style="color:white;" href="{{ route('register') }}">Don't have an account yet?</a>
+                                        <a style="color:white;" href="{{ route('register') }}">Belum punya akun?</a>
                                     @endif
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>       
+                </div>
             </div>
         </div>
     </div>

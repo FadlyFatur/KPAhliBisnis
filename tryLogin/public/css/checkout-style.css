@@ -1,10 +1,5 @@
  * {
-   margin: 0;
+   font-family: 'Exo', sans-serif;
    padding: 0;
-   box-sizing: border-box;
-   font-family: 'Montserrat', sans-serif;
- }
-
- .no-svg{
- background:url("wave3.svg") no-repeat;
+   margin: 0;
  }

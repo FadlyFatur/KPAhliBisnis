@@ -1,7 +1,7 @@
 @extends('layouts.template')
 @section('title', 'Checkout')
 @section('css')
-    <link rel="stylesheet" href="checkout-style.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/checkout-style.css') }}">
 @endsection
 
 @section('content')
@@ -24,9 +24,10 @@
            <li class="list-group-item d-flex justify-content-between lh-condensed">
              <div>
                <h6 class="my-0">{{$produk['item']['nama']}}</h6>
-               <small class="text-muted">Brief description</small>
+               <small class="text-muted">Jumlah Produk yang dipesan : </small>
+               <span class="badge badge-secondary ">{{$produk['qty']}} </span>
              </div>
-             <span class="text-muted">Rp. {{$produk['harga']}}</span>
+             <span class="text-muted">Rp. {{number_format($produk['harga'],0,",",".")}}</span>
            </li>
            @endforeach
            <!-- <li class="list-group-item d-flex justify-content-between bg-light">
@@ -38,7 +39,7 @@
            </li> -->
            <li class="list-group-item d-flex justify-content-between">
              <span>Harga Total</span>
-             <strong>Rp.{{$total}}</strong>
+             <strong>Rp.{{number_format($total,0,",",".")}}</strong>
            </li>
          </ul>
          @else
@@ -133,7 +134,7 @@
                       $('#provinsi').on('change', function() {
 
                           // create data from form input(s)
-                          const nama_provinsi = $("#provinsi").children("option:selected").val(); 
+                          const nama_provinsi = $("#provinsi").children("option:selected").val();
                           let formData = $('#myForm').serialize();
                           console.log(formData);
 
