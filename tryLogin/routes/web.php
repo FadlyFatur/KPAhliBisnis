@@ -27,6 +27,8 @@ Route::get('/', function () {
   return view('welcome',compact("user"));
 });
 
+// Route('/invoice','checkoutController@invoiceMail');
+
 //route ke keranjang/cart --fdly
 Route::get('/Keranjang',[
   'uses' => 'detailProdukController@getCart',

@@ -6,7 +6,7 @@
 
 html,body{
     height: 100%;
-    background-image: linear-gradient(235deg,#E14455, #E14455);
+    background-image: radial-gradient( circle 972.6px at 10% 20%,  rgb(216, 34, 52) 0%, rgb(225, 68, 85) 90% );
     background-repeat: no-repeat;
 }
 

@@ -84,14 +84,14 @@ class checkoutController extends Controller
       $order->pengunaan_foto = $request->input('uses');
       $order->Provinsi = $request->input('prov');
       $order->Kabupaten = $request->input('kab');
-      $order->Kecamatan = $request->input('kec');
+      $order->Kode_pos = $request->input('posKode');
       //create unique id
       $uniqid = Str::random(5);
       $order->payment_id = $uniqid;
 
       Auth::user()->orders()->save($order);
       Session::forget('cart');
-      return redirect()->route('detailProduk.index')->with('success','Berhasil Melakukan Pemesanan Produk');
+      return redirect()->route('infoPemesanan')->with('success','Berhasil Melakukan Pemesanan Produk');
     }
 
     public function selectedCity(Request $request)
@@ -103,5 +103,10 @@ class checkoutController extends Controller
         $list_related_prov = array_keys($list_kota, $nama_prov);
 
         return response()->json(['success2'=> $list_related_prov]);
+    }
+
+    public function invoiceMail()
+    {
+      return view('invoice_mail');
     }
 }

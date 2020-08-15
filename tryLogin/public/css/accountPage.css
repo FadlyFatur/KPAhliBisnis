@@ -3,6 +3,13 @@
     padding: 0;
     margin: 0;
 }
+
+.btn-nav{
+  padding: 10px;
+  width: 120px;
+  border-radius: 50px;
+}
+
 html,body{
     height: 100%;
 }

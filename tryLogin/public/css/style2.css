@@ -3,7 +3,10 @@
 }
 html,body{
     color:#F8F9FA;
-    background-image: linear-gradient(235deg,#E14455, #E14455);
+    /* background-image: linear-gradient(235deg,#E14455, #c43c4a); */
+    background-image: radial-gradient( circle 972.6px at 10% 20%,  rgb(216, 34, 52) 0%, rgb(225, 68, 85) 90% );
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 form{
@@ -12,6 +15,18 @@ form{
     width: 50%;
     border-radius: 10px;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 @media only screen and (max-width: 992px){
 

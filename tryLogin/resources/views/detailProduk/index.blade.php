@@ -34,7 +34,7 @@
 </main>
 
 <!-- Foto Produk Section -->
-@if(Session::has('success'))
+<!-- @if(Session::has('success'))
 <div class="row d-flex justify-content-center mb-5">
   <div class=" sukses col-sm-6 col-md-4">
     <div id="error-message" class="alert alert-seccess text-center rounded">
@@ -43,7 +43,7 @@
   </div>
 </div>
 <br>
-@endif
+@endif -->
 <!-- <div class="btn-group mb-5 d-flex justify-content-center" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary btn-lg btn1 border border-light" id="btn1" onclick="myFunction()">Foto Produk</button>
   <button type="button" class="btn btn-secondary btn-lg btn2 border border-light" id="btn2" onclick="btn2Function()">Desain Grafis</button>
