@@ -11,7 +11,10 @@ html,body{
 }
 
 nav img{
+    padding : 7px;
+    background-color: white;
     float: left;
+    clip-path: circle(15px at center);
 }
 nav p{
     margin-left: 20px;
@@ -72,7 +75,7 @@ form .form-group input{
 }
 
 form button{
-    background: #d35c68;
+    background: #E14455;
     color: white;
     font-family: 'Exo', sans-serif;
     letter-spacing: 5px;
