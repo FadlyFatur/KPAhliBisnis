@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/contact.css') }}">
 @endsection
 
-@section('content')
+@section('content') 
 @include('layouts.navigation')
     <div class="containers">
         <h2>CONTACT US</h2>
@@ -13,15 +13,15 @@
         <main>
             <div class="row text-center mt-2">
                 <div class="col">
-                    <img src="{{ URL::asset('img/location.webp') }}">
+                    <img src="{{ URL::asset('img/location.png') }}">
                     <p class="mt-3">Jl.Sudirman 31 No.88<br>Bandung, Jawa Barat</p>
                 </div>
                 <div class="col">
-                    <img src="{{ URL::asset('img/phone.webp') }}">
+                    <img src="{{ URL::asset('img/phone.png') }}">
                     <p class="mt-3">+62 888 8888 8888</p>
                 </div>
                 <div class="col">
-                    <img src="{{ URL::asset('img/mail.webp') }}">
+                    <img src="{{ URL::asset('img/mail.png') }}">
                     <p class="mt-3">ahlibisnis@test.com</p>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             <div class="col-sm-4 mt-4">
                 <div class="row">
                     <div class="col-sm-2">
-                        <img src="{{ URL::asset('img/questionMark.webp') }}">
+                        <img src="{{ URL::asset('img/questionMark.png') }}">
                     </div>
                     <div class="col-sm-10">
                         <h4>Lorem ipsum dolor sit</h4>
@@ -52,7 +52,7 @@
             <div class="col-sm-4 mt-4">
                 <div class="row">
                     <div class="col-sm-2">
-                        <img src="{{ URL::asset('img/questionMark.webp') }}">
+                        <img src="{{ URL::asset('img/questionMark.png') }}">
                     </div>
                     <div class="col-sm-10">
                         <h4>Lorem ipsum dolor sit</h4>
@@ -64,7 +64,7 @@
             <div class="col-sm-4 mt-4">
                 <div class="row">
                     <div class="col-sm-2">
-                        <img src="{{ URL::asset('img/questionMark.webp') }}">
+                        <img src="{{ URL::asset('img/questionMark.png') }}">
                     </div>
                     <div class="col-sm-10">
                         <h4>Lorem ipsum dolor sit</h4>
