@@ -36,7 +36,7 @@ Route::get('/Keranjang',[
 ]);
 
 
-Route::get('/Tambah-keranjang/{id}',[
+Route::get('/Tambahkeranjang/{id}',[
   'uses' => 'detailProdukController@getTambahKeranjang',
   'as'=> 'detailProduk.TambahKeranjang'
 ]);
@@ -101,9 +101,12 @@ Route::post('/home', 'HomeController@update')->name('homeUpdate');
 
 // route ke info pemesanan
 Route::get('/home/infoPemesanan', 'PemesananController@getInfo')->name('infoPemesanan');
-// Route::get('/home/infoPemesanan', 'PemesananController@index')->name('infoPemesanan');
+// Route::post('/upload/{id}', 'PemesananController@Upload');
 
-// Route::view('/home/infoPemesanan','infoPemesanan');
+Route::post('/upload/{id}',[
+  'uses' => 'PemesananController@Upload',
+  'as'=> 'uploadStruk'
+]);
 
 // Proses Session
 Route::get('/session/get', 'UserController@getSessionData');

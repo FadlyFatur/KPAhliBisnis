@@ -26,7 +26,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Pembelian Sukses</h5>
+                    <h5 class="modal-title">Order Sukses</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -71,8 +71,12 @@
                                   <th scope="col">{{date("d/m/Y", strtotime($order->created_at))}}</th>
                                   <th scope="col">{{$order->address}}, {{$order->Kabupaten}}, {{$order->Provinsi}}</th>
                                   <th scope="col">{{number_format($order->cart->totalHarga,0,",",".")}} </th>
-                                  <th scope="col">Pending</th>
-                                  <th scope="col">...</th>
+                                  @if($order->status != True)
+                                    <th scope="col">Pending</th>
+                                  @else
+                                    <th scope="col">Confirm</th>
+                                  @endif
+                                  <th scope="col"> <img src="{{url('uploads/'.$order->filename)}}" alt="..."></th>
                                   <th scope="col" class="but-col">
                                     <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#exampleModal">Konfirmasi</button>
                                     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->payment_id}}" aria-expanded="false" aria-controls="collapseExample">
@@ -128,20 +132,23 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <form method="POST" action="{{ route('uploadStruk',['id'=>$order->id]) }}" enctype="multipart/form-data">
           <div class="modal-body">
-            <form>
+              {{csrf_field()}}
               <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <label for="struk">Upload Bukti Pembayaran</label>
+                <input type="file" class="form-control-file" name="struk" id="exampleFormControlFile1">
                 <hr>
                 <p>Silahkan upload foto struck/nota pembayaran sesuai dengan total harga</p>
               </div>
-            </form>
           </div>
           <div class="modal-footer">
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-            <button type="button" class="btn btn-primary">Submit</button>
+            <!-- <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <!-- <input type="submit" value="Upload" class="btn btn-primary"> -->
+            <!-- <a method="POST" href="{{ route('uploadStruk',['id'=>$order->id]) }}"> <button type="button" value="Upload" class="btn btn-primary" id="btn">Submit</button> </a> -->
+            <button type="<submit></submit>" class="btn btn-primary">Submit</button>
           </div>
+        </form>
         </div>
       </div>
     </div>

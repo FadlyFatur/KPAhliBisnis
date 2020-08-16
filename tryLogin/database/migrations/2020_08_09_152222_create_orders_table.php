@@ -30,6 +30,8 @@ class CreateOrdersTable extends Migration
           $table->text('cart');
           $table->integer('user_id');
           $table->string('payment_id');
+          $table->string('filename')->nullable();
+          $table->boolean('status')->default(0);
         });
     }
 
