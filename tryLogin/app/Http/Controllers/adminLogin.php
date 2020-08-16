@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\admin;
+use App\order;
 use Illuminate\Support\Facades\Storage;
 
 class adminLogin extends Controller
@@ -78,8 +78,8 @@ class adminLogin extends Controller
         // $admin_edit = $request->input('status');
         switch ($request->input('action')) {
             case 'Konfirmasi':
-                $admin_edit = admin::find($id);
-                $admin_edit->status = true;
+                $admin_edit = order::find($id);
+                $admin_edit->status = 1;
                 $admin_edit->save();
                 return redirect()->route('adminDashboard.index');
             
