@@ -17,10 +17,9 @@ class adminLogin extends Controller
     public function index($id=0)
     {
         // mengambil data dari table admin
-        $admin = DB::table('admins')->get();
-        $user = DB::table('users')->get();
+        $order = DB::table('orders')->get();
         // mengirim data admin ke view admin
-        return view('adminDashboard.index', ['admins' => $admin, 'users' => $user]);
+        return view('adminDashboard.index', ['orders' => $order]);
         }
 
     /**
@@ -80,7 +79,7 @@ class adminLogin extends Controller
         switch ($request->input('action')) {
             case 'Konfirmasi':
                 $admin_edit = admin::find($id);
-                $admin_edit->status = 'yes';
+                $admin_edit->status = true;
                 $admin_edit->save();
                 return redirect()->route('adminDashboard.index');
             

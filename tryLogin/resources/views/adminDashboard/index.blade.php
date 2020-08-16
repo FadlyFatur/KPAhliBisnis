@@ -78,75 +78,74 @@
         </div>
     </div>
 </main>
-
     <div class="container">
         <table style="width:100%">
             <?php $i = 1; ?>
                 <tr>
                     <th>No.</th>
                     <th>Id</th>
-                    <th>Nama</th>
-                    <th>Kode Pembelian</th>
-                    <th>Bukti Pembayaran</th>
-                    <th>Status</th>
-                    <th>Created at</th>
-                    <th>updated at</th>
-                    <th>Konfirmasi?</th>
+                    <th>Nama Depan</th>
+                    <th>Nama Belakang</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Address</th>
+                    <th>Provinsi at</th>
+                    <th>Kabupaten</th>
+                    <th>Kode Pos</th>
+
                 </tr>
-                @foreach($admins as $admin)
+                @foreach($orders as $order)
                 <tr>
                     <td class="text-center">{{$loop->iteration}}</td>
-                    <td>{{$admin->id}}</td>
-                    <td>{{$admin->name}}</td>
-                    <td>{{$admin->kode_pembelian}}</td>
-                    <td class="edit text-center">
-                    <form method="post" action="{{Route('adminUpdate',$admin->id)}}">
-                        @csrf
-                        <input type="hidden" name="adminid" value="{{$admin->id}}"/>
-                        <a href="">
-                          <button class="btn btn-lg btn-success" type="submit" name ="action" value="cek">Cek Bukti</button>
-                        </a>
-                    </form>{{$admin->BuktiPembayaran}}</td>
-                    <td class="text-center">{{$admin->status}}</td>
-                    <td class="text-center">{{$admin->created_at}}</td>
-                    <td class="text-center">{{$admin->updated_at}}</td>
-                    <td>
-                    <form method="post" action="{{Route('adminUpdate',$admin->id)}}">
-                        @csrf
-                        <input type="hidden" name="adminid" value="{{$admin->id}}"/>
-                        <a href="">
-                          <button class="btn btn-lg btn-success" type="submit" name="action" value="Konfirmasi">Konfirmasi</button>
-                        </a>
-                    </form>
-                    </td>
+                    <td>{{$order->id}}</td>
+                    <td>{{$order->name_depan}}</td>
+                    <td>{{$order->name_belakang}}</td>
+                    <td>{{$order->email}}</td>
+                    <td>{{$order->telphone}}</td>
+                    <td>{{$order->address}}</td>
+                    <td>{{$order->Provinsi}}</td>
+                    <td>{{$order->Kabupaten}}</td>
+                    <td>{{$order->Kode_pos}}</td>
+                    
                 </tr>
                 @endforeach
         </table>
-        <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
-
         <table style="width:100%">
             <?php $i = 1; ?>
                 <tr>
                     <th>No.</th>
-                    <th>Id</th>
-                    <th>Nama</th>
-                    <th>No. Hp</th>
-                    <th>E- Mail</th>
-                    <th>Password</th>
+                    <th>Nama Produk</th>
+                    <th>Konsep</th>
+                    <th>Penggunaan Foto</th>
+                    <th>Cart</th>
+                    <th>Filename</th>
+                    <th>Status</th>
+                    <tH>Konfirmasi?</th>
                 </tr>
-                @foreach($users as $user)
-                <tr>
+            @foreach($orders as $order)
+            <tr>
                     <td class="text-center">{{$loop->iteration}}</td>
-                    <td>{{$user->id}}</td>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->nohp}}</td>
-                    <td>{{$user->email}}</td>
-                    <td class="text-center">{{$user->password}}</td>
-                </tr>
-                @endforeach
+                    <td>{{$order->nama_produk}}</td>
+                    <td>{{$order->konsep}}</td>
+                    <td>{{$order->pengunaan_foto}}</td>
+                    <td>{{$order->cart}}</td>
+                    <td>{{$order->filename}}</td>
+                    <td class="text-center">{{$order->status}}</td>
+                    <td>
+                        <form method="post" action="{{Route('adminUpdate',$order->id)}}">
+                            @csrf
+                            <input type="hidden" name="orderid" value="{{$order->id}}"/>
+                            <a href="">
+                            <button class="btn btn-lg btn-success" type="submit" name="action" value="Konfirmasi">Konfirmasi</button>
+                            </a>
+                        </form>
+                    </td>
+            </tr>
+            @endforeach
+                <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
+            
         </table>
-        <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
-</div>
+    </div>
 
 
 
