@@ -24,7 +24,7 @@
       <div class="form-group" >
         <label for="number">Nomer Hp</label>
                 <!-- <input id="nohp" type="number" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" required autocomplete="nohp" autofocus> -->
-                <input Number type="tel"  pattern="[0-9]{3}[0-9]{2}[0-9]{3}" id="nohp" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" aria-label="telephone" aria-describedby="basic-addon1" autocomplete="nohp" autofocus required>
+                <input Number type="number" id="nohp" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ old('nohp') }}" aria-label="telephone" aria-describedby="basic-addon1" autocomplete="nohp" autofocus required>
                 @error('nohp')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

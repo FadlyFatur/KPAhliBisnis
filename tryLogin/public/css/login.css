@@ -6,12 +6,15 @@
 
 html,body{
     height: 100%;
-    background-image: linear-gradient(235deg,#E14455, #E14455);
+    background-image: radial-gradient( circle 972.6px at 10% 20%,  rgb(216, 34, 52) 0%, rgb(225, 68, 85) 90% );
     background-repeat: no-repeat;
 }
 
 nav img{
+    padding : 7px;
+    background-color: white;
     float: left;
+    clip-path: circle(15px at center);
 }
 nav p{
     margin-left: 20px;
@@ -72,7 +75,7 @@ form .form-group input{
 }
 
 form button{
-    background: #d35c68;
+    background: #E14455;
     color: white;
     font-family: 'Exo', sans-serif;
     letter-spacing: 5px;

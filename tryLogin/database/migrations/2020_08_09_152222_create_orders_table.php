@@ -23,7 +23,7 @@ class CreateOrdersTable extends Migration
           $table->text('address');
           $table->string('Provinsi');
           $table->string('Kabupaten');
-          $table->string('Kecamatan');
+          $table->string('Kode_pos');
           $table->string('nama_produk');
           $table->string('konsep');
           $table->string('pengunaan_foto');

@@ -176,19 +176,26 @@
              </div>
              <div class="col-md-4 mb-3">
                <div class="form-group">
+                 <label for="address">Kode Pos</label>
+                 <input type="number" class="form-control" name="posKode" id="kecamatan" placeholder="" value="" required>
+                 <div class="invalid-feedback">
+                   Please enter your shipping address.
+                 </div>
+               </div>
+               <!-- <div class="form-group">
                  <label for="kecamatan">Kecamatan</label>
                 <input type="text" class="form-control" name="kec" id="kecamatan" placeholder="" value="" required>
                  <div class="invalid-feedback">
                    Please provide a valid state.
                  </div>
-             </div>
+             </div> -->
              </div>
            </div>
 
            <hr>
 
             <!-- identitas brand -->
-           <h5 class="mt-5">Identitas Brand</h5>
+           <h4 class="mb-3 text-danger">Identitas Brand/Produk</h4>
            <hr>
             <div class="row">
               <div class="col mb-3 ">
@@ -222,7 +229,7 @@
                     <option>Creativedesk</option>
                   </select>
                   <div class="invalid-feedback">
-                    Please provide a valid state.
+                    Pilih Salah satu.
                   </div>
                 </div>
               </div>
@@ -237,7 +244,7 @@
                     <option>Private photoshoot</option>
                   </select>
                   <div class="invalid-feedback">
-                    Please provide a valid state.
+                    Pilih Salah satu.
                   </div>
                 </div>
               </div>

@@ -10,6 +10,12 @@ html,body{
   height: 100%;
 }
 
+.btn-nav{
+  padding: 10px;
+  width: 120px;
+  border-radius: 50px;
+}
+
 h1{
     /* font-family: "Exo Black"; */
     text-transform: uppercase;
@@ -84,7 +90,7 @@ display: none;
 }
 
 .fotoProduk{
-  margin-top: -300px; 
+  margin-top: -300px;
 }
 
 .fotoProduk .col-lg-3{

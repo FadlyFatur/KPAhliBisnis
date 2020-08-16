@@ -17,7 +17,7 @@
         <div class="designPage">
             <div class="row mt-3">
                 <div class="col-md-6">
-                    <img src="{{ URL::asset('img/2-layers.webp') }}" alt="workingAnimation">
+                    <img src="{{ URL::asset('img/login_icon.png') }}" alt="workingAnimation">
                 </div>
                 <div class="col-md-6">
                     <div class="forms">
