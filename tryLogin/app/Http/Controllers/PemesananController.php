@@ -100,8 +100,8 @@ class PemesananController extends Controller
     {
       $orders = Auth::user()->orders;
       $orders->transform(function($order, $key){
-      $order->cart = unserialize($order->cart);
-      return $order;
+        $order->cart = unserialize($order->cart);
+        return $order;
       });
       // $user = Order::all();
       return view('infoPemesanan',['orders'=>$orders]);
@@ -112,16 +112,24 @@ class PemesananController extends Controller
         'filename' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
       ]);
 
-      $image = $request->file('struk');
-      $nama_file = $image->getClientOriginalName();
+      $image = $request->file('image');
+      // $nama_file = $image->getClientOriginalName();
       $extension = $image->getClientOriginalExtension();
       Storage::disk('upload')->put($image->getFilename().'.'.$extension, File::get($image));
+      // menyimpan data file yang diupload ke variabel $file
+    	// $file = $request->file('image');
+      //
+    	// $nama_file = time()."_".$file->getClientOriginalName();
+      //
+      // // isi dengan nama folder tempat kemana file diupload
+    	// $tujuan_upload = 'data_file';
+    	// $file->move($tujuan_upload,$nama_file);
 
       $struk = new Order();
       $struk = Order::find($id);
-      $struk->filename = $nama_file;
+      $struk->filename =  $image->getClientOriginalName();
       $struk->save();
 
-      return redirect()->back()->with('success');
+      return redirect()->back()->with('sukses');
     }
 }

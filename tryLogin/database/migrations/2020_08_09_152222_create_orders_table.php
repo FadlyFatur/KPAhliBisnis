@@ -31,7 +31,7 @@ class CreateOrdersTable extends Migration
           $table->integer('user_id');
           $table->string('payment_id');
           $table->string('filename')->nullable();
-          $table->boolean('status')->default(0);
+          $table->boolean('status')->default(False);
         });
     }
 

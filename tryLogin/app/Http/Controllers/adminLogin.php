@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\admin;
+use App\Order;
 use Illuminate\Support\Facades\Storage;
 
 class adminLogin extends Controller
@@ -17,7 +18,11 @@ class adminLogin extends Controller
     public function index($id=0)
     {
         // mengambil data dari table admin
-        $order = DB::table('orders')->get();
+        $order = Order::all();
+        $order->transform(function($order, $key){
+          $order->cart = unserialize($order->cart);
+          return $order;
+        });
         // mengirim data admin ke view admin
         return view('adminDashboard.index', ['orders' => $order]);
         }
@@ -78,11 +83,11 @@ class adminLogin extends Controller
         // $admin_edit = $request->input('status');
         switch ($request->input('action')) {
             case 'Konfirmasi':
-                $admin_edit = admin::find($id);
+                $admin_edit = Order::find($id);
                 $admin_edit->status = true;
                 $admin_edit->save();
                 return redirect()->route('adminDashboard.index');
-            
+
             case 'cek':
                 $admin_edit = Admin::where('id', $id)->firstOrFail();
                 $path = storage_path('public/' . $admin_edit->filename) ;
