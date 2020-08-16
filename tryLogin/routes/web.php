@@ -108,6 +108,9 @@ Route::post('/upload/{id}',[
   'as'=> 'uploadStruk'
 ]);
 
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@proses_upload');
+
 // Proses Session
 Route::get('/session/get', 'UserController@getSessionData');
 Route::get('/session/set', 'UserController@storeSessionData');
