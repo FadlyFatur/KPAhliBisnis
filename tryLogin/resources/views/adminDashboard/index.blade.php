@@ -123,7 +123,31 @@
                 @endforeach
         </table>
         <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
+
+        <table style="width:100%">
+            <?php $i = 1; ?>
+                <tr>
+                    <th>No.</th>
+                    <th>Id</th>
+                    <th>Nama</th>
+                    <th>No. Hp</th>
+                    <th>E- Mail</th>
+                    <th>Password</th>
+                </tr>
+                @foreach($users as $user)
+                <tr>
+                    <td class="text-center">{{$loop->iteration}}</td>
+                    <td>{{$user->id}}</td>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->nohp}}</td>
+                    <td>{{$user->email}}</td>
+                    <td class="text-center">{{$user->password}}</td>
+                </tr>
+                @endforeach
+        </table>
+        <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
 </div>
+
 
 
 <!-- jQuery -->

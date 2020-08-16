@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\admin;
+use Illuminate\Support\Facades\Storage;
 
 class adminLogin extends Controller
 {
@@ -17,8 +18,9 @@ class adminLogin extends Controller
     {
         // mengambil data dari table admin
         $admin = DB::table('admins')->get();
+        $user = DB::table('users')->get();
         // mengirim data admin ke view admin
-        return view('adminDashboard.index', ['admins' => $admin]);
+        return view('adminDashboard.index', ['admins' => $admin, 'users' => $user]);
         }
 
     /**
@@ -83,10 +85,10 @@ class adminLogin extends Controller
                 return redirect()->route('adminDashboard.index');
             
             case 'cek':
-                $admin_edit = admin::find($id);
-                $admin = echo $admin_edit->BuktiPembayaran;
-
-                return redirect($admin);
+                $admin_edit = Admin::where('id', $id)->firstOrFail();
+                $path = storage_path('public/' . $admin_edit->filename) ;
+                return response()->download($path, $admin_edit
+                         ->original_filename, ['Content-Type' => $admin_edit->mime]);
         }
     }
 
