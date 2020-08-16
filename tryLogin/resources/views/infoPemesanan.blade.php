@@ -50,6 +50,11 @@
                     <i class="fa fa-bars" style="font-size:24px;" onclick="showFunction()" id="show"></i>
                     <i class="fa fa-close" style="font-size:24px;" onclick="closeFunction()" id="close"></i>
                     <h1 class="mb-5">Info Pemesanan</h1>
+
+                    <!-- @if(Session::has('sukses'))
+                      <p class="text-success">Foto telah diupload</p>
+                    @endif -->
+
                     @foreach ($orders as $order)
                     <div class="table-responsive">
                       <p>Kode Pemesanan : {{$order->payment_id}}</p>
@@ -126,29 +131,31 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
+
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembayaran</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form method="POST" action="{{ route('uploadStruk',['id'=>$order->id]) }}" enctype="multipart/form-data">
+
+          <form method="POST" action="{{ url('/upload/{id}') }}" enctype="multipart/form-data">
+          {{csrf_field()}}
+
           <div class="modal-body">
-              {{csrf_field()}}
               <div class="form-group">
                 <label for="struk">Upload Bukti Pembayaran</label>
-                <input type="file" class="form-control-file" name="struk" id="exampleFormControlFile1">
+                <input type="file" class="form-control-file" name="image">
                 <hr>
                 <p>Silahkan upload foto struck/nota pembayaran sesuai dengan total harga</p>
               </div>
           </div>
+
           <div class="modal-footer">
-            <!-- <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-            <!-- <input type="submit" value="Upload" class="btn btn-primary"> -->
-            <!-- <a method="POST" href="{{ route('uploadStruk',['id'=>$order->id]) }}"> <button type="button" value="Upload" class="btn btn-primary" id="btn">Submit</button> </a> -->
-            <button type="<submit></submit>" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
+
         </div>
       </div>
     </div>

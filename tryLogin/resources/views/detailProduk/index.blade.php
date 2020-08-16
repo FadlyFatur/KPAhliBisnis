@@ -23,7 +23,7 @@
               <p>Membutuhkan Bantuan?</p>
               <a href="/contact"> <button type="button" class="btn btn-danger">Hubungi kami</button> </a>
             </div>
-        </div>
+        </div>  
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320">
         <path fill="#ffffff" fill-opacity="1"

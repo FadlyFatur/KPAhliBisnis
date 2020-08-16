@@ -106,7 +106,7 @@
                     <td>{{$order->Provinsi}}</td>
                     <td>{{$order->Kabupaten}}</td>
                     <td>{{$order->Kode_pos}}</td>
-                    
+
                 </tr>
                 @endforeach
         </table>
@@ -117,7 +117,8 @@
                     <th>Nama Produk</th>
                     <th>Konsep</th>
                     <th>Penggunaan Foto</th>
-                    <th>Cart</th>
+                    <th>Produk</th>
+                    <th>Total Harga</th>
                     <th>Filename</th>
                     <th>Status</th>
                     <tH>Konfirmasi?</th>
@@ -128,7 +129,12 @@
                     <td>{{$order->nama_produk}}</td>
                     <td>{{$order->konsep}}</td>
                     <td>{{$order->pengunaan_foto}}</td>
-                    <td>{{$order->cart}}</td>
+                    <td>
+                      @foreach ($order->cart->items as $item)
+                      {{$item['item']['nama']}} | {{$item['qty']}} | {{number_format($item['harga'],0,",",".")}} <br>
+                      @endforeach
+                    </td>
+                    <td>{{number_format($order->cart->totalHarga,0,",",".")}}</td>
                     <td>{{$order->filename}}</td>
                     <td class="text-center">{{$order->status}}</td>
                     <td>
@@ -143,7 +149,7 @@
             </tr>
             @endforeach
                 <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
-            
+
         </table>
     </div>
 
