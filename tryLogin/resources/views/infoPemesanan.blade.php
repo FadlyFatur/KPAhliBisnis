@@ -16,7 +16,7 @@
                 <div class="link">
                     <a href= "{{ route('homeUpdate') }}"><p>Pengaturan Akun</p></a>
                     <a style="cursor: pointer;"><p>Info Pemesanan<i class='fas fa-angle-right' style='font-size:20px'></i></p></a>
-                    <a href= ""><p>Konfirmasi Pembayaran</p></a>
+                    <!-- <a href= ""><p>Konfirmasi Pembayaran</p></a> -->
                 </div>
                 <button type="button" class="btn btn-outline-light">LOGOUT</button>
             </div>
@@ -33,8 +33,7 @@
                   </div>
                   <div class="modal-body">
                     <h5>{{Session::get('success')}}</h5>
-                    <p>Silahkan cek email dan segera lakukan pemabayaran <br><hr> Detail order dapat dilihat dihalaman ini</p>
-
+                    <p>Detail order dapat dilihat dihalaman ini</p>
                     <p></p>
                   </div>
                   <div class="modal-footer">
@@ -54,8 +53,8 @@
                     <!-- @if(Session::has('sukses'))
                       <p class="text-success">Foto telah diupload</p>
                     @endif -->
-
                     @foreach ($orders as $order)
+
                     <div class="table-responsive">
                       <p>Kode Pemesanan : {{$order->payment_id}}</p>
                         <table class="table table-bordered table-hover text-center">
@@ -81,10 +80,15 @@
                                   @else
                                     <th scope="col">Confirm</th>
                                   @endif
-                                  <th scope="col"> <img src="{{url('uploads/'.$order->filename)}}" alt="..."></th>
+                                  @if($order->filename != NULL)
+                                  <td class="cs-p-1"><a class="text-primary" href="{{ url('/data_file/'.$order->filename) }}" target="_blank">Lihat Gambar</a></td>
+                                  @else
+                                  <td class="cs-p-1">Belum upload</td>
+                                  @endif
+                                  <!-- <th scope="col"> <img src="{{ url('/data_file/'.$order->filename) }}" alt="..."></th> -->
                                   <th scope="col" class="but-col">
                                     <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#exampleModal">Konfirmasi</button>
-                                    <!-- <a href="{{route('lihatStruk')}}" type="button" class="btn btn-Success mb-2">Konfirmasi</a> -->
+
                                     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->payment_id}}" aria-expanded="false" aria-controls="collapseExample">
                                     Lihat Produk
                                      </button>
@@ -140,32 +144,30 @@
             </button>
           </div>
 
-          <form method="POST" action="/file-upload" enctype="multipart/form-data">
-          {{csrf_field()}}
+          <form method="POST" action="/file-upload/{{$order->id}}" enctype="multipart/form-data">
+            {{csrf_field()}}
 
-          <div class="modal-body">
+            <div class="modal-body">
+              <!-- <div class="form-group">
+              <label for="name">File Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter file Name" name="name">
+            </div> -->
             <div class="form-group">
-                <label for="name">File Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter file Name" name="name">
+              <label for="struk">Upload Bukti Pembayaran</label>
+              <input type="file" class="form-control-file" name="image">
+              <hr>
+              <p>Silahkan upload foto struck/nota pembayaran sesuai dengan total harga</p>
             </div>
-              <div class="form-group">
-                <label for="struk">Upload Bukti Pembayaran</label>
-                <input type="file" class="form-control-file" name="image">
-                <hr>
-                <p>Silahkan upload foto struck/nota pembayaran sesuai dengan total harga</p>
-              </div>
           </div>
 
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
             <!-- <input type="submit" name="submit" value="Upload" class="btn btn-primary"> -->
           </div>
-
         </form>
-
-        </div>
       </div>
     </div>
+  </div>
 
 </main>
 

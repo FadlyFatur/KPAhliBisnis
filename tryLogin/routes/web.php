@@ -106,7 +106,10 @@ Route::get('/home/infoPemesanan', 'PemesananController@getInfo')->name('infoPeme
 // Route::post('/upload/proses', 'PemesananController@proses_upload');
 
 // Route::view('/file-upload', 'upload');
-Route::post('/file-upload', 'PemesananController@store');
+// Route::post('/file-upload', 'PemesananController@store');
+// Route::get('/view-uploads', 'PemesananController@viewUploads')->name('lihatStruk');
+
+Route::post('/file-upload/{id}', 'PemesananController@store');
 Route::get('/view-uploads', 'PemesananController@viewUploads')->name('lihatStruk');
 
 // Proses Session
