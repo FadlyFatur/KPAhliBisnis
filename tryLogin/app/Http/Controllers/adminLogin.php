@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Order;
+use App\Struk;
 use Illuminate\Support\Facades\Storage;
 
 class adminLogin extends Controller
@@ -88,8 +89,8 @@ class adminLogin extends Controller
                 return redirect()->route('adminDashboard.index');
 
             case 'cek':
-                $admin_edit = Admin::where('id', $id)->firstOrFail();
-                $path = storage_path('public/' . $admin_edit->filename) ;
+                $admin_edit = Struk::where('id', $id)->firstOrFail();
+                $path = storage_path('public' . $admin_edit->filename) ;
                 return response()->download($path, $admin_edit
                          ->original_filename, ['Content-Type' => $admin_edit->mime]);
         }
