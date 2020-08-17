@@ -1,5 +1,4 @@
 *{
-  font-family: 'Exo', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -9,13 +8,7 @@ html,body{
     height: 100%;
 }
 
-.btn-nav{
-  padding: 10px;
-  width: 120px;
-  border-radius: 50px;
-}
-
-.containers{
+.containers{  
     height: 50%;
     background-image: radial-gradient( circle 972.6px at 10% 20%,  rgb(216, 34, 52) 0%, rgb(225, 68, 85) 90% );
     background-repeat: no-repeat;
@@ -52,6 +45,25 @@ section{
 
 section .gMapSection{
     height: 30vh;
+
+}
+
+section .gMapSection{
+    height: 40vh;
+}
+section .row .col-md-6:last-child{
+    padding: 50px;
+}
+section h4{
+    text-transform: uppercase;
+}
+
+.contactUs{
+    margin: 0 auto  ;
+    width: 100%;
+    -webkit-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+    -moz-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+    box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
 }
 #map {
     width: 100%;
@@ -96,13 +108,26 @@ footer h4{
     main img{
         width: 40%;
     }
-
+    
     main p{
         font-size: 65%;
     }
 
     section .gMapSection{
         height: 40vh;
+    }
+    section .row .col-md-6:last-child{
+        padding: 50px;
+    }
+    section h4{
+        text-transform: uppercase;
+    }
+    .contactUs{
+        margin: 0 auto  ;
+        width: 100%;
+        -webkit-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+        -moz-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+        box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
     }
 
     footer{
@@ -131,12 +156,39 @@ footer h4{
         color: #234e79;
     }
 }
+@media (min-width: 767.98px) {
+    section .gMapSection{
+        height: 90vh;
+        position: absolute;
+        top: -9%;
+        width: 100%;
+        
+    }
+    section .row .col-md-6:first-child{
+        padding: 0px;
+    }
+    section .row .col-md-6:last-child{
+        padding: 50px;
+        position: relative;
+        left: -2%;
+    }
+    section h4{
+        text-transform: uppercase;
+    }
+    .contactUs{
+        margin: 0 auto  ;
+        width: 80%;
+        -webkit-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+        -moz-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+        box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+    }
+}
 
 /* Large Desktop */
 @media (min-width: 992px){
     h2{
         font-size: 50px;
-        padding-top: 130px;
+        padding-top: 150px;
         letter-spacing: 10px;
     }
     .wrapper{
@@ -148,7 +200,7 @@ footer h4{
     main img{
         width: 40%;
     }
-
+    
     main p{
         font-size: 12px;
     }
@@ -156,12 +208,34 @@ footer h4{
         padding: 70px;
     }
     section .gMapSection{
-        height: 45vh;
+        height: 100vh;
+        position: absolute;
+        top: -3%;
+        width: 90%;
+        
+    }
+    section .row .col-md-6:first-child{
+        padding: 0px;
+    }
+    section .row .col-md-6:last-child{
+        padding: 80px;
+        position: relative;
+        left: -7%;
+    }
+    section h4{
+        text-transform: uppercase;
+    }
+    .contactUs{
+        margin: 0 auto  ;
+        width: 80%;
+        -webkit-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+        -moz-box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
+        box-shadow: 11px 10px 17px 0px rgba(219,219,219,1);
     }
 
     footer{
         text-align: left;
-        margin-bottom: 100px;
+        margin-top: 100px;
     }
     footer p{
         margin: 0;
@@ -169,7 +243,7 @@ footer h4{
         font-size: 80%;
         text-align: justify;
     }
-    footer h4{
+    footer h4{  
         font-size: 18px;
         font-weight: 700;
         letter-spacing: 2px;

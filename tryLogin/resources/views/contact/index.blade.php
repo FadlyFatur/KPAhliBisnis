@@ -28,10 +28,37 @@
         </main>
     </div>
 
+    
     <section>
-        <div class="container gMapSection">
-            <div id="map"></div>
+        <div class="contactUs mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container gMapSection">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Kontak Kami</h4>
+                    <form>
+                        <div class="form-group mt-4">
+                            <label for="exampleInputEmail1">Your Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter name">
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="exampleInputPassword1">Your Email</label>
+                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group mt-4">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
+            
     </section>
 
     <footer class="container footer">
