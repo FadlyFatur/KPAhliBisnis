@@ -123,7 +123,8 @@
                     <th>Total Harga</th>
                     <th>Filename</th>
                     <th>Status</th>
-                    <tH>Konfirmasi?</th>
+                    <th>Konfirmasi?</th>
+                    <th>Cek Bukti</th>
                 </tr>
             @foreach($orders as $order)
             <tr>
@@ -145,13 +146,16 @@
                             <input type="hidden" name="orderid" value="{{$order->id}}"/>
                             <a href="">
                             <button class="btn btn-lg btn-success" type="submit" name="action" value="Konfirmasi">Konfirmasi</button>
+                            @if($order->filename != NULL)
+                                <td class="cs-p-1"><a class="text-primary" href="{{ url('/data_file/'.$order->filename) }}" target="_blank">Lihat Gambar</a></td>
+                            @else
+                                <td class="cs-p-1">Belum upload</td>
+                            @endif
                             </a>
                         </form>
                     </td>
             </tr>
             @endforeach
-                <a class="btn btn-primary float-right mt-2" href="{{url('/create')}}" role="button">Tambah Data</a>
-
         </table>
     </div>
 
