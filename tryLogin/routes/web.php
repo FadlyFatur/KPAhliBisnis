@@ -136,7 +136,7 @@ Route::get('adminLogin/{key}', function ($key) {
     if($key == $link){
         return redirect("/adminLogin");
     }else{
-        return redirect("/adminLogin");
+        return redirect("/");
     }
 });
 
