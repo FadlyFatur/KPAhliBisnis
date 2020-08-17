@@ -87,8 +87,8 @@
                                   @endif
                                   <!-- <th scope="col"> <img src="{{ url('/data_file/'.$order->filename) }}" alt="..."></th> -->
                                   <th scope="col" class="but-col">
-                                    <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#exampleModal">Konfirmasi</button>
-
+                                    <!-- <a href="#" class="btn btn-Success mb-2" data-toggle="modal" data-target="#konfirmasiModal">Konfirmasi</a> -->
+                                    <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#konfirmasiModal-{{$order->id}}">Konfirmasi</button>
                                     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->payment_id}}" aria-expanded="false" aria-controls="collapseExample">
                                     Lihat Produk
                                      </button>
@@ -96,6 +96,7 @@
                                   <!-- <button type="button" class="btn btn-danger">Delete</button></td> -->
                                 </tr>
                             </tbody>
+
                         </table>
                         <div class="collapse" id="{{$order->payment_id}}">
                           <div class="card card-body">
@@ -133,41 +134,39 @@
     </div>
 
     <!-- modal konfirmasi struk -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembayaran</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <form method="POST" action="/file-upload/{{$order->id}}" enctype="multipart/form-data">
-            {{csrf_field()}}
-
+    <!-- Button trigger modal -->
+    @foreach ($orders as $data)
+      <div class="modal fade" id="konfirmasiModal-{{$data->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembayaran</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
             <div class="modal-body">
-              <!-- <div class="form-group">
-              <label for="name">File Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter file Name" name="name">
-            </div> -->
-            <div class="form-group">
-              <label for="struk">Upload Bukti Pembayaran</label>
-              <input type="file" class="form-control-file" name="image">
-              <hr>
-              <p>Silahkan upload foto struck/nota pembayaran sesuai dengan total harga</p>
+              <form method="POST" action="{{url('/file-upload/'.$data->id)}}" enctype="multipart/form-data">
+                {{csrf_field()}}
+              
+                <div class="modal-body">
+                <div class="form-group">
+                  <label for="struk">Upload Bukti Pembayaran</label>
+                  <input type="file" class="form-control-file" name="image">
+                  <hr>
+                  <p>Silahkan upload foto struck/nota pembayaran sesuai dengan total harga</p>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <Button type="submit" class="btn btn-primary">Submit</Button>
+              </div>
+            </form>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <!-- <input type="submit" name="submit" value="Upload" class="btn btn-primary"> -->
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
+    @endforeach
 
 </main>
 

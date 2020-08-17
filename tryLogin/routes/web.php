@@ -110,7 +110,8 @@ Route::get('/home/infoPemesanan', 'PemesananController@getInfo')->name('infoPeme
 // Route::get('/view-uploads', 'PemesananController@viewUploads')->name('lihatStruk');
 
 Route::post('/file-upload/{id}', 'PemesananController@store');
-Route::get('/view-uploads', 'PemesananController@viewUploads')->name('lihatStruk');
+
+// Route::get('/view-uploads', 'PemesananController@viewUploads')->name('lihatStruk');
 
 // Proses Session
 Route::get('/session/get', 'UserController@getSessionData');
