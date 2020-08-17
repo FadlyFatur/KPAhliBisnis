@@ -85,6 +85,7 @@ class checkoutController extends Controller
       $order->Provinsi = $request->input('prov');
       $order->Kabupaten = $request->input('kab');
       $order->Kode_pos = $request->input('posKode');
+
       //create unique id
       $uniqid = Str::random(5);
       $order->payment_id = $uniqid;

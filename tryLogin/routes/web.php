@@ -101,15 +101,13 @@ Route::post('/home', 'HomeController@update')->name('homeUpdate');
 
 // route ke info pemesanan
 Route::get('/home/infoPemesanan', 'PemesananController@getInfo')->name('infoPemesanan');
-// Route::post('/upload/{id}', 'PemesananController@Upload');
 
-Route::post('/upload/{id}',[
-  'uses' => 'PemesananController@Upload',
-  'as'=> 'uploadStruk'
-]);
+// Route::get('/upload/{id}', 'PemesananController@upload')->name('upload');
+// Route::post('/upload/proses', 'PemesananController@proses_upload');
 
-Route::get('/upload', 'UploadController@upload');
-Route::post('/upload/proses', 'UploadController@proses_upload');
+// Route::view('/file-upload', 'upload');
+Route::post('/file-upload', 'PemesananController@store');
+Route::get('/view-uploads', 'PemesananController@viewUploads')->name('lihatStruk');
 
 // Proses Session
 Route::get('/session/get', 'UserController@getSessionData');

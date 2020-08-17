@@ -84,6 +84,7 @@
                                   <th scope="col"> <img src="{{url('uploads/'.$order->filename)}}" alt="..."></th>
                                   <th scope="col" class="but-col">
                                     <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#exampleModal">Konfirmasi</button>
+                                    <!-- <a href="{{route('lihatStruk')}}" type="button" class="btn btn-Success mb-2">Konfirmasi</a> -->
                                     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->payment_id}}" aria-expanded="false" aria-controls="collapseExample">
                                     Lihat Produk
                                      </button>
@@ -139,10 +140,14 @@
             </button>
           </div>
 
-          <form method="POST" action="{{ url('/upload/{id}') }}" enctype="multipart/form-data">
+          <form method="POST" action="/file-upload" enctype="multipart/form-data">
           {{csrf_field()}}
 
           <div class="modal-body">
+            <div class="form-group">
+                <label for="name">File Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter file Name" name="name">
+            </div>
               <div class="form-group">
                 <label for="struk">Upload Bukti Pembayaran</label>
                 <input type="file" class="form-control-file" name="image">
@@ -153,7 +158,9 @@
 
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
+            <!-- <input type="submit" name="submit" value="Upload" class="btn btn-primary"> -->
           </div>
+
         </form>
 
         </div>

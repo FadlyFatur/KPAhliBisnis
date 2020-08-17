@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Order;
+use App\Struk;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Session;
 
 class PemesananController extends Controller
 {
@@ -46,10 +48,10 @@ class PemesananController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -107,29 +109,58 @@ class PemesananController extends Controller
       return view('infoPemesanan',['orders'=>$orders]);
     }
 
-    public function upload(Request $request, $id){
-      request()->validate([
-        'filename' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
-      ]);
+    // public function upload(Request $request, $id){
+    //   $user = Order::where('id',$id)->first();
+    //   $this->validate($request, [
+    //     'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+    //   ]);
+    //
+    //   // menyimpan data file yang diupload ke variabel $file
+    //   $file = $request->file('file');
+    //   if($file->isValid()){
+    //     $extension = $file->getClientOriginalExtension();
+    //     $nama_file =$file->getClientOriginalName();
+    //     $hasilImage = Image::make($file)->save(storage_path("app/public/image/". $filename .".".$extension));
+    //     // Storage::disk('public')->put($file->getFilename().'.'.$nama_file, File::get($file));
+    //     $image->filename = $nama_file;
+    //     $image->save();
+    //   }
+    //
+    //
+    //   // $image = new Order();
+    //
+    //   return redirect()->back()->with('sukses');
+    // }
 
-      $image = $request->file('image');
-      // $nama_file = $image->getClientOriginalName();
-      $extension = $image->getClientOriginalExtension();
-      Storage::disk('upload')->put($image->getFilename().'.'.$extension, File::get($image));
-      // menyimpan data file yang diupload ke variabel $file
-    	// $file = $request->file('image');
-      //
-    	// $nama_file = time()."_".$file->getClientOriginalName();
-      //
-      // // isi dengan nama folder tempat kemana file diupload
-    	// $tujuan_upload = 'data_file';
-    	// $file->move($tujuan_upload,$nama_file);
+    public function viewUploads()
+    {
+      $images = Struk::all();
+      return view('konfirmasi')->with('images', $images);
+    }
 
-      $struk = new Order();
-      $struk = Order::find($id);
-      $struk->filename =  $image->getClientOriginalName();
-      $struk->save();
-
-      return redirect()->back()->with('sukses');
+    public function store(Request $request)
+    {
+      if ($request->hasFile('image')) {
+              //  Let's do everything here
+              if ($request->file('image')->isValid()) {
+                  //
+                  $validated = $request->validate([
+                      'name' => 'string|max:40',
+                      'image' => 'mimes:jpeg,png|max:1014',
+                  ]);
+                  $extension = $request->image->extension();
+                  $request->image->storeAs('/public', $validated['name'].".".$extension);
+                  $url = Storage::url($validated['name'].".".$extension);
+                  $file = Struk::create([
+                     'name' => $validated['name'],
+                      'url' => $url,
+                  ]);
+                  ob_end_clean();
+                  Session::flash('success', "Success!");
+                  $images = Struk::all();
+                  return view('konfirmasi')->with('images', $images);
+              }
+          }
+          abort(500, 'Could not upload image :(');
     }
 }
