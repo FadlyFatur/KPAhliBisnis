@@ -65,10 +65,9 @@ Route::get('/sendNotif', function () {
 });
 
 
-// Route untuk halaman detail dan kontak
-Route::get('/contact', function () {
-    return view('contact.index');
-});
+// Route untuk halaman kontak
+Route::get('/contact','contactController@index');
+Route::post('/contact','contactController@store');
 
 // pindah detail produk {{fdly}}
 Route::get('/detailProduk',[

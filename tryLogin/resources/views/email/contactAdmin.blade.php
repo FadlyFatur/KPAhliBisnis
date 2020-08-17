@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Message') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,9 +20,10 @@
     <!-- Styles -->
 </head> 
 <body>
-    <h1>{{ $order["message"] }}</h1>
-    <p>Click the link to redirect to admin login page</p>
-    <!-- <a href="http://127.0.0.1:8000/adminLogin/{{ $order['RandomString'] }}">{{ $order["RandomString"] }}</a> -->
+    <h4>Dari : </h4>
+    <h5>{{ $contact["email"] }}</h5>
+    <h4>Isi Pesan</h4>
+    <p>{{ $contact['message'] }}</p>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

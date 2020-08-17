@@ -6,6 +6,11 @@
 
 @section('content') 
 @include('layouts.navigation')
+    @if(session('status'))
+        <script>
+            alert("Pesan anda telah terkirim!");
+        </script>
+    @endif
     <div class="containers">
         <h2>CONTACT US</h2>
     </div>
@@ -39,19 +44,22 @@
                 </div>
                 <div class="col-md-6">
                     <h4>Kontak Kami</h4>
-                    <form>
+                    <form method="POST">
+                        @csrf
                         <div class="form-group mt-4">
                             <label for="exampleInputEmail1">Your Name</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Enter name">
+                                name="username" placeholder="Enter name">
                         </div>
                         <div class="form-group mt-4">
                             <label for="exampleInputPassword1">Your Email</label>
-                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email">
+                            <input type="email" class="form-control" id="exampleInputPassword1" 
+                            name="useremail" placeholder="Enter Email">
                         </div>
                         <div class="form-group mt-4">
                             <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            name="usermessage"></textarea>
                         </div>
                         <button type="submit" class="btn btn-danger btn-block">Submit</button>
                     </form>

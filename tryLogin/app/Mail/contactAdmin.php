@@ -3,11 +3,11 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue; 
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class OrderShipped extends Mailable
+class contactAdmin extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,11 +16,11 @@ class OrderShipped extends Mailable
      *
      * @return void
      */
-    public $order;
+    public $contact;
 
-    public function __construct($order)
+    public function __construct($contact)
     {
-        $this->order = $order;
+        $this->contact = $contact;
     }
 
     /**
@@ -30,6 +30,7 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->subject('Link to Admin Login')->view('email.testMail');
+        return $this->subject("[UntukMasarin] Pesan dari : ".$this->contact["username"])
+                    ->view('email.contactAdmin');
     }
 }
