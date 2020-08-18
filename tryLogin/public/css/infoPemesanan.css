@@ -71,12 +71,20 @@ p{
     /* right: 0; */
 }
 main .col-md-9 i{
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
+
 .content > i {
     display: none;
 }
+
+.content .fa-info-circle {
+  position: relative;
+  cursor: pointer;
+  /* color: #E14354; */
+}
+
 #close{
     display: none;
 }

@@ -34,7 +34,8 @@
                   <div class="modal-body">
                     <h5>{{Session::get('success')}}</h5>
                     <p>Detail order dapat dilihat dihalaman ini</p>
-                    <p></p>
+                    <hr>
+                    <p>Untuk Info rekening dapat dilihat di icon <i class="fas fa-info-circle ml-1 text-success"></i></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -48,7 +49,8 @@
                 <div class="content">
                     <i class="fa fa-bars" style="font-size:24px;" onclick="showFunction()" id="show"></i>
                     <i class="fa fa-close" style="font-size:24px;" onclick="closeFunction()" id="close"></i>
-                    <h1 class="mb-5">Info Pemesanan</h1>
+
+                    <h1 class="mb-2">Info Pemesanan <i data-toggle="modal" data-target="#transferModal"class="text-success fas fa-info-circle ml-1"></i></h1>
 
                     <!-- @if(Session::has('sukses'))
                       <p class="text-success">Foto telah diupload</p>
@@ -148,7 +150,7 @@
             <div class="modal-body">
               <form method="POST" action="{{url('/file-upload/'.$data->id)}}" enctype="multipart/form-data">
                 {{csrf_field()}}
-              
+
                 <div class="modal-body">
                 <div class="form-group">
                   <label for="struk">Upload Bukti Pembayaran</label>
@@ -167,6 +169,31 @@
         </div>
       </div>
     @endforeach
+
+    <!-- modal info transfer -->
+    <!-- Button trigger modal -->
+    <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Rekening Transfer</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Bank BRI</h5>
+            <p>a.n Untuk Masarin : 1234 5667 890</p>
+            <hr>
+            <h5>Bank Mandiri</h5>
+            <p>a.n Untuk Masarin : 1234 5667 890</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </main>
 
