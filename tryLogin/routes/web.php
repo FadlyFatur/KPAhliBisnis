@@ -93,8 +93,8 @@ Route::post('/checkout',[
 Route::post("/checkout/getCity","checkoutController@selectedCity")->name("checkoutLoc");
 
 // Proses Autentikasid dan Halaman Profile
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(['verify' => true]);
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::post('/home', 'HomeController@update')->name('homeUpdate');
 
 

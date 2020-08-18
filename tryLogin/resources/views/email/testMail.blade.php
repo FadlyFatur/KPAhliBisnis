@@ -20,7 +20,7 @@
     <!-- Styles -->
 </head> 
 <body>
-    <h1>{{ $order["message"] }}</h1>
+    <h1>{{ $order["Title"] }}</h1>
     <p>Click the link to redirect to admin login page</p>
     <!-- <a href="http://127.0.0.1:8000/adminLogin/{{ $order['RandomString'] }}">{{ $order["RandomString"] }}</a> -->
     <!-- Optional JavaScript -->
