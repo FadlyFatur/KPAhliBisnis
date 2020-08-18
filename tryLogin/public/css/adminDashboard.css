@@ -7,38 +7,27 @@ html,body{
     height: 100%;
 
 }
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    border-spacing: 5px;
-    text-align: left;
-      
-}
-th, td {
-    padding: 5px;
+table {
+    border-collapse: separate;
+    border-spacing: 0;
   }
-th{
-    background: #Ed1e26;
-}
-td{
-    background-color: #EEEEEE;
-}
-table tfoot {
-    font-size: 13px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background: #A40808;
+  th,
+  td {
+    padding: 10px 15px;
   }
-table tfoot td {
-    font-size: 13px;
+  th {
+    background: #ed1e26;
+    background: linear-gradient(#e14455, #ed1e26);
+    color: #fff;
   }
-table tfoot .links {
-    text-align: right;
+  tbody tr:nth-child(even) {
+    background: #f0f0f2;
   }
-table tfoot .links a{
-    display: inline-block;
-    background: #FFFFFF;
-    color: #A40808;
-    padding: 2px 8px;
-    border-radius: 5px;
-}
+  td {
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+  }
+  td:first-child {
+    border-left: 1px solid #cecfd5;
+  }
+  
