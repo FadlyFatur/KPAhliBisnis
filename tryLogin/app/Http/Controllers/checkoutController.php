@@ -84,11 +84,12 @@ class checkoutController extends Controller
       $order->pengunaan_foto = $request->input('uses');
       $order->Provinsi = $request->input('prov');
       $order->Kabupaten = $request->input('kab');
+      $order->kecamatan = $request->input('kec');
       $order->Kode_pos = $request->input('posKode');
 
       //create unique id
       $uniqid = Str::random(5);
-      $order->payment_id = $uniqid;
+      $order->order_id = $uniqid;
 
       Auth::user()->orders()->save($order);
       Session::forget('cart');

@@ -49,16 +49,19 @@
                 <div class="content">
                     <i class="fa fa-bars" style="font-size:24px;" onclick="showFunction()" id="show"></i>
                     <i class="fa fa-close" style="font-size:24px;" onclick="closeFunction()" id="close"></i>
+                    <h1 class="mb-4">Info Pemesanan <i data-toggle="modal" data-target="#transferModal"class="text-success fas fa-info-circle ml-1"></i></h1>
 
-                    <h1 class="mb-2">Info Pemesanan <i data-toggle="modal" data-target="#transferModal"class="text-success fas fa-info-circle ml-1"></i></h1>
+                    <div class="bank mb-4">
+                      <img src="{{URL::asset('img/logo_bri.png') }}" class="mr-2" alt="logo_bank">
+                      <strong>BRI (Bank Rakyat Indonesia)</strong> <hr>
+                      <p>0337 0100 1646 301 <br>A.N PT. Teknologi Wirausaha Bangsa</p>
+                    </div>
+                    <hr>
 
-                    <!-- @if(Session::has('sukses'))
-                      <p class="text-success">Foto telah diupload</p>
-                    @endif -->
                     @foreach ($orders as $order)
 
                     <div class="table-responsive">
-                      <p>Kode Pemesanan : {{$order->payment_id}}</p>
+                      <p>Kode Pemesanan : {{$order->order_id}}</p>
                         <table class="table table-bordered table-hover text-center">
                             <thead class="">
                                 <tr>
@@ -91,7 +94,7 @@
                                   <th scope="col" class="but-col">
                                     <!-- <a href="#" class="btn btn-Success mb-2" data-toggle="modal" data-target="#konfirmasiModal">Konfirmasi</a> -->
                                     <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#konfirmasiModal-{{$order->id}}">Konfirmasi</button>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->payment_id}}" aria-expanded="false" aria-controls="collapseExample">
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->order_id}}" aria-expanded="false" aria-controls="collapseExample">
                                     Lihat Produk
                                      </button>
                                   </th>
@@ -100,11 +103,11 @@
                             </tbody>
 
                         </table>
-                        <div class="collapse" id="{{$order->payment_id}}">
+                        <div class="collapse" id="{{$order->order_id}}">
                           <div class="card card-body">
                             <table class="table">
                               <thead>
-                                <tr>
+                                <tr class="text-center">
                                   <th scope="col">No</th>
                                   <th scope="col">Nama Produk</th>
                                   <th scope="col">Quantity</th>
@@ -114,7 +117,7 @@
                               <tbody>
                                 <!-- {{$number=1}} JANGAN DIHAPUS-->
                                 @foreach ($order->cart->items as $item)
-                                <tr>
+                                <tr class="text-center">
                                   <th scope="row">{{$number++}}</th>
                                   <td>{{$item['item']['nama']}}</td>
                                   <td>{{$item['qty']}}</td>
@@ -172,21 +175,21 @@
 
     <!-- modal info transfer -->
     <!-- Button trigger modal -->
-    <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade info-modal" id="transferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Rekening Transfer</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Info Halaman</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <h5>Bank BRI</h5>
-            <p>a.n Untuk Masarin : 1234 5667 890</p>
+            <button type="button" class="info btn btn-Success d-flex justify-content-center">Konfirmasi</button>
+            <p>Berfungsi untuk mengupload foto struk/nota pembayaran</p>
             <hr>
-            <h5>Bank Mandiri</h5>
-            <p>a.n Untuk Masarin : 1234 5667 890</p>
+            <button class="info btn btn-primary d-flex justify-content-center" type="button">Lihat Produk</button>
+            <p>berfungsi untuk melihat produk pembelian dan harga total</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

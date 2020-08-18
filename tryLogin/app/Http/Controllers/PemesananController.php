@@ -105,6 +105,7 @@ class PemesananController extends Controller
         $order->cart = unserialize($order->cart);
         return $order;
       });
+
       $order=Order::all()->count();
       if ($order <= 0) {
         return redirect()->back();

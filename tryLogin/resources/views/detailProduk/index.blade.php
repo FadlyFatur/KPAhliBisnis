@@ -23,7 +23,7 @@
               <p>Membutuhkan Bantuan?</p>
               <a href="/contact"> <button type="button" class="btn btn-danger">Hubungi kami</button> </a>
             </div>
-        </div>  
+        </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320">
         <path fill="#ffffff" fill-opacity="1"
@@ -32,22 +32,6 @@
     </svg>
 
 </main>
-
-<!-- Foto Produk Section -->
-<!-- @if(Session::has('success'))
-<div class="row d-flex justify-content-center mb-5">
-  <div class=" sukses col-sm-6 col-md-4">
-    <div id="error-message" class="alert alert-seccess text-center rounded">
-      <h5>{{Session::get('success')}}</h5>
-    </div>
-  </div>
-</div>
-<br>
-@endif -->
-<!-- <div class="btn-group mb-5 d-flex justify-content-center" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary btn-lg btn1 border border-light" id="btn1" onclick="myFunction()">Foto Produk</button>
-  <button type="button" class="btn btn-secondary btn-lg btn2 border border-light" id="btn2" onclick="btn2Function()">Desain Grafis</button>
-</div> -->
 
 <div class="fotoProduk fp1 mb-5" id="kol-1">
   <div class="container">

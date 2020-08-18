@@ -111,7 +111,18 @@
            <div class="mb-3">
              <div class="form-group">
                <label for="address">Alamat</label>
-               <input type="text" class="form-control" id="address" name="alamat" placeholder="Isi dengan detail" required>
+               <!-- <input type="text" class="form-control" id="address" name="alamat" placeholder="Isi dengan detail" required> -->
+               <textarea type="text" class="form-control" id="address" name="alamat" placeholder="Isi dengan detail" rows="3" required></textarea>
+               <div class="invalid-feedback">
+                 Please enter your shipping address.
+               </div>
+             </div>
+           </div>
+
+           <div class="mb-3">
+             <div class="form-group">
+               <label for="address">Kode Pos</label>
+               <input type="number" class="form-control" name="posKode" id="kecamatan" placeholder="" value="" required>
                <div class="invalid-feedback">
                  Please enter your shipping address.
                </div>
@@ -176,19 +187,12 @@
              </div>
              <div class="col-md-4 mb-3">
                <div class="form-group">
-                 <label for="address">Kode Pos</label>
-                 <input type="number" class="form-control" name="posKode" id="kecamatan" placeholder="" value="" required>
-                 <div class="invalid-feedback">
-                   Please enter your shipping address.
-                 </div>
-               </div>
-               <!-- <div class="form-group">
                  <label for="kecamatan">Kecamatan</label>
-                <input type="text" class="form-control" name="kec" id="kecamatan" placeholder="" value="" required>
+                 <input type="text" class="form-control" name="kec" id="kecamatan" placeholder="" value="" required>
                  <div class="invalid-feedback">
                    Please provide a valid state.
                  </div>
-             </div> -->
+               </div>
              </div>
            </div>
 

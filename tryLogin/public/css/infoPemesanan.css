@@ -85,6 +85,24 @@ main .col-md-9 i{
   /* color: #E14354; */
 }
 
+.bank hr{
+  margin-top: 10px;
+  margin-bottom: 8px;
+  width: 300px;
+  border: 2px solid red;
+}
+
+.bank img{
+  width: 35px;
+  height: 35px;
+}
+
+.info-modal button{
+  border-radius: 10px;
+  width:120px;    //Specify your width here
+  font-size: 5px;
+}
+
 #close{
     display: none;
 }

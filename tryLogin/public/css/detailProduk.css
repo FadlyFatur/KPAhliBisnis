@@ -90,7 +90,7 @@ display: none;
 }
 
 .fotoProduk{
-  margin-top: -300px;
+  margin-top: -350px;
 }
 
 .fotoProduk .col-lg-3{
@@ -157,6 +157,10 @@ margin-top: 16px;
     .fotoProduk .row{
       margin-bottom: 16px;
     }
+
+    .fotoProduk{
+      margin-top: 10px;
+    }
     /* ========================================== */
 }
 
@@ -191,6 +195,10 @@ margin-top: 16px;
 
     .fotoProduk .row{
       margin-bottom: 16px;
+    }
+
+    .fotoProduk{
+      margin-top: -10px;
     }
     /* ========================================== */
 }
