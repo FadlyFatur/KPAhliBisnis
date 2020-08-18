@@ -57,9 +57,9 @@
 
         <div class="mt-3">
           <div class="col-md-6-md-4">
-            <button type="submit" class="btn btn-danger">
-              {{ __('Register') }}
-            </button>
+              <button type="submit" class="btn btn-danger">
+                {{ __('Register') }}
+              </button>
             <a href="{{ url('/login') }}" type="submit" class="text-white pull-right">
               {{__('Sudah Punya Akun?') }}
             </a>

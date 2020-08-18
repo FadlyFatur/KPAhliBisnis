@@ -93,7 +93,7 @@ Route::post('/checkout',[
 Route::post("/checkout/getCity","checkoutController@selectedCity")->name("checkoutLoc");
 
 // Proses Autentikasid dan Halaman Profile
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@update')->name('homeUpdate');
 
@@ -151,3 +151,14 @@ Route::post('update/{id}',[
   'uses'=>'adminLogin@update',
   'as'=>'adminUpdate'
 ]);
+	
+// Route::get('/kirim-email', 'EmailController@index');
+// // Route::get('/verifikasi',[
+// //   'uses'=> 'Auth\VerificationController@index',
+// //   'as'=>'verifikasi'
+// // ]);
+
+// Route::get('/Resend',[
+//    'uses'=> 'VerificationController@__construct',
+//    'as'=>'verification.resend'
+// ]);
