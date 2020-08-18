@@ -94,7 +94,7 @@ Route::post("/checkout/getCity","checkoutController@selectedCity")->name("checko
 
 // Proses Autentikasid dan Halaman Profile
 Auth::routes(['verify' => true]);
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@update')->name('homeUpdate');
 
 
