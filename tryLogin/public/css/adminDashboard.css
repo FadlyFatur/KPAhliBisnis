@@ -11,10 +11,34 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     border-spacing: 5px;
+    text-align: left;
       
 }
 th, td {
     padding: 5px;
   }
-
-  
+th{
+    background: #Ed1e26;
+}
+td{
+    background-color: #EEEEEE;
+}
+table tfoot {
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #A40808;
+  }
+table tfoot td {
+    font-size: 13px;
+  }
+table tfoot .links {
+    text-align: right;
+  }
+table tfoot .links a{
+    display: inline-block;
+    background: #FFFFFF;
+    color: #A40808;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
