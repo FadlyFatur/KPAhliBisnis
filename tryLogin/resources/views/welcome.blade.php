@@ -10,7 +10,7 @@
         <div class="row align-self-center">
           <div class="col">
             <h1>UntukMasarin</h1>
-            <p> <b class="text-danger">UntukMasarin</b> bertujuan membantu UMKM dalam mempermudah berbagai kegiatan promosi UMKM dengan menyediakan beragam jasa seperti Foto produk, Desain, Dan pembuatan video promosi</p>
+            <p> <b class="text-dark">UntukMasarin</b> bertujuan membantu UMKM dalam mempermudah berbagai kegiatan promosi UMKM dengan menyediakan beragam jasa seperti Foto produk, Desain, Dan pembuatan video promosi</p>
             <a href="{{route('detailProduk.index')}}"> <button type="button" class="btn btn-danger btn-psn pesan">PESAN</button></a>
             <a href="/contact"> <button type="button" class="btn btn-danger btn-ktk kontak">KONTAK</button></a>
           </div>
