@@ -1,1 +1,0 @@
-<h1>sample page</h1><?php /**PATH D:\Aplikasi\xampp\htdocs\Laravel\Laravel\resources\views/sample.blade.php ENDPATH**/ ?>
