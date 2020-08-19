@@ -69,7 +69,7 @@
             
     </section>
 
-    <footer class="container footer">
+    <!-- <footer class="container footer">
         <h3 class="mt-5 text-center">FAQ</h3>
         <div class="row">
             <div class="col-sm-4 mt-4">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script src="http://maps.google.com/maps/api/js"></script>
     <script src="{{ URL::asset('js/gmaps.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
