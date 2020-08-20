@@ -129,7 +129,7 @@ Route::get('/sendMail', function () {
     ];
     Mail::to("mesweb.design@gmail.com")->send( new OrderShipped($order));
     echo "Mail sent!,Check your inbox";
-});
+}); 
 
 Route::get('adminLogin/{key}', function ($key) {
     $link = session("key");
