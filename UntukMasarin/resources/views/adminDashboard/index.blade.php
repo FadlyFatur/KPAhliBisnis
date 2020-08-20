@@ -83,8 +83,8 @@
 
   @foreach ($orders as $order)
 
-  <div class="container table">
-      <table class="table table-bordered table-hover text-center">
+  <div class="table col-lg-3">
+      <table class="table table-bordered table-hover text-center ">
           <thead class="">
             <?php $i = 1; ?>
               <tr>
@@ -182,27 +182,6 @@
   <hr>
   @endforeach
 
-
-
-
-<!-- jQuery -->
-
-<script>
-$("#update").click(function() {
-    $(".edit").show();
-}
-</script>
-<script src="{{ asset('/dashboard/plugins/jquery/jquery.min.jss') }}"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="{{ asset('/dashboard/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('/dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('/dashboard/dist/js/adminlte.js') }}"></script>
 
 </body>
 @endsection
