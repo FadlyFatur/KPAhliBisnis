@@ -110,15 +110,16 @@
                     <td>{{$order->Kabupaten}}</td>
                     <td>{{$order->Kode_pos}}</td>
                     <td>
-                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->id}}" aria-expanded="false" aria-controls="collapseExample">
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->order_id}}" aria-expanded="false" aria-controls="collapseExample">
                       Lihat Produk
                        </button>
                     </td>
                 </tr>
                 @endforeach
         </table>
-        <div class="collapse" id="{{$order['id']}}">
 
+        @foreach($orders as $order)
+        <div class="collapse" id="{{$order['order_id']}}">
         <table style="width:100%">
             <?php $i = 1; ?>
                 <tr>
@@ -140,7 +141,6 @@
                         </td>
                     </tr>
                 </tfoot>
-            @foreach($orders as $order)
             <tr>
                     <td class="text-center">{{$loop->iteration}}</td>
                     <td>{{$order->nama_produk}}</td>
@@ -169,9 +169,9 @@
                         </form>
                     </td>
             </tr>
-            @endforeach
         </table>
       </div>
+      @endforeach
     </div>
 
 
