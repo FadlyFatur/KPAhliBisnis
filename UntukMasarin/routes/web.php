@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Notifications\InvoicePaid;
 use App\User;
 use Illuminate\Support\Str;
+use App\Order;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -134,15 +135,20 @@ Route::get('/sendMail', function () {
 Route::get('adminLogin/{key}', function ($key) {
     $link = session("key");
     if($key == $link){
-        return redirect("/adminLogin");
+        $order = Order::all();
+        $order->transform(function($order, $key){
+          $order->cart = unserialize($order->cart);
+          return $order;
+        });
+        // mengirim data admin ke view admin
+        return view('adminDashboard.index', ['orders' => $order]);
     }else{
         return redirect("/");
     }
 });
 
-Route::get('/adminLogin',[
-  'uses'=> 'adminLogin@index',
-  'as'=>'adminDashboard.index'
+Route::post('/adminLogin/{key}',[
+  'uses'=> 'adminLogin@store',
 ]);
 
 Route::get('adminUpdate/{id}','adminLogin@edit');

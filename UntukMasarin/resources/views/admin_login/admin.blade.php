@@ -6,7 +6,7 @@
 @section('content')
 @include('layouts.navigation')
 <div class="container">
-    <form method="POST" action="{{ route('index') }}">
+    <form method="POST" action="">
         @csrf
         <div class="form-group">
             <input id="email" type="email" class=" mt-1 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukan Email">
