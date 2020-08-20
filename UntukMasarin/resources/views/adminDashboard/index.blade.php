@@ -80,12 +80,12 @@
         </div>
     </div>
 </main>
-    <div class="container">
-        <table style="width:100%">
+    <div class="container table-responsive">
+        <table style="table width:100%">
             <?php $i = 1; ?>
                 <tr>
                     <th>No.</th>
-                    <th>Id</th>
+                    <th>Id Pemesan</th>
                     <th>Nama Depan</th>
                     <th>Nama Belakang</th>
                     <th>Email</th>
@@ -136,9 +136,17 @@
                 </tr>
                 <tfoot>
                     <tr>
-                        <td colspan="3">
-                        <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
-                        </td>
+                        <th>No.</th>
+                        <th>Id Pemesan</th>
+                        <th>Nama Produk</th>
+                        <th>Konsep</th>
+                        <th>Penggunaan Foto</th>
+                        <th>Produk</th>
+                        <th>Total Harga</th>
+                        <th>Filename</th>
+                        <th>Status</th>
+                        <th>Konfirmasi?</th>
+                        <th>Cek Bukti</th>
                     </tr>
                 </tfoot>
             <tr>
