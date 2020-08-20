@@ -80,107 +80,109 @@
         </div>
     </div>
 </main>
-    <div class="container table-responsive">
-        <table style="table width:100%">
-            <?php $i = 1; ?>
-                <tr>
-                    <th>No.</th>
-                    <th>Id Pemesan</th>
-                    <th>Nama Depan</th>
-                    <th>Nama Belakang</th>
-                    <th>Email</th>
-                    <th>Telephone</th>
-                    <th>Address</th>
-                    <th>Provinsi at</th>
-                    <th>Kabupaten</th>
-                    <th>Kode Pos</th>
-                    <th>Aksi</th>
 
-                </tr>
-                @foreach($orders as $order)
-                <tr>
-                    <td class="text-center">{{$loop->iteration}}</td>
-                    <td>{{$order->id}}</td>
-                    <td>{{$order->name_depan}}</td>
-                    <td>{{$order->name_belakang}}</td>
-                    <td>{{$order->email}}</td>
-                    <td>{{$order->telphone}}</td>
-                    <td>{{$order->address}}</td>
-                    <td>{{$order->Provinsi}}</td>
-                    <td>{{$order->Kabupaten}}</td>
-                    <td>{{$order->Kode_pos}}</td>
-                    <td>
-                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->order_id}}" aria-expanded="false" aria-controls="collapseExample">
-                      Lihat Produk
-                       </button>
-                    </td>
-                </tr>
-                @endforeach
-        </table>
+  @foreach ($orders as $order)
 
-        @foreach($orders as $order)
-        <div class="collapse" id="{{$order['order_id']}}">
-        <table style="width:100%">
+  <div class="table">
+      <table class="table table-bordered table-hover text-center">
+          <thead class="">
             <?php $i = 1; ?>
-                <tr>
+              <tr>
+                <th>No.</th>
+                <th>Id Pemesan</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Address</th>
+                <th>Provinsi at</th>
+                <th>Kabupaten</th>
+                <th>Kode Pos</th>
+                <th>Aksi</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td class="text-center">{{$loop->iteration}}</td>
+                <td>{{$order->id}}</td>
+                <td>{{$order->name_depan}} {{$order->name_belakang}}</td>
+                <td>{{$order->email}}</td>
+                <td>{{$order->telphone}}</td>
+                <td>{{$order->address}}</td>
+                <td>{{$order->Provinsi}}</td>
+                <td>{{$order->Kabupaten}}</td>
+                <td>{{$order->Kode_pos}}</td>
+                <td>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->id}}" aria-expanded="false" aria-controls="collapseExample">
+                  Lihat Produk
+                   </button>
+                </td>
+              </tr>
+          </tbody>
+
+      </table>
+
+      <div class="collapse" id="{{$order->id}}">
+        <div class="card card-body">
+          <table class="table">
+            <thead>
+              <?php $i = 1; ?>
+                  <tr>
                     <th>No.</th>
                     <th>Nama Produk</th>
                     <th>Konsep</th>
                     <th>Penggunaan Foto</th>
                     <th>Produk</th>
                     <th>Total Harga</th>
-                    <th>Filename</th>
+                    <th>Nama Image</th>
                     <th>Status</th>
                     <th>Konfirmasi?</th>
                     <th>Cek Bukti</th>
-                </tr>
-                <tfoot>
-                    <tr>
-                        <th>No.</th>
-                        <th>Id Pemesan</th>
-                        <th>Nama Produk</th>
-                        <th>Konsep</th>
-                        <th>Penggunaan Foto</th>
-                        <th>Produk</th>
-                        <th>Total Harga</th>
-                        <th>Filename</th>
-                        <th>Status</th>
-                        <th>Konfirmasi?</th>
-                        <th>Cek Bukti</th>
-                    </tr>
-                </tfoot>
-            <tr>
-                    <td class="text-center">{{$loop->iteration}}</td>
-                    <td>{{$order->nama_produk}}</td>
-                    <td>{{$order->konsep}}</td>
-                    <td>{{$order->pengunaan_foto}}</td>
-                    <td>
-                      @foreach ($order->cart->items as $item)
-                      {{$item['item']['nama']}} | {{$item['qty']}} | {{number_format($item['harga'],0,",",".")}} <br>
-                      @endforeach
-                    </td>
-                    <td>{{number_format($order->cart->totalHarga,0,",",".")}}</td>
-                    <td>{{$order->filename}}</td>
-                    <td class="text-center">{{$order->status}}</td>
-                    <td>
-                        <form method="post" action="{{Route('adminUpdate',$order->id)}}">
-                            @csrf
-                            <input type="hidden" name="orderid" value="{{$order->id}}"/>
-                            <a href="">
-                            <button class="btn btn-lg btn-success" type="submit" name="action" value="Konfirmasi">Konfirmasi</button>
-                            @if($order->filename != NULL)
-                                <td class="cs-p-1"><a class="text-primary" href="{{ url('/data_file/'.$order->filename) }}" target="_blank">Lihat Gambar</a></td>
-                            @else
-                                <td class="cs-p-1">Belum upload</td>
-                            @endif
-                            </a>
-                        </form>
-                    </td>
-            </tr>
-        </table>
+                  </tr>
+            </thead>
+            <tbody>
+              <!-- {{$number=1}} JANGAN DIHAPUS-->
+              @foreach ($order->cart->items as $item)
+              <tr class="text-center">
+                <td class="text-center">{{$loop->iteration}}</td>
+                <td>{{$order->nama_produk}}</td>
+                <td>{{$order->konsep}}</td>
+                <td>{{$order->pengunaan_foto}}</td>
+                <td>
+                  @foreach ($order->cart->items as $item)
+                  {{$item['item']['nama']}} | {{$item['qty']}} | {{number_format($item['harga'],0,",",".")}} <br>
+                  @endforeach
+                </td>
+                <td>{{number_format($order->cart->totalHarga,0,",",".")}}</td>
+                <td>{{$order->filename}}</td>
+                <td class="text-center">{{$order->status}}</td>
+                <td>
+                    <form method="post" action="{{Route('adminUpdate',$order->id)}}">
+                        @csrf
+                        <input type="hidden" name="orderid" value="{{$order->id}}"/>
+                        <a href="">
+                        <button class="btn btn-lg btn-success" type="submit" name="action" value="Konfirmasi">Konfirmasi</button>
+                        @if($order->filename != NULL)
+                            <td class="cs-p-1"><a class="text-primary" href="{{ url('/data_file/'.$order->filename) }}" target="_blank">Lihat Gambar</a></td>
+                        @else
+                            <td class="cs-p-1">Belum upload</td>
+                        @endif
+                        </a>
+                    </form>
+                </td>
+              </tr>
+              @endforeach
+              <!-- <strong class="text-primary">Total Harga : Rp.{{number_format($order->cart->totalHarga,0,",",".")}}</strong> -->
+            </tbody>
+          </table>
+        </div>
       </div>
-      @endforeach
-    </div>
+
+  </div>
+
+  <br>
+  <hr>
+  @endforeach
+
 
 
 
