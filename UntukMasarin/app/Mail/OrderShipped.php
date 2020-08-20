@@ -22,7 +22,7 @@ class OrderShipped extends Mailable
     {
         $this->order = $order;
     }
-
+ 
     /**
      * Build the message.
      *
