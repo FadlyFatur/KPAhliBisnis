@@ -29,7 +29,7 @@
 </head>
 
 
-<main class="main">
+<!-- <main class="main">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
         <li class="breadcrumb-item active">Dashboard</li>
@@ -79,11 +79,11 @@
             </div>
         </div>
     </div>
-</main>
+</main> -->
 
   @foreach ($orders as $order)
 
-  <div class="table">
+  <div class="container table">
       <table class="table table-bordered table-hover text-center">
           <thead class="">
             <?php $i = 1; ?>
@@ -118,11 +118,10 @@
                 </td>
               </tr>
           </tbody>
-
       </table>
 
       <div class="collapse" id="{{$order->id}}">
-        <div class="card card-body">
+
           <table class="table">
             <thead>
               <?php $i = 1; ?>
@@ -174,7 +173,7 @@
               <!-- <strong class="text-primary">Total Harga : Rp.{{number_format($order->cart->totalHarga,0,",",".")}}</strong> -->
             </tbody>
           </table>
-        </div>
+
       </div>
 
   </div>

@@ -17,7 +17,6 @@ table {
   }
   th {
     background: #ed1e26;
-    background: linear-gradient(#e14455, #ed1e26);
     color: #fff;
   }
   tbody tr:nth-child(even) {
