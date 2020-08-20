@@ -15,7 +15,7 @@ class adminLogin extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id=0)
+    public function index()
     {
         // mengambil data dari table admin
         $order = Order::all();
