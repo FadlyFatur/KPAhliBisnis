@@ -70,7 +70,7 @@ return [
         'array' => [
             'transport' => 'array',
         ],
-    ], 
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -84,7 +84,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'moontea404@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
