@@ -88,8 +88,8 @@ class checkoutController extends Controller
       $order->Kode_pos = $request->input('posKode');
 
       //create unique id
-      $uniqid = Str::random(5);
-      $order->order_id = $uniqid;
+      // $uniqid = Str::random(5);
+      // $order->order_id = $uniqid;
 
       Auth::user()->orders()->save($order);
       Session::forget('cart');

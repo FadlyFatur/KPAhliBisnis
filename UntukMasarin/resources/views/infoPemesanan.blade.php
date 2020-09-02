@@ -61,7 +61,7 @@
                     @foreach ($orders as $order)
 
                     <div class="table-responsive">
-                      <p>Kode Pemesanan : {{$order->order_id}}</p>
+                      <!-- <p>Kode Pemesanan :</p> -->
                         <table class="table table-bordered table-hover text-center">
                             <thead class="">
                                 <tr>
@@ -94,7 +94,7 @@
                                   <th scope="col" class="but-col">
                                     <!-- <a href="#" class="btn btn-Success mb-2" data-toggle="modal" data-target="#konfirmasiModal">Konfirmasi</a> -->
                                     <button type="button" class="btn btn-Success mb-2"  data-toggle="modal" data-target="#konfirmasiModal-{{$order->id}}">Konfirmasi</button>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->order_id}}" aria-expanded="false" aria-controls="collapseExample">
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$order->id}}" aria-expanded="false" aria-controls="collapseExample">
                                     Lihat Produk
                                      </button>
                                   </th>
@@ -103,7 +103,8 @@
                             </tbody>
 
                         </table>
-                        <div class="collapse" id="{{$order->order_id}}">
+
+                        <div class="collapse" id="{{$order->id}}">
                           <div class="card card-body">
                             <table class="table">
                               <thead>
@@ -130,6 +131,7 @@
                           </div>
                         </div>
                     </div>
+
                     <br>
                     <hr>
                     @endforeach

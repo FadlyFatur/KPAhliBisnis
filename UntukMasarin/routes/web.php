@@ -128,9 +128,9 @@ Route::get('/sendMail', function () {
         "Title" => "Confirmation Links",
         "Success" => "Success"
     ];
-    Mail::to("mesweb.design@gmail.com")->send( new OrderShipped($order));
+    Mail::to("faturrohman309@gmail.com")->send( new OrderShipped($order));
     echo "Mail sent!,Check your inbox";
-}); 
+});
 
 Route::get('adminLogin/{key}', function ($key) {
     $link = session("key");

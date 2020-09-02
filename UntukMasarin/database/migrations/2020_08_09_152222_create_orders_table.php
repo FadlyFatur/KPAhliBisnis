@@ -15,6 +15,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
           $table->increments('id');
+          // $table->string('order_id');
           $table->timestamps();
           $table->string('name_depan');
           $table->string('name_belakang');
@@ -29,6 +30,7 @@ class CreateOrdersTable extends Migration
           $table->string('konsep');
           $table->string('pengunaan_foto');
           $table->text('cart');
+          // $table->integer('user_id');
           $table->string('filename')->nullable();
           $table->boolean('status')->default(False);
           $table->unsignedBigInteger('user_id');
